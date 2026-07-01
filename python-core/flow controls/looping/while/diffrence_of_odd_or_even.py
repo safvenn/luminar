@@ -1,4 +1,4 @@
-
+#---------------------difference of odd or even-------------------------------
 num = int(input("Enter a number: "))
 
 tem =0

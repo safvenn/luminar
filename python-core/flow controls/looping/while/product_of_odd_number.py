@@ -11,5 +11,5 @@ while num!=0:
     product*=digit
     num=num//10
     
-print(product)
+print(f"product of {num} is {product}")
 

@@ -10,5 +10,5 @@ while low<=high:
     else:
         esum+=low
         low+=1
-print("sum of odd numbersa:",osum)
+print("sum of odd numbers:",osum)
 print("Sum of even nunmbers:",esum)

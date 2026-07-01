@@ -8,6 +8,7 @@ while True:
         name = input("Enter Student name: ")
         print(name,"Present")
     elif user == 2:
+        print("Complted..")
         break
     else:
         print("Invalid Input")
