@@ -2,8 +2,6 @@
 
 
 
-low=int(input("Enter the lower limit: "))
-high=int(input("Enter the upper limit: "))
 
 
 
