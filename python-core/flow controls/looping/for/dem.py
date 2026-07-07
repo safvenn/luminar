@@ -32,7 +32,25 @@
         
         
         
-for i in range(1,5):
-    for j in range(i,i+4):
-        print(j,end="")
-    print()
+# for i in range(1,5):
+#     for j in range(i,i+4):
+#         print(j,end="")
+#     print()
+
+
+
+
+digit=0
+num = int(input("Enter a number "))
+temp=num
+count=0
+dcount=0
+digitx={}
+while temp > 0:
+    digit =temp%10
+    digitx[digit]=1
+    digitx[digit] +=1
+    temp=temp//10
+    
+print(digitx)
+    
