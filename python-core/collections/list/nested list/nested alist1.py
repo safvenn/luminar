@@ -17,12 +17,15 @@ for i in lst:
     if i[4] == 'bigdata':
         print("Big data professionals")
         print(i[1:4],'\n')
-    if i[5]<10000:
+    # pyrefly: ignore [unsupported-operation]
+    if i[5] < 10000:
         print("Salary below 10k")
         print(i[1:4],'\n')
+    # pyrefly: ignore [unsupported-operation]
     if i[3] > 29 and i[4] == 'bigdata':
         print("age above 29 and professional is bigdata")
         print(i[1:4])
+    # pyrefly: ignore [unsupported-operation]
     sum+=i[-1]
 
 
