@@ -1,4 +1,4 @@
-f=open('lines','r')
+f=open('../files/lines', 'r')
 count=1
 long=0
 l_line=""

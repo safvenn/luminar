@@ -1,4 +1,4 @@
-f=open('about','r')
+f=open('../files/about', 'r')
 for i in f:
     i=i.rstrip(',')
 

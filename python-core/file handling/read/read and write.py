@@ -2,7 +2,7 @@
 #Read the file using pytthon and add into a list and print
 
 
-f=open('numbers','r')
+f=open('../files/numbers', 'r')
 num=[]
 for i in f:
     num.append(int(i))

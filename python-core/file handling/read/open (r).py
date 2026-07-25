@@ -1,6 +1,6 @@
 #inside from same directory
 
-f=open('demo','r')
+f=open('../files/demo', 'r')
 for i in f:
     print(i)
 
@@ -10,7 +10,7 @@ for i in f:
 #demo2 located at C:\Users\rehan\OneDrive\Desktop\luminar\python-core\collections\demo2
 
 
-m=open(r'C:\Users\rehan\OneDrive\Desktop\luminar\python-core\collections\demo2','r')
+m=open(r'/python-core/file handling/demo2', 'r')
 
 for i in m:
     print(i)
