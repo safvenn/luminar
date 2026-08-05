@@ -1,0 +1,38 @@
+Python Weekend Task (20 Questions)
+1. Print all prime numbers between 1 and N.
+Sample Input: 20
+Sample Output: 2 3 5 7 11 13 17 19
+2. Find the factorial of a number using a for loop.
+Input: 5 Output: 120
+3. Print the multiplication table of a number.
+Input: 7
+4. Find the sum of all even numbers between two given numbers.
+Input: 10 20 Output: 90
+5. Count how many prime numbers are present between 1 and N.
+6. Find the reverse of a number using while.
+Input:12345 Output:54321
+7. Check whether a number is a palindrome.
+Input:121 Output:Palindrome
+8. Find the sum of odd digits in a number.
+Input:58391 Output:17
+9. Find the largest digit in a number.
+Input:294816 Output:9
+10. Count how many digits are divisible by 3.
+Input:123456789 Output:3
+11. Count vowels and consonants in a string.
+12. Remove duplicate characters while maintaining order.
+Input: programming Output: progamin
+13. Print characters at odd index positions.
+14. Find the longest word in a sentence.
+Input: Python is a powerful programming language Output: programming
+15. Count occurrences of a given character without count().
+16. Merge two lists without duplicates.
+list1=[1,2,3,4], list2=[3,4,5,6] Output:[1,2,3,4,5,6]
+17. Print the frequency of every element in a list without using a dictionary.
+Input:[2,3,2,4,3,2]
+18. Find the first non-repeating element in a list.
+Input:[2,3,4,2,3,5,6] Output:4
+19. Find the common elements between two lists without using set().
+20. Given a dictionary of student names and marks, print the student with the highest
+mark.
+students={Rahul:82, Anu:91, Arjun:78, Meera:95} Output:Meera

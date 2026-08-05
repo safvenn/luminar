@@ -1,0 +1,24 @@
+String For Loop Practice Questions
+1. Count the number of uppercase and lowercase letters in a string.
+Sample Input: PyTHon123
+2. Count the number of digits in a string.
+Sample Input: Abc12345
+3. Check whether a string is a palindrome.
+Sample Input: madam
+4. Count the occurrence of a given character.
+Sample Input: String=programming, Character=g
+5. Find the first occurrence of a given character.
+Sample Input: String=programming, Character=r
+6. Print characters at even indices.
+Sample Input: Python
+7. Remove all spaces from a string.
+Sample Input: Python is easy
+8. Print only numeric characters from a string.
+Sample Input: Ab12Cd345
+9. Count how many times each vowel appears.
+Sample Input: Education
+10. Remove all digits from a string.
+Sample Input: Py123thon45
+11. Compress a string (Example: aaabbc -> a3b2c1).
+Sample Input: aaabbcccc
+12. Find the first non-repeating character in a string.
