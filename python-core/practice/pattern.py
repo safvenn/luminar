@@ -152,20 +152,29 @@
 
 
 #Hollow Pyramid
-
-for i in range(5):
-    for j in range(5-i):
-        print(" ",end=" ")
-    for k in range(2*i-1):
-        if k == 0 or k == 2*i-2:
-            print("*",end=" ")
-        else:
-            print(" ",end=" ")
-    print()
-    if i == 4:
-        for k in range(2*i-1):
-            print("*",end=" ")
-        print()
-        continue
-
-    print()
+#
+# for i in range(5):
+#     for j in range(4-i):
+#         print(" ",end=" ")
+#     for k in range(2*i-1):
+#         if k == 0 or k == 2*i-2:
+#             print("*",end=" ")
+#         else:
+#             print(" ",end=" ")
+#     print()
+#     if i == 4:
+#         for k in range(2*i-1):
+#             print("*",end=" ")
+#         print()
+#         continue
+#
+#     print()
+#
+#       *
+#
+#     *   *
+#
+#   *       *
+#
+# *           *
+# * * * * * * *
