@@ -17,6 +17,6 @@ df=pd.read_csv(r'mysql\files\customer1.csv')
 
 x=df.iloc[:,0:5]
 print(x)
-
+print(''*100000)
 y=df.iloc[:,-1]
 print(y)

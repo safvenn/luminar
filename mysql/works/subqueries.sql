@@ -34,7 +34,7 @@ select * from employee where salary<(select avg(salary) from employee);
 -- 3) salry greater than avg 
 
 select * from employee where salary>=(select avg(salary) from employee);
-
+---------------------------------------------------------------------------------------------
 select * from customer5_windows;
 -- 1)avg salry above salary f,l,age,pro,salry
 

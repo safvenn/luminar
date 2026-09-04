@@ -15,7 +15,7 @@ select * from sample4 order by fname;
 
 
 #HEIRACHY
-# [SELCT > WHERE > ORDER BY > LIMIT]
+# [SELECT > WHERE > ORDER BY > LIMIT]
 
 
 #LOC == CHENNAI ORDER BY AGE
