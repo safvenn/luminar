@@ -1,0 +1,1066 @@
+order_id,order_date,customer_name,customer_city,product_name,product_category,quantity,unit_price,total_amount,sales_person,payment_method
+SO-00113,2026-01-01,Customer Client 14,Ajman,Filing Cabinet,Furniture,3,4500,13500,John,Bank Transfer
+SO-00036,2026-01-01,ABC Trading,Dubai,Mouse,Accessories,10,500,5000,Sarah,Bank Transfer
+SO-00053,2026-01-02,Global Mart,Sharjah,Stapler,Office Supplies,20,100,2000,Robert,Online Payment
+SO-00078,2026-01-02,XYZ Stores,Abu Dhabi,HDMI Cable,Accessories,3,200,600,Robert,Online Payment
+SO-00032,2026-01-02,XYZ Stores,Abu Dhabi,Mouse,Accessories,10,500,5000,David,Card
+SO-00027,2026-01-02,ABC Trading,Dubai,Antivirus Subscription,Software,2,1200,2400,Michael,Online Payment
+SO-00021,2026-01-03,Customer Client 30,Ras Al Khaimah,Mouse,Accessories,20,500,10000,Robert,Cash
+SO-00002,2026-01-03,Tech Solutions,Dubai,Laptop,Electronics,2,50000,100000,Robert,Card
+SO-00020,2026-01-03,Elite Enterprises,Sharjah,Keyboard,Accessories,10,1000,10000,Sarah,Cash
+SO-00087,2026-01-04,Customer Client 26,Fujairah,HDMI Cable,Accessories,15,200,3000,Michael,Online Payment
+SO-00097,2026-01-04,XYZ Stores,Abu Dhabi,Keyboard,Accessories,2,1000,2000,Linda,Bank Transfer
+SO-00010,2026-01-05,Apex Distributors,Al Ain,Whiteboard,Furniture,1,1200,1200,James,Online Payment
+SO-00103,2026-01-05,Global Mart,Sharjah,Mouse,Accessories,2,500,1000,David,Online Payment
+SO-00030,2026-01-05,ABC Trading,Dubai,Filing Cabinet,Furniture,3,4500,13500,William,Cash
+SO-00014,2026-01-05,Smart Buy,Abu Dhabi,Cloud Storage Plan,Software,1,600,600,Karen,Bank Transfer
+SO-00037,2026-01-05,Customer Client 24,Al Ain,Laptop,Electronics,2,50000,100000,Emily,Card
+SO-00026,2026-01-05,Prime Retail,Ajman,Laptop,Electronics,1,50000,50000,Linda,Cash
+SO-00017,2026-01-05,XYZ Stores,Abu Dhabi,Laptop Stand,Accessories,20,1800,36000,Karen,Online Payment
+SO-00049,2026-01-06,ABC Trading,Dubai,HDMI Cable,Accessories,2,200,400,Sarah,Online Payment
+SO-00099,2026-01-06,Smart Buy,Abu Dhabi,Mouse,Accessories,3,500,1500,John,Cash
+SO-00115,2026-01-06,Prime Retail,Ajman,Mouse,Accessories,5,500,2500,Robert,Online Payment
+SO-00088,2026-01-06,Alpha Logistics,Fujairah,Laptop Stand,Accessories,20,1800,36000,Linda,Online Payment
+SO-00081,2026-01-07,XYZ Stores,Abu Dhabi,Mouse,Accessories,5,500,2500,David,Card
+SO-00058,2026-01-07,Desert Star LLC,Al Ain,Antivirus Subscription,Software,2,1200,2400,Karen,Bank Transfer
+SO-00016,2026-01-08,Prime Retail,Ajman,Mouse,Accessories,20,500,10000,William,Card
+SO-00065,2026-01-08,HyperMax,Dubai,HDMI Cable,Accessories,1,200,200,William,Card
+SO-00062,2026-01-08,ABC Trading,Dubai,Laptop,Electronics,2,50000,100000,Karen,Cash
+SO-00070,2026-01-08,Customer Client 26,Fujairah,Ethernet Switch,Accessories,1,2200,2200,Michael,Card
+SO-00071,2026-01-08,Peak Industries,Sharjah,Keyboard,Accessories,1,1000,1000,James,Online Payment
+SO-00023,2026-01-08,XYZ Stores,Abu Dhabi,Mouse,Accessories,1,500,500,James,Bank Transfer
+SO-00008,2026-01-08,Nova Soft,Ajman,Desk Lamp,Furniture,2,800,1600,Karen,Online Payment
+SO-00041,2026-01-09,Apex Distributors,Al Ain,Laptop,Electronics,1,50000,50000,John,Bank Transfer
+SO-00040,2026-01-09,Peak Industries,Sharjah,Printer,Electronics,1,8000,8000,Emily,Online Payment
+SO-00118,2026-01-09,Tech Solutions,Dubai,Wireless Charger,Accessories,20,1200,24000,John,Online Payment
+SO-00035,2026-01-09,Falcon Trading,Abu Dhabi,Monitor,Electronics,2,12000,24000,Robert,Cash
+SO-00079,2026-01-09,ABC Trading,Dubai,HDMI Cable,Accessories,1,200,200,William,Cash
+SO-00105,2026-01-10,ABC Trading,Dubai,Antivirus Subscription,Software,2,1200,2400,Sarah,Bank Transfer
+SO-00117,2026-01-10,Smart Buy,Abu Dhabi,Mouse,Accessories,5,500,2500,David,Bank Transfer
+SO-00061,2026-01-10,Beta Corp,Ras Al Khaimah,Monitor,Electronics,1,12000,12000,Sarah,Bank Transfer
+SO-00116,2026-01-11,Customer Client 18,Sharjah,Keyboard,Accessories,3,1000,3000,James,Online Payment
+SO-00072,2026-01-11,ABC Trading,Dubai,Keyboard,Accessories,20,1000,20000,James,Online Payment
+SO-00045,2026-01-12,XYZ Stores,Abu Dhabi,Pens Box,Office Supplies,2,80,160,David,Bank Transfer
+SO-00009,2026-01-12,Prime Retail,Ajman,Mouse,Accessories,20,500,10000,John,Cash
+SO-00050,2026-01-12,Customer Client 22,Ajman,Keyboard,Accessories,2,1000,2000,John,Card
+SO-00003,2026-01-12,XYZ Stores,Abu Dhabi,Pens Box,Office Supplies,15,80,1200,David,Card
+SO-00096,2026-01-12,XYZ Stores,Abu Dhabi,Keyboard,Accessories,1,1000,1000,Sarah,Bank Transfer
+SO-00033,2026-01-13,XYZ Stores,Abu Dhabi,Filing Cabinet,Furniture,3,4500,13500,John,Cash
+SO-00064,2026-01-13,Desert Star LLC,Al Ain,Mouse,Accessories,20,500,10000,David,Online Payment
+SO-00006,2026-01-13,Customer Client 30,Ras Al Khaimah,Standing Desk,Furniture,3,18000,54000,Robert,Card
+SO-00029,2026-01-13,Customer Client 6,Dubai,HDMI Cable,Accessories,3,200,600,James,Online Payment
+SO-00051,2026-01-13,ABC Trading,Dubai,Cloud Storage Plan,Software,5,600,3000,Robert,Online Payment
+SO-00019,2026-01-13,HyperMax,Dubai,USB Hub,Accessories,1,800,800,Sarah,Card
+SO-00025,2026-01-13,ABC Trading,Dubai,Laptop,Electronics,1,50000,50000,Sarah,Online Payment
+SO-00059,2026-01-13,Global Mart,Sharjah,Laptop,Electronics,1,50000,50000,James,Bank Transfer
+SO-00119,2026-01-14,Tech Solutions,Dubai,Paper Reams,Office Supplies,20,150,3000,Linda,Online Payment
+SO-00056,2026-01-14,Global Mart,Sharjah,Paper Reams,Office Supplies,3,150,450,David,Bank Transfer
+SO-00089,2026-01-14,XYZ Stores,Abu Dhabi,Mouse,Accessories,3,500,1500,Linda,Card
+SO-00024,2026-01-14,Vanguard Group,Abu Dhabi,Mouse,Accessories,15,500,7500,David,Cash
+SO-00107,2026-01-14,Prime Retail,Ajman,Laptop,Electronics,1,50000,50000,Sarah,Bank Transfer
+SO-00034,2026-01-14,XYZ Stores,Abu Dhabi,Keyboard,Accessories,15,1000,15000,Robert,Card
+SO-00111,2026-01-15,Global Mart,Sharjah,Pens Box,Office Supplies,5,80,400,Emily,Online Payment
+SO-00112,2026-01-15,Customer Client 26,Fujairah,Headphones,Accessories,15,1500,22500,Robert,Bank Transfer
+SO-00082,2026-01-15,XYZ Stores,Abu Dhabi,Bookshelf,Furniture,3,3500,10500,David,Card
+SO-00063,2026-01-15,Elite Enterprises,Sharjah,Keyboard,Accessories,15,1000,15000,James,Online Payment
+SO-00060,2026-01-15,XYZ Stores,Abu Dhabi,Wireless Charger,Accessories,5,1200,6000,Michael,Cash
+SO-00038,2026-01-15,Alpha Logistics,Fujairah,Graphics Editor Pro,Software,1,9500,9500,William,Bank Transfer
+SO-00015,2026-01-16,Tech Solutions,Dubai,Graphics Editor Pro,Software,5,9500,47500,Sarah,Cash
+SO-00075,2026-01-16,Prime Retail,Ajman,Mouse,Accessories,5,500,2500,Robert,Online Payment
+SO-00028,2026-01-16,Tech Solutions,Dubai,Mouse,Accessories,2,500,1000,James,Cash
+SO-00093,2026-01-16,Skyline Ventures,Dubai,HDMI Cable,Accessories,15,200,3000,Linda,Online Payment
+SO-00013,2026-01-17,ABC Trading,Dubai,Paper Reams,Office Supplies,3,150,450,William,Card
+SO-00022,2026-01-17,Prime Retail,Ajman,Keyboard,Accessories,10,1000,10000,Michael,Online Payment
+SO-00057,2026-01-17,Global Mart,Sharjah,Web Camera,Accessories,15,2500,37500,Emily,Card
+SO-00043,2026-01-18,Customer Client 24,Al Ain,Pens Box,Office Supplies,2,80,160,William,Cash
+SO-00004,2026-01-18,Tech Solutions,Dubai,Laptop,Electronics,3,50000,150000,William,Card
+SO-00100,2026-01-18,Beta Corp,Ras Al Khaimah,Antivirus Subscription,Software,10,1200,12000,David,Cash
+SO-00077,2026-01-19,Apex Distributors,Al Ain,Mouse,Accessories,20,500,10000,Linda,Card
+SO-00114,2026-01-19,XYZ Stores,Abu Dhabi,HDMI Cable,Accessories,10,200,2000,Linda,Bank Transfer
+SO-00101,2026-01-19,Apex Distributors,Al Ain,Printer,Electronics,1,8000,8000,John,Bank Transfer
+SO-00104,2026-01-20,Tech Solutions,Dubai,USB Hub,Accessories,5,800,4000,Emily,Online Payment
+SO-00011,2026-01-20,Elite Enterprises,Sharjah,Mouse,Accessories,15,500,7500,David,Bank Transfer
+SO-00054,2026-01-20,Customer Client 29,Al Ain,Filing Cabinet,Furniture,1,4500,4500,Emily,Cash
+SO-00007,2026-01-21,Falcon Trading,Abu Dhabi,HDMI Cable,Accessories,2,200,400,Emily,Card
+SO-00106,2026-01-22,XYZ Stores,Abu Dhabi,Office Chair,Furniture,1,6000,6000,Michael,Cash
+SO-00086,2026-01-22,Falcon Trading,Abu Dhabi,Printer,Electronics,1,8000,8000,James,Online Payment
+SO-00095,2026-01-22,Smart Buy,Abu Dhabi,Printer,Electronics,2,8000,16000,William,Bank Transfer
+SO-00005,2026-01-22,Customer Client 5,Fujairah,Mouse,Accessories,2,500,1000,John,Bank Transfer
+SO-00052,2026-01-22,ABC Trading,Dubai,Laptop,Electronics,1,50000,50000,Karen,Bank Transfer
+SO-00108,2026-01-23,Apex Distributors,Al Ain,Mouse,Accessories,15,500,7500,Sarah,Bank Transfer
+SO-00055,2026-01-23,Customer Client 10,Al Ain,Laptop Stand,Accessories,15,1800,27000,Sarah,Bank Transfer
+SO-00076,2026-01-24,ABC Trading,Dubai,Paper Reams,Office Supplies,10,150,1500,John,Online Payment
+SO-00031,2026-01-24,Omega Systems,Dubai,HDMI Cable,Accessories,10,200,2000,William,Card
+SO-00098,2026-01-24,ABC Trading,Dubai,Keyboard,Accessories,3,1000,3000,Sarah,Bank Transfer
+SO-00120,2026-01-25,Smart Buy,Abu Dhabi,Mouse,Accessories,3,500,1500,Linda,Online Payment
+SO-00042,2026-01-25,XYZ Stores,Abu Dhabi,Stapler,Office Supplies,5,100,500,William,Online Payment
+SO-00012,2026-01-25,Apex Distributors,Al Ain,Keyboard,Accessories,5,1000,5000,John,Bank Transfer
+SO-00090,2026-01-25,Gulf Merchants,Dubai,Tablet,Electronics,2,15000,30000,John,Online Payment
+SO-00069,2026-01-25,XYZ Stores,Abu Dhabi,Laptop,Electronics,2,50000,100000,David,Bank Transfer
+SO-00046,2026-01-25,Tech Solutions,Dubai,Paper Reams,Office Supplies,15,150,2250,Michael,Card
+SO-00094,2026-01-26,XYZ Stores,Abu Dhabi,Web Camera,Accessories,15,2500,37500,Sarah,Bank Transfer
+SO-00109,2026-01-26,Smart Buy,Abu Dhabi,Keyboard,Accessories,15,1000,15000,Michael,Bank Transfer
+SO-00048,2026-01-26,Customer Client 20,Ras Al Khaimah,Stapler,Office Supplies,20,100,2000,Sarah,Bank Transfer
+SO-00110,2026-01-27,XYZ Stores,Abu Dhabi,Office Suite License,Software,5,4500,22500,Karen,Bank Transfer
+SO-00044,2026-01-27,ABC Trading,Dubai,Headphones,Accessories,2,1500,3000,John,Bank Transfer
+SO-00085,2026-01-28,Customer Client 6,Dubai,Mouse,Accessories,3,500,1500,William,Online Payment
+SO-00047,2026-01-28,XYZ Stores,Abu Dhabi,Web Camera,Accessories,1,2500,2500,Michael,Bank Transfer
+SO-00091,2026-01-28,XYZ Stores,Abu Dhabi,Printer,Electronics,2,8000,16000,Robert,Bank Transfer
+SO-00073,2026-01-29,Customer Client 3,Abu Dhabi,Filing Cabinet,Furniture,2,4500,9000,Linda,Cash
+SO-00068,2026-01-29,Prime Retail,Ajman,USB Hub,Accessories,3,800,2400,Sarah,Bank Transfer
+SO-00092,2026-01-29,HyperMax,Dubai,Keyboard,Accessories,1,1000,1000,Sarah,Online Payment
+SO-00001,2026-01-29,Skyline Ventures,Dubai,Mouse,Accessories,1,500,500,Sarah,Bank Transfer
+SO-00066,2026-01-30,Customer Client 10,Al Ain,HDMI Cable,Accessories,15,200,3000,William,Bank Transfer
+SO-00039,2026-01-30,XYZ Stores,Abu Dhabi,Mouse,Accessories,1,500,500,William,Card
+SO-00084,2026-01-31,Skyline Ventures,Dubai,Paper Reams,Office Supplies,2,150,300,David,Bank Transfer
+SO-00018,2026-01-31,Nova Soft,Ajman,Stapler,Office Supplies,15,100,1500,Sarah,Bank Transfer
+SO-00083,2026-01-31,ABC Trading,Dubai,Monitor,Electronics,3,12000,36000,James,Online Payment
+SO-00080,2026-01-31,ABC Trading,Dubai,Cloud Storage Plan,Software,1,600,600,John,Card
+SO-00074,2026-01-31,Tech Solutions,Dubai,Headphones,Accessories,10,1500,15000,William,Card
+SO-00102,2026-01-31,ABC Trading,Dubai,Web Camera,Accessories,5,2500,12500,David,Cash
+SO-00067,2026-01-31,Vanguard Group,Abu Dhabi,External Hard Drive,Accessories,5,3500,17500,William,Online Payment
+SO-00239,2026-02-01,Desert Star LLC,Al Ain,Cloud Storage Plan,Software,10,600,6000,John,Card
+SO-00218,2026-02-01,HyperMax,Dubai,Tablet,Electronics,1,15000,15000,James,Cash
+SO-00152,2026-02-01,Alpha Logistics,Fujairah,Keyboard,Accessories,15,1000,15000,David,Online Payment
+SO-00182,2026-02-02,Alpha Logistics,Fujairah,Mouse,Accessories,15,500,7500,David,Bank Transfer
+SO-00185,2026-02-02,ABC Trading,Dubai,Mouse,Accessories,2,500,1000,Emily,Card
+SO-00159,2026-02-02,Customer Client 6,Dubai,Standing Desk,Furniture,1,18000,18000,David,Card
+SO-00198,2026-02-02,ABC Trading,Dubai,Notebooks Pack,Office Supplies,20,120,2400,David,Online Payment
+SO-00158,2026-02-02,ABC Trading,Dubai,HDMI Cable,Accessories,1,200,200,Sarah,Cash
+SO-00223,2026-02-03,HyperMax,Dubai,Whiteboard,Furniture,3,1200,3600,John,Card
+SO-00240,2026-02-03,Tech Solutions,Dubai,Printer,Electronics,2,8000,16000,Karen,Cash
+SO-00150,2026-02-03,Smart Buy,Abu Dhabi,Mouse,Accessories,5,500,2500,Robert,Bank Transfer
+SO-00173,2026-02-03,Zenith Digital,Dubai,Tablet,Electronics,1,15000,15000,William,Cash
+SO-00188,2026-02-03,ABC Trading,Dubai,USB Hub,Accessories,1,800,800,Linda,Cash
+SO-00121,2026-02-04,Customer Client 10,Al Ain,Laptop,Electronics,3,50000,150000,Michael,Bank Transfer
+SO-00194,2026-02-04,XYZ Stores,Abu Dhabi,Bookshelf,Furniture,1,3500,3500,David,Card
+SO-00123,2026-02-04,Peak Industries,Sharjah,Laptop,Electronics,3,50000,150000,Emily,Online Payment
+SO-00222,2026-02-04,ABC Trading,Dubai,Mouse,Accessories,2,500,1000,James,Online Payment
+SO-00190,2026-02-04,XYZ Stores,Abu Dhabi,Graphics Editor Pro,Software,10,9500,95000,Robert,Cash
+SO-00180,2026-02-05,Smart Buy,Abu Dhabi,Keyboard,Accessories,5,1000,5000,James,Online Payment
+SO-00220,2026-02-05,Customer Client 13,Ajman,HDMI Cable,Accessories,15,200,3000,Michael,Online Payment
+SO-00228,2026-02-05,Global Mart,Sharjah,Notebooks Pack,Office Supplies,2,120,240,Linda,Online Payment
+SO-00162,2026-02-05,Customer Client 6,Dubai,Laptop,Electronics,3,50000,150000,Robert,Cash
+SO-00245,2026-02-05,Customer Client 29,Al Ain,Desk Organizer,Office Supplies,5,300,1500,David,Bank Transfer
+SO-00168,2026-02-05,Omega Systems,Dubai,Ethernet Switch,Accessories,15,2200,33000,Robert,Online Payment
+SO-00176,2026-02-05,ABC Trading,Dubai,Printer,Electronics,3,8000,24000,Robert,Cash
+SO-00225,2026-02-06,ABC Trading,Dubai,Laptop Stand,Accessories,10,1800,18000,William,Cash
+SO-00138,2026-02-06,Tech Solutions,Dubai,Paper Reams,Office Supplies,15,150,2250,Sarah,Online Payment
+SO-00163,2026-02-06,Zenith Digital,Dubai,Headphones,Accessories,10,1500,15000,David,Cash
+SO-00136,2026-02-06,ABC Trading,Dubai,Monitor,Electronics,1,12000,12000,Emily,Bank Transfer
+SO-00135,2026-02-08,Customer Client 2,Dubai,Paper Reams,Office Supplies,15,150,2250,David,Online Payment
+SO-00145,2026-02-08,Desert Star LLC,Al Ain,Antivirus Subscription,Software,2,1200,2400,David,Cash
+SO-00248,2026-02-08,Elite Enterprises,Sharjah,Filing Cabinet,Furniture,2,4500,9000,Linda,Card
+SO-00161,2026-02-09,XYZ Stores,Abu Dhabi,Office Suite License,Software,2,4500,9000,David,Cash
+SO-00204,2026-02-09,Omega Systems,Dubai,Notebooks Pack,Office Supplies,2,120,240,Robert,Bank Transfer
+SO-00230,2026-02-10,XYZ Stores,Abu Dhabi,Mouse,Accessories,3,500,1500,Emily,Online Payment
+SO-00146,2026-02-10,Tech Solutions,Dubai,Stapler,Office Supplies,2,100,200,David,Bank Transfer
+SO-00236,2026-02-10,Apex Distributors,Al Ain,Keyboard,Accessories,15,1000,15000,Linda,Bank Transfer
+SO-00213,2026-02-10,XYZ Stores,Abu Dhabi,Tablet,Electronics,3,15000,45000,Karen,Online Payment
+SO-00181,2026-02-11,Vanguard Group,Abu Dhabi,Monitor,Electronics,3,12000,36000,Karen,Cash
+SO-00253,2026-02-11,Customer Client 27,Al Ain,Laptop,Electronics,1,50000,50000,Emily,Card
+SO-00147,2026-02-11,ABC Trading,Dubai,Office Suite License,Software,5,4500,22500,William,Bank Transfer
+SO-00208,2026-02-11,ABC Trading,Dubai,Keyboard,Accessories,1,1000,1000,Emily,Cash
+SO-00171,2026-02-11,Vanguard Group,Abu Dhabi,Mouse,Accessories,3,500,1500,James,Bank Transfer
+SO-00200,2026-02-11,ABC Trading,Dubai,USB Hub,Accessories,1,800,800,Robert,Cash
+SO-00134,2026-02-11,ABC Trading,Dubai,Paper Reams,Office Supplies,1,150,150,Sarah,Bank Transfer
+SO-00179,2026-02-12,ABC Trading,Dubai,Standing Desk,Furniture,3,18000,54000,James,Cash
+SO-00219,2026-02-12,ABC Trading,Dubai,Desk Organizer,Office Supplies,15,300,4500,Robert,Card
+SO-00141,2026-02-12,Skyline Ventures,Dubai,Laptop,Electronics,2,50000,100000,Emily,Card
+SO-00202,2026-02-12,Tech Solutions,Dubai,Web Camera,Accessories,20,2500,50000,Robert,Cash
+SO-00184,2026-02-12,Desert Star LLC,Al Ain,Pens Box,Office Supplies,10,80,800,Linda,Bank Transfer
+SO-00137,2026-02-12,Smart Buy,Abu Dhabi,Web Camera,Accessories,10,2500,25000,Michael,Card
+SO-00155,2026-02-12,Zenith Digital,Dubai,Stapler,Office Supplies,2,100,200,James,Cash
+SO-00226,2026-02-13,Tech Solutions,Dubai,Tablet,Electronics,2,15000,30000,John,Bank Transfer
+SO-00142,2026-02-13,Tech Solutions,Dubai,Filing Cabinet,Furniture,2,4500,9000,Karen,Bank Transfer
+SO-00233,2026-02-13,Global Mart,Sharjah,Keyboard,Accessories,5,1000,5000,Linda,Bank Transfer
+SO-00191,2026-02-14,Omega Systems,Dubai,Web Camera,Accessories,10,2500,25000,David,Online Payment
+SO-00237,2026-02-15,Customer Client 30,Ras Al Khaimah,Printer,Electronics,3,8000,24000,James,Bank Transfer
+SO-00221,2026-02-15,ABC Trading,Dubai,Laptop,Electronics,1,50000,50000,Michael,Online Payment
+SO-00214,2026-02-15,HyperMax,Dubai,Laptop Stand,Accessories,5,1800,9000,Michael,Card
+SO-00128,2026-02-15,Skyline Ventures,Dubai,Laptop,Electronics,3,50000,150000,James,Card
+SO-00183,2026-02-15,Apex Distributors,Al Ain,Headphones,Accessories,3,1500,4500,Sarah,Cash
+SO-00157,2026-02-15,Tech Solutions,Dubai,Mouse,Accessories,15,500,7500,Robert,Bank Transfer
+SO-00217,2026-02-15,Apex Distributors,Al Ain,Mouse,Accessories,2,500,1000,Linda,Bank Transfer
+SO-00251,2026-02-15,Customer Client 23,Sharjah,Cloud Storage Plan,Software,2,600,1200,Michael,Online Payment
+SO-00199,2026-02-15,Customer Client 27,Al Ain,Mouse,Accessories,5,500,2500,Karen,Card
+SO-00154,2026-02-16,Customer Client 26,Fujairah,Laptop Stand,Accessories,2,1800,3600,James,Online Payment
+SO-00164,2026-02-16,HyperMax,Dubai,Whiteboard,Furniture,1,1200,1200,Linda,Card
+SO-00252,2026-02-17,HyperMax,Dubai,Keyboard,Accessories,3,1000,3000,Michael,Card
+SO-00201,2026-02-17,Peak Industries,Sharjah,USB Hub,Accessories,5,800,4000,William,Card
+SO-00255,2026-02-17,ABC Trading,Dubai,Keyboard,Accessories,15,1000,15000,Karen,Bank Transfer
+SO-00242,2026-02-17,Falcon Trading,Abu Dhabi,Laptop,Electronics,1,50000,50000,David,Cash
+SO-00193,2026-02-17,Customer Client 5,Fujairah,Printer,Electronics,2,8000,16000,Michael,Card
+SO-00209,2026-02-17,Customer Client 24,Al Ain,Laptop Stand,Accessories,1,1800,1800,Robert,Card
+SO-00122,2026-02-18,ABC Trading,Dubai,Keyboard,Accessories,20,1000,20000,David,Online Payment
+SO-00197,2026-02-19,ABC Trading,Dubai,Monitor,Electronics,2,12000,24000,Linda,Cash
+SO-00139,2026-02-19,Beta Corp,Ras Al Khaimah,Laptop,Electronics,2,50000,100000,Emily,Cash
+SO-00160,2026-02-19,XYZ Stores,Abu Dhabi,Monitor,Electronics,1,12000,12000,Karen,Cash
+SO-00151,2026-02-19,Tech Solutions,Dubai,Mouse,Accessories,15,500,7500,Sarah,Online Payment
+SO-00174,2026-02-19,Gulf Merchants,Dubai,Mouse,Accessories,5,500,2500,Robert,Online Payment
+SO-00165,2026-02-20,Customer Client 30,Ras Al Khaimah,Notebooks Pack,Office Supplies,10,120,1200,Emily,Online Payment
+SO-00249,2026-02-20,Tech Solutions,Dubai,Desk Organizer,Office Supplies,15,300,4500,Linda,Online Payment
+SO-00235,2026-02-20,Global Mart,Sharjah,Mouse,Accessories,1,500,500,Robert,Bank Transfer
+SO-00241,2026-02-20,Tech Solutions,Dubai,Tablet,Electronics,2,15000,30000,David,Card
+SO-00178,2026-02-20,XYZ Stores,Abu Dhabi,Pens Box,Office Supplies,20,80,1600,Emily,Bank Transfer
+SO-00212,2026-02-20,Customer Client 6,Dubai,USB Hub,Accessories,2,800,1600,William,Card
+SO-00210,2026-02-20,XYZ Stores,Abu Dhabi,Pens Box,Office Supplies,20,80,1600,Karen,Card
+SO-00144,2026-02-20,Customer Client 29,Al Ain,Laptop,Electronics,1,50000,50000,Karen,Bank Transfer
+SO-00169,2026-02-20,HyperMax,Dubai,Bookshelf,Furniture,2,3500,7000,David,Cash
+SO-00125,2026-02-20,ABC Trading,Dubai,Mouse,Accessories,3,500,1500,James,Bank Transfer
+SO-00166,2026-02-21,Customer Client 17,Fujairah,Web Camera,Accessories,5,2500,12500,David,Online Payment
+SO-00238,2026-02-21,Beta Corp,Ras Al Khaimah,Web Camera,Accessories,3,2500,7500,William,Card
+SO-00133,2026-02-21,Customer Client 17,Fujairah,Pens Box,Office Supplies,20,80,1600,William,Online Payment
+SO-00229,2026-02-21,ABC Trading,Dubai,Desk Organizer,Office Supplies,20,300,6000,Linda,Cash
+SO-00206,2026-02-21,Gulf Merchants,Dubai,Pens Box,Office Supplies,20,80,1600,William,Cash
+SO-00205,2026-02-21,Peak Industries,Sharjah,Mouse,Accessories,3,500,1500,William,Online Payment
+SO-00207,2026-02-21,ABC Trading,Dubai,Printer,Electronics,2,8000,16000,Michael,Card
+SO-00254,2026-02-21,Beta Corp,Ras Al Khaimah,Monitor,Electronics,3,12000,36000,William,Cash
+SO-00130,2026-02-22,ABC Trading,Dubai,External Hard Drive,Accessories,10,3500,35000,Robert,Cash
+SO-00172,2026-02-22,Desert Star LLC,Al Ain,HDMI Cable,Accessories,1,200,200,David,Cash
+SO-00246,2026-02-22,Smart Buy,Abu Dhabi,Ethernet Switch,Accessories,3,2200,6600,Emily,Card
+SO-00224,2026-02-23,ABC Trading,Dubai,Paper Reams,Office Supplies,3,150,450,Sarah,Online Payment
+SO-00247,2026-02-23,HyperMax,Dubai,Keyboard,Accessories,1,1000,1000,Sarah,Card
+SO-00143,2026-02-23,Gulf Merchants,Dubai,Web Camera,Accessories,3,2500,7500,John,Cash
+SO-00153,2026-02-23,ABC Trading,Dubai,Mouse,Accessories,1,500,500,John,Bank Transfer
+SO-00167,2026-02-23,ABC Trading,Dubai,Monitor,Electronics,3,12000,36000,Michael,Cash
+SO-00244,2026-02-23,Global Mart,Sharjah,Pens Box,Office Supplies,5,80,400,Sarah,Cash
+SO-00216,2026-02-23,Global Mart,Sharjah,Mouse,Accessories,20,500,10000,Michael,Bank Transfer
+SO-00243,2026-02-24,Tech Solutions,Dubai,Office Chair,Furniture,1,6000,6000,Emily,Bank Transfer
+SO-00187,2026-02-24,Tech Solutions,Dubai,Laptop Stand,Accessories,15,1800,27000,Sarah,Bank Transfer
+SO-00211,2026-02-24,Tech Solutions,Dubai,Pens Box,Office Supplies,15,80,1200,Sarah,Online Payment
+SO-00186,2026-02-25,Global Mart,Sharjah,Monitor,Electronics,1,12000,12000,John,Online Payment
+SO-00177,2026-02-25,Customer Client 11,Dubai,Headphones,Accessories,20,1500,30000,William,Cash
+SO-00250,2026-02-25,ABC Trading,Dubai,Mouse,Accessories,3,500,1500,David,Online Payment
+SO-00195,2026-02-25,Elite Enterprises,Sharjah,Antivirus Subscription,Software,10,1200,12000,Karen,Bank Transfer
+SO-00227,2026-02-26,Zenith Digital,Dubai,Notebooks Pack,Office Supplies,15,120,1800,David,Bank Transfer
+SO-00149,2026-02-26,ABC Trading,Dubai,Antivirus Subscription,Software,2,1200,2400,James,Bank Transfer
+SO-00215,2026-02-26,ABC Trading,Dubai,Notebooks Pack,Office Supplies,5,120,600,Robert,Cash
+SO-00203,2026-02-26,ABC Trading,Dubai,Office Chair,Furniture,3,6000,18000,James,Bank Transfer
+SO-00140,2026-02-26,Desert Star LLC,Al Ain,Ethernet Switch,Accessories,2,2200,4400,David,Online Payment
+SO-00234,2026-02-26,ABC Trading,Dubai,Stapler,Office Supplies,5,100,500,David,Online Payment
+SO-00126,2026-02-26,ABC Trading,Dubai,Laptop,Electronics,3,50000,150000,Emily,Online Payment
+SO-00148,2026-02-27,Customer Client 12,Abu Dhabi,HDMI Cable,Accessories,20,200,4000,Emily,Bank Transfer
+SO-00124,2026-02-27,Apex Distributors,Al Ain,Office Chair,Furniture,1,6000,6000,James,Card
+SO-00156,2026-02-27,Global Mart,Sharjah,Mouse,Accessories,15,500,7500,Robert,Card
+SO-00231,2026-02-27,ABC Trading,Dubai,Antivirus Subscription,Software,2,1200,2400,Emily,Bank Transfer
+SO-00175,2026-02-28,Global Mart,Sharjah,Printer,Electronics,1,8000,8000,Karen,Card
+SO-00232,2026-02-28,Global Mart,Sharjah,Laptop,Electronics,1,50000,50000,Robert,Online Payment
+SO-00132,2026-02-28,Customer Client 6,Dubai,Laptop,Electronics,2,50000,100000,Karen,Online Payment
+SO-00127,2026-02-28,Prime Retail,Ajman,Printer,Electronics,2,8000,16000,William,Online Payment
+SO-00192,2026-02-28,XYZ Stores,Abu Dhabi,Monitor,Electronics,1,12000,12000,David,Cash
+SO-00196,2026-02-28,ABC Trading,Dubai,HDMI Cable,Accessories,5,200,1000,Emily,Bank Transfer
+SO-00189,2026-02-28,Elite Enterprises,Sharjah,Web Camera,Accessories,15,2500,37500,James,Bank Transfer
+SO-00129,2026-02-28,Nova Soft,Ajman,HDMI Cable,Accessories,15,200,3000,James,Online Payment
+SO-00131,2026-02-28,Customer Client 30,Ras Al Khaimah,HDMI Cable,Accessories,1,200,200,Michael,Online Payment
+SO-00170,2026-02-28,XYZ Stores,Abu Dhabi,Headphones,Accessories,5,1500,7500,Sarah,Online Payment
+SO-00382,2026-03-01,Apex Distributors,Al Ain,Projector,Electronics,1,25000,25000,Sarah,Card
+SO-00298,2026-03-01,Apex Distributors,Al Ain,Antivirus Subscription,Software,5,1200,6000,Robert,Bank Transfer
+SO-00339,2026-03-01,ABC Trading,Dubai,Mouse,Accessories,10,500,5000,Emily,Bank Transfer
+SO-00340,2026-03-01,Desert Star LLC,Al Ain,Headphones,Accessories,20,1500,30000,Michael,Cash
+SO-00379,2026-03-02,Global Mart,Sharjah,Notebooks Pack,Office Supplies,1,120,120,Michael,Card
+SO-00310,2026-03-02,Customer Client 4,Abu Dhabi,Mouse,Accessories,20,500,10000,James,Bank Transfer
+SO-00266,2026-03-02,Customer Client 24,Al Ain,Notebooks Pack,Office Supplies,15,120,1800,Linda,Bank Transfer
+SO-00321,2026-03-02,Tech Solutions,Dubai,Office Suite License,Software,5,4500,22500,James,Online Payment
+SO-00309,2026-03-02,ABC Trading,Dubai,Ethernet Switch,Accessories,1,2200,2200,David,Online Payment
+SO-00361,2026-03-03,Apex Distributors,Al Ain,Monitor,Electronics,2,12000,24000,David,Bank Transfer
+SO-00358,2026-03-03,Omega Systems,Dubai,Whiteboard,Furniture,2,1200,2400,James,Cash
+SO-00344,2026-03-03,Smart Buy,Abu Dhabi,HDMI Cable,Accessories,1,200,200,John,Card
+SO-00269,2026-03-03,Customer Client 3,Abu Dhabi,Office Chair,Furniture,2,6000,12000,Karen,Cash
+SO-00297,2026-03-03,XYZ Stores,Abu Dhabi,Mouse,Accessories,5,500,2500,Robert,Card
+SO-00345,2026-03-03,Falcon Trading,Abu Dhabi,Cloud Storage Plan,Software,5,600,3000,Karen,Cash
+SO-00325,2026-03-03,XYZ Stores,Abu Dhabi,Mouse,Accessories,3,500,1500,James,Cash
+SO-00363,2026-03-04,Tech Solutions,Dubai,Monitor,Electronics,3,12000,36000,James,Bank Transfer
+SO-00387,2026-03-04,XYZ Stores,Abu Dhabi,Tablet,Electronics,3,15000,45000,Michael,Online Payment
+SO-00351,2026-03-04,ABC Trading,Dubai,Printer,Electronics,3,8000,24000,Karen,Online Payment
+SO-00288,2026-03-04,Prime Retail,Ajman,Mouse,Accessories,15,500,7500,Michael,Cash
+SO-00270,2026-03-05,Customer Client 9,Abu Dhabi,Monitor,Electronics,3,12000,36000,Robert,Card
+SO-00277,2026-03-05,Skyline Ventures,Dubai,Mouse,Accessories,2,500,1000,John,Online Payment
+SO-00333,2026-03-05,Tech Solutions,Dubai,Standing Desk,Furniture,1,18000,18000,Linda,Bank Transfer
+SO-00322,2026-03-05,Nova Soft,Ajman,Laptop Stand,Accessories,5,1800,9000,Sarah,Card
+SO-00261,2026-03-05,ABC Trading,Dubai,Monitor,Electronics,1,12000,12000,Linda,Cash
+SO-00307,2026-03-05,Elite Enterprises,Sharjah,Mouse,Accessories,10,500,5000,Linda,Bank Transfer
+SO-00335,2026-03-06,Prime Retail,Ajman,Keyboard,Accessories,10,1000,10000,John,Cash
+SO-00348,2026-03-06,Omega Systems,Dubai,Mouse,Accessories,20,500,10000,James,Cash
+SO-00357,2026-03-06,Elite Enterprises,Sharjah,Wireless Charger,Accessories,5,1200,6000,David,Cash
+SO-00295,2026-03-06,Peak Industries,Sharjah,Keyboard,Accessories,1,1000,1000,Robert,Bank Transfer
+SO-00315,2026-03-07,Gulf Merchants,Dubai,Headphones,Accessories,10,1500,15000,John,Card
+SO-00316,2026-03-07,ABC Trading,Dubai,USB Hub,Accessories,10,800,8000,John,Card
+SO-00260,2026-03-07,Global Mart,Sharjah,Desk Organizer,Office Supplies,3,300,900,Robert,Online Payment
+SO-00397,2026-03-07,Alpha Logistics,Fujairah,Paper Reams,Office Supplies,5,150,750,Michael,Card
+SO-00384,2026-03-07,Gulf Merchants,Dubai,External Hard Drive,Accessories,10,3500,35000,Robert,Online Payment
+SO-00286,2026-03-07,Elite Enterprises,Sharjah,Pens Box,Office Supplies,3,80,240,Michael,Cash
+SO-00271,2026-03-07,ABC Trading,Dubai,Mouse,Accessories,1,500,500,Michael,Bank Transfer
+SO-00263,2026-03-08,Omega Systems,Dubai,Desk Organizer,Office Supplies,3,300,900,Sarah,Card
+SO-00282,2026-03-08,Skyline Ventures,Dubai,Keyboard,Accessories,15,1000,15000,Linda,Bank Transfer
+SO-00319,2026-03-08,Gulf Merchants,Dubai,Wireless Charger,Accessories,2,1200,2400,James,Bank Transfer
+SO-00320,2026-03-09,Customer Client 24,Al Ain,Stapler,Office Supplies,2,100,200,James,Online Payment
+SO-00347,2026-03-09,Desert Star LLC,Al Ain,Laptop,Electronics,3,50000,150000,Karen,Cash
+SO-00383,2026-03-09,Customer Client 10,Al Ain,Laptop Stand,Accessories,2,1800,3600,Robert,Bank Transfer
+SO-00401,2026-03-09,ABC Trading,Dubai,Laptop,Electronics,1,50000,50000,Robert,Card
+SO-00374,2026-03-09,HyperMax,Dubai,Office Chair,Furniture,3,6000,18000,Karen,Card
+SO-00276,2026-03-09,Omega Systems,Dubai,HDMI Cable,Accessories,2,200,400,William,Online Payment
+SO-00362,2026-03-09,HyperMax,Dubai,Whiteboard,Furniture,3,1200,3600,Sarah,Online Payment
+SO-00262,2026-03-09,ABC Trading,Dubai,Mouse,Accessories,3,500,1500,James,Online Payment
+SO-00334,2026-03-09,Zenith Digital,Dubai,External Hard Drive,Accessories,5,3500,17500,Michael,Bank Transfer
+SO-00285,2026-03-10,Apex Distributors,Al Ain,Notebooks Pack,Office Supplies,3,120,360,Linda,Card
+SO-00293,2026-03-10,Global Mart,Sharjah,HDMI Cable,Accessories,15,200,3000,William,Online Payment
+SO-00349,2026-03-10,Elite Enterprises,Sharjah,Projector,Electronics,3,25000,75000,William,Bank Transfer
+SO-00323,2026-03-10,ABC Trading,Dubai,Office Chair,Furniture,2,6000,12000,James,Card
+SO-00330,2026-03-10,Customer Client 24,Al Ain,External Hard Drive,Accessories,5,3500,17500,David,Online Payment
+SO-00359,2026-03-10,ABC Trading,Dubai,Desk Organizer,Office Supplies,10,300,3000,Sarah,Card
+SO-00365,2026-03-11,XYZ Stores,Abu Dhabi,Web Camera,Accessories,3,2500,7500,Emily,Online Payment
+SO-00278,2026-03-11,Skyline Ventures,Dubai,Keyboard,Accessories,5,1000,5000,William,Online Payment
+SO-00268,2026-03-12,Elite Enterprises,Sharjah,Office Chair,Furniture,1,6000,6000,Robert,Bank Transfer
+SO-00376,2026-03-12,Global Mart,Sharjah,Headphones,Accessories,1,1500,1500,David,Card
+SO-00338,2026-03-12,Gulf Merchants,Dubai,Paper Reams,Office Supplies,5,150,750,Linda,Cash
+SO-00377,2026-03-12,Customer Client 6,Dubai,Keyboard,Accessories,10,1000,10000,Linda,Bank Transfer
+SO-00275,2026-03-12,Tech Solutions,Dubai,Desk Lamp,Furniture,2,800,1600,John,Online Payment
+SO-00353,2026-03-12,XYZ Stores,Abu Dhabi,Pens Box,Office Supplies,10,80,800,James,Cash
+SO-00355,2026-03-13,Global Mart,Sharjah,Printer,Electronics,1,8000,8000,David,Cash
+SO-00350,2026-03-13,Vanguard Group,Abu Dhabi,Mouse,Accessories,10,500,5000,Robert,Cash
+SO-00324,2026-03-13,Global Mart,Sharjah,Notebooks Pack,Office Supplies,1,120,120,Linda,Bank Transfer
+SO-00329,2026-03-13,Customer Client 5,Fujairah,Laptop,Electronics,2,50000,100000,Linda,Bank Transfer
+SO-00388,2026-03-14,Apex Distributors,Al Ain,Keyboard,Accessories,5,1000,5000,William,Card
+SO-00391,2026-03-14,Customer Client 15,Sharjah,USB Hub,Accessories,5,800,4000,Michael,Cash
+SO-00403,2026-03-15,Customer Client 24,Al Ain,Cloud Storage Plan,Software,1,600,600,James,Bank Transfer
+SO-00259,2026-03-15,XYZ Stores,Abu Dhabi,USB Hub,Accessories,5,800,4000,Linda,Online Payment
+SO-00300,2026-03-15,Desert Star LLC,Al Ain,External Hard Drive,Accessories,15,3500,52500,Emily,Cash
+SO-00375,2026-03-15,Customer Client 5,Fujairah,Pens Box,Office Supplies,10,80,800,William,Card
+SO-00302,2026-03-15,Smart Buy,Abu Dhabi,HDMI Cable,Accessories,20,200,4000,William,Card
+SO-00364,2026-03-15,Customer Client 12,Abu Dhabi,Notebooks Pack,Office Supplies,10,120,1200,Michael,Bank Transfer
+SO-00378,2026-03-16,Skyline Ventures,Dubai,USB Hub,Accessories,3,800,2400,David,Bank Transfer
+SO-00327,2026-03-16,Global Mart,Sharjah,Monitor,Electronics,1,12000,12000,Sarah,Card
+SO-00283,2026-03-16,Customer Client 9,Abu Dhabi,Desk Organizer,Office Supplies,3,300,900,Emily,Cash
+SO-00264,2026-03-16,Customer Client 24,Al Ain,Monitor,Electronics,2,12000,24000,John,Cash
+SO-00380,2026-03-17,Global Mart,Sharjah,Office Chair,Furniture,2,6000,12000,Linda,Card
+SO-00318,2026-03-17,Vanguard Group,Abu Dhabi,Filing Cabinet,Furniture,2,4500,9000,Karen,Bank Transfer
+SO-00304,2026-03-17,Elite Enterprises,Sharjah,Mouse,Accessories,1,500,500,William,Card
+SO-00280,2026-03-17,Prime Retail,Ajman,Laptop Stand,Accessories,3,1800,5400,William,Bank Transfer
+SO-00274,2026-03-17,Peak Industries,Sharjah,Office Chair,Furniture,2,6000,12000,Linda,Cash
+SO-00371,2026-03-18,Skyline Ventures,Dubai,Laptop Stand,Accessories,10,1800,18000,David,Cash
+SO-00267,2026-03-18,Apex Distributors,Al Ain,Mouse,Accessories,3,500,1500,Robert,Online Payment
+SO-00291,2026-03-18,XYZ Stores,Abu Dhabi,Headphones,Accessories,20,1500,30000,Michael,Cash
+SO-00389,2026-03-18,ABC Trading,Dubai,Keyboard,Accessories,3,1000,3000,Linda,Cash
+SO-00395,2026-03-18,Zenith Digital,Dubai,Notebooks Pack,Office Supplies,20,120,2400,Sarah,Bank Transfer
+SO-00393,2026-03-18,Apex Distributors,Al Ain,Standing Desk,Furniture,3,18000,54000,Linda,Cash
+SO-00314,2026-03-18,XYZ Stores,Abu Dhabi,HDMI Cable,Accessories,3,200,600,Michael,Bank Transfer
+SO-00299,2026-03-19,Global Mart,Sharjah,Pens Box,Office Supplies,2,80,160,John,Cash
+SO-00392,2026-03-19,XYZ Stores,Abu Dhabi,Laptop,Electronics,1,50000,50000,Emily,Card
+SO-00394,2026-03-19,Smart Buy,Abu Dhabi,Tablet,Electronics,3,15000,45000,John,Online Payment
+SO-00296,2026-03-19,Customer Client 18,Sharjah,Paper Reams,Office Supplies,5,150,750,James,Bank Transfer
+SO-00343,2026-03-19,Global Mart,Sharjah,Pens Box,Office Supplies,20,80,1600,David,Cash
+SO-00373,2026-03-19,Customer Client 9,Abu Dhabi,Headphones,Accessories,1,1500,1500,John,Cash
+SO-00305,2026-03-19,Global Mart,Sharjah,Wireless Charger,Accessories,5,1200,6000,David,Card
+SO-00284,2026-03-19,Tech Solutions,Dubai,Printer,Electronics,1,8000,8000,Emily,Cash
+SO-00287,2026-03-20,Gulf Merchants,Dubai,Laptop Stand,Accessories,2,1800,3600,Sarah,Cash
+SO-00385,2026-03-20,Global Mart,Sharjah,Printer,Electronics,2,8000,16000,Karen,Card
+SO-00399,2026-03-20,Skyline Ventures,Dubai,Laptop,Electronics,2,50000,100000,Karen,Bank Transfer
+SO-00257,2026-03-21,Tech Solutions,Dubai,Paper Reams,Office Supplies,15,150,2250,John,Online Payment
+SO-00301,2026-03-21,XYZ Stores,Abu Dhabi,Keyboard,Accessories,2,1000,2000,Linda,Card
+SO-00312,2026-03-21,Smart Buy,Abu Dhabi,Projector,Electronics,3,25000,75000,Michael,Card
+SO-00405,2026-03-21,Customer Client 9,Abu Dhabi,Laptop Stand,Accessories,5,1800,9000,Sarah,Online Payment
+SO-00281,2026-03-22,XYZ Stores,Abu Dhabi,Laptop,Electronics,2,50000,100000,William,Bank Transfer
+SO-00360,2026-03-22,XYZ Stores,Abu Dhabi,Monitor,Electronics,2,12000,24000,Linda,Card
+SO-00369,2026-03-22,Global Mart,Sharjah,Laptop,Electronics,2,50000,100000,Michael,Online Payment
+SO-00404,2026-03-23,Global Mart,Sharjah,Desk Lamp,Furniture,1,800,800,David,Online Payment
+SO-00306,2026-03-23,HyperMax,Dubai,USB Hub,Accessories,20,800,16000,John,Online Payment
+SO-00308,2026-03-24,Customer Client 12,Abu Dhabi,Mouse,Accessories,15,500,7500,Sarah,Cash
+SO-00317,2026-03-24,XYZ Stores,Abu Dhabi,Ethernet Switch,Accessories,2,2200,4400,John,Card
+SO-00332,2026-03-24,Elite Enterprises,Sharjah,Desk Lamp,Furniture,3,800,2400,James,Bank Transfer
+SO-00372,2026-03-25,Global Mart,Sharjah,Keyboard,Accessories,15,1000,15000,Karen,Cash
+SO-00303,2026-03-25,Omega Systems,Dubai,Office Suite License,Software,1,4500,4500,William,Online Payment
+SO-00290,2026-03-25,Falcon Trading,Abu Dhabi,Mouse,Accessories,20,500,10000,David,Card
+SO-00354,2026-03-25,Peak Industries,Sharjah,Mouse,Accessories,1,500,500,Emily,Card
+SO-00352,2026-03-25,XYZ Stores,Abu Dhabi,Cloud Storage Plan,Software,10,600,6000,Linda,Card
+SO-00331,2026-03-25,Tech Solutions,Dubai,Monitor,Electronics,2,12000,24000,John,Card
+SO-00402,2026-03-25,Omega Systems,Dubai,Paper Reams,Office Supplies,3,150,450,James,Online Payment
+SO-00398,2026-03-26,Customer Client 10,Al Ain,Mouse,Accessories,10,500,5000,Robert,Bank Transfer
+SO-00370,2026-03-26,Omega Systems,Dubai,HDMI Cable,Accessories,10,200,2000,James,Online Payment
+SO-00381,2026-03-26,XYZ Stores,Abu Dhabi,Paper Reams,Office Supplies,15,150,2250,James,Online Payment
+SO-00272,2026-03-26,ABC Trading,Dubai,Bookshelf,Furniture,3,3500,10500,Michael,Bank Transfer
+SO-00313,2026-03-27,Global Mart,Sharjah,HDMI Cable,Accessories,15,200,3000,William,Online Payment
+SO-00256,2026-03-27,ABC Trading,Dubai,Mouse,Accessories,1,500,500,Karen,Bank Transfer
+SO-00336,2026-03-27,ABC Trading,Dubai,Cloud Storage Plan,Software,1,600,600,James,Card
+SO-00337,2026-03-27,ABC Trading,Dubai,Mouse,Accessories,2,500,1000,William,Online Payment
+SO-00386,2026-03-27,Omega Systems,Dubai,Mouse,Accessories,15,500,7500,Michael,Bank Transfer
+SO-00342,2026-03-27,Tech Solutions,Dubai,Mouse,Accessories,3,500,1500,James,Online Payment
+SO-00292,2026-03-27,XYZ Stores,Abu Dhabi,Antivirus Subscription,Software,5,1200,6000,John,Cash
+SO-00396,2026-03-28,Global Mart,Sharjah,Mouse,Accessories,5,500,2500,David,Card
+SO-00279,2026-03-28,HyperMax,Dubai,Keyboard,Accessories,10,1000,10000,Robert,Online Payment
+SO-00326,2026-03-28,Customer Client 2,Dubai,Desk Lamp,Furniture,3,800,2400,William,Card
+SO-00390,2026-03-28,ABC Trading,Dubai,Keyboard,Accessories,20,1000,20000,James,Online Payment
+SO-00294,2026-03-29,Prime Retail,Ajman,Laptop,Electronics,1,50000,50000,David,Bank Transfer
+SO-00311,2026-03-29,Customer Client 30,Ras Al Khaimah,Tablet,Electronics,2,15000,30000,David,Card
+SO-00258,2026-03-29,Global Mart,Sharjah,HDMI Cable,Accessories,2,200,400,James,Bank Transfer
+SO-00346,2026-03-29,XYZ Stores,Abu Dhabi,Keyboard,Accessories,20,1000,20000,Karen,Online Payment
+SO-00341,2026-03-30,XYZ Stores,Abu Dhabi,Keyboard,Accessories,10,1000,10000,William,Bank Transfer
+SO-00367,2026-03-30,XYZ Stores,Abu Dhabi,Pens Box,Office Supplies,20,80,1600,William,Cash
+SO-00273,2026-03-30,Alpha Logistics,Fujairah,Stapler,Office Supplies,20,100,2000,Emily,Bank Transfer
+SO-00328,2026-03-31,Prime Retail,Ajman,Laptop,Electronics,3,50000,150000,Karen,Card
+SO-00366,2026-03-31,Global Mart,Sharjah,Office Suite License,Software,10,4500,45000,Robert,Cash
+SO-00356,2026-03-31,Customer Client 2,Dubai,Laptop,Electronics,1,50000,50000,Michael,Cash
+SO-00265,2026-03-31,XYZ Stores,Abu Dhabi,Keyboard,Accessories,10,1000,10000,Robert,Cash
+SO-00368,2026-03-31,Apex Distributors,Al Ain,Office Suite License,Software,5,4500,22500,David,Online Payment
+SO-00400,2026-03-31,Customer Client 11,Dubai,Mouse,Accessories,2,500,1000,James,Cash
+SO-00289,2026-03-31,Tech Solutions,Dubai,Notebooks Pack,Office Supplies,5,120,600,Linda,Card
+SO-00537,2026-04-01,XYZ Stores,Abu Dhabi,Keyboard,Accessories,15,1000,15000,Robert,Bank Transfer
+SO-00413,2026-04-01,Customer Client 12,Abu Dhabi,Mouse,Accessories,20,500,10000,James,Card
+SO-00550,2026-04-01,Customer Client 14,Ajman,Filing Cabinet,Furniture,3,4500,13500,Linda,Card
+SO-00541,2026-04-01,ABC Trading,Dubai,Keyboard,Accessories,15,1000,15000,John,Card
+SO-00412,2026-04-01,ABC Trading,Dubai,Whiteboard,Furniture,1,1200,1200,William,Online Payment
+SO-00466,2026-04-01,Prime Retail,Ajman,Laptop Stand,Accessories,3,1800,5400,Karen,Card
+SO-00481,2026-04-01,Skyline Ventures,Dubai,Mouse,Accessories,3,500,1500,Emily,Cash
+SO-00472,2026-04-01,XYZ Stores,Abu Dhabi,Graphics Editor Pro,Software,2,9500,19000,Robert,Card
+SO-00585,2026-04-01,Gulf Merchants,Dubai,Mouse,Accessories,2,500,1000,Emily,Card
+SO-00436,2026-04-02,Prime Retail,Ajman,Tablet,Electronics,2,15000,30000,Michael,Card
+SO-00446,2026-04-02,HyperMax,Dubai,Headphones,Accessories,15,1500,22500,Robert,Online Payment
+SO-00493,2026-04-02,XYZ Stores,Abu Dhabi,Keyboard,Accessories,20,1000,20000,Emily,Cash
+SO-00536,2026-04-02,Tech Solutions,Dubai,Mouse,Accessories,3,500,1500,William,Card
+SO-00427,2026-04-03,XYZ Stores,Abu Dhabi,Keyboard,Accessories,10,1000,10000,Robert,Online Payment
+SO-00560,2026-04-03,ABC Trading,Dubai,Pens Box,Office Supplies,20,80,1600,William,Card
+SO-00410,2026-04-03,Tech Solutions,Dubai,Notebooks Pack,Office Supplies,15,120,1800,Michael,Cash
+SO-00498,2026-04-03,Beta Corp,Ras Al Khaimah,Keyboard,Accessories,20,1000,20000,Karen,Bank Transfer
+SO-00551,2026-04-03,Vanguard Group,Abu Dhabi,Mouse,Accessories,3,500,1500,Sarah,Online Payment
+SO-00557,2026-04-04,ABC Trading,Dubai,Keyboard,Accessories,1,1000,1000,James,Online Payment
+SO-00422,2026-04-04,Omega Systems,Dubai,Mouse,Accessories,10,500,5000,John,Bank Transfer
+SO-00542,2026-04-04,Customer Client 8,Dubai,Mouse,Accessories,5,500,2500,Emily,Cash
+SO-00408,2026-04-04,Customer Client 18,Sharjah,Keyboard,Accessories,5,1000,5000,Linda,Cash
+SO-00497,2026-04-04,XYZ Stores,Abu Dhabi,Keyboard,Accessories,2,1000,2000,John,Online Payment
+SO-00439,2026-04-04,ABC Trading,Dubai,Keyboard,Accessories,2,1000,2000,William,Cash
+SO-00489,2026-04-05,Apex Distributors,Al Ain,Mouse,Accessories,3,500,1500,Karen,Online Payment
+SO-00443,2026-04-05,ABC Trading,Dubai,Keyboard,Accessories,10,1000,10000,Robert,Cash
+SO-00494,2026-04-05,Global Mart,Sharjah,Ethernet Switch,Accessories,5,2200,11000,Karen,Card
+SO-00538,2026-04-05,Omega Systems,Dubai,Monitor,Electronics,1,12000,12000,David,Cash
+SO-00501,2026-04-05,Omega Systems,Dubai,Antivirus Subscription,Software,1,1200,1200,David,Cash
+SO-00432,2026-04-05,ABC Trading,Dubai,Cloud Storage Plan,Software,1,600,600,Robert,Online Payment
+SO-00507,2026-04-05,Customer Client 5,Fujairah,Monitor,Electronics,2,12000,24000,James,Cash
+SO-00504,2026-04-05,Customer Client 26,Fujairah,Monitor,Electronics,3,12000,36000,Sarah,Cash
+SO-00510,2026-04-05,ABC Trading,Dubai,Keyboard,Accessories,2,1000,2000,Sarah,Cash
+SO-00487,2026-04-06,XYZ Stores,Abu Dhabi,Keyboard,Accessories,5,1000,5000,William,Bank Transfer
+SO-00467,2026-04-06,XYZ Stores,Abu Dhabi,Laptop,Electronics,3,50000,150000,John,Card
+SO-00480,2026-04-06,Gulf Merchants,Dubai,Paper Reams,Office Supplies,15,150,2250,Robert,Online Payment
+SO-00484,2026-04-06,Customer Client 17,Fujairah,Mouse,Accessories,3,500,1500,John,Bank Transfer
+SO-00451,2026-04-06,Tech Solutions,Dubai,Mouse,Accessories,10,500,5000,Robert,Card
+SO-00476,2026-04-06,Alpha Logistics,Fujairah,Office Suite License,Software,5,4500,22500,Sarah,Card
+SO-00425,2026-04-07,Customer Client 7,Ajman,Web Camera,Accessories,10,2500,25000,Emily,Online Payment
+SO-00490,2026-04-07,XYZ Stores,Abu Dhabi,Paper Reams,Office Supplies,3,150,450,David,Online Payment
+SO-00461,2026-04-07,Apex Distributors,Al Ain,Keyboard,Accessories,1,1000,1000,Karen,Card
+SO-00582,2026-04-07,Gulf Merchants,Dubai,Mouse,Accessories,15,500,7500,Michael,Bank Transfer
+SO-00508,2026-04-07,Customer Client 12,Abu Dhabi,Web Camera,Accessories,15,2500,37500,Linda,Bank Transfer
+SO-00445,2026-04-07,Prime Retail,Ajman,Mouse,Accessories,2,500,1000,Emily,Cash
+SO-00511,2026-04-08,Global Mart,Sharjah,Pens Box,Office Supplies,2,80,160,Emily,Bank Transfer
+SO-00450,2026-04-08,Customer Client 6,Dubai,Cloud Storage Plan,Software,1,600,600,Michael,Cash
+SO-00429,2026-04-08,ABC Trading,Dubai,USB Hub,Accessories,10,800,8000,Karen,Cash
+SO-00419,2026-04-08,XYZ Stores,Abu Dhabi,Office Chair,Furniture,3,6000,18000,Karen,Bank Transfer
+SO-00528,2026-04-08,Customer Client 22,Ajman,Monitor,Electronics,2,12000,24000,Robert,Bank Transfer
+SO-00485,2026-04-09,XYZ Stores,Abu Dhabi,Tablet,Electronics,1,15000,15000,David,Cash
+SO-00435,2026-04-09,Desert Star LLC,Al Ain,Desk Organizer,Office Supplies,1,300,300,Sarah,Cash
+SO-00574,2026-04-09,Customer Client 17,Fujairah,Projector,Electronics,1,25000,25000,Linda,Card
+SO-00522,2026-04-09,HyperMax,Dubai,Cloud Storage Plan,Software,2,600,1200,John,Online Payment
+SO-00529,2026-04-09,ABC Trading,Dubai,HDMI Cable,Accessories,1,200,200,Karen,Cash
+SO-00463,2026-04-09,XYZ Stores,Abu Dhabi,Notebooks Pack,Office Supplies,20,120,2400,William,Card
+SO-00524,2026-04-09,Zenith Digital,Dubai,Mouse,Accessories,10,500,5000,Karen,Card
+SO-00433,2026-04-09,Peak Industries,Sharjah,Filing Cabinet,Furniture,3,4500,13500,David,Online Payment
+SO-00521,2026-04-10,Global Mart,Sharjah,Laptop,Electronics,3,50000,150000,Robert,Bank Transfer
+SO-00547,2026-04-10,HyperMax,Dubai,Keyboard,Accessories,10,1000,10000,Sarah,Bank Transfer
+SO-00430,2026-04-10,Peak Industries,Sharjah,Mouse,Accessories,15,500,7500,John,Card
+SO-00552,2026-04-10,ABC Trading,Dubai,Keyboard,Accessories,20,1000,20000,John,Bank Transfer
+SO-00539,2026-04-10,HyperMax,Dubai,Whiteboard,Furniture,3,1200,3600,Robert,Online Payment
+SO-00506,2026-04-10,Customer Client 18,Sharjah,Pens Box,Office Supplies,15,80,1200,David,Card
+SO-00444,2026-04-11,Tech Solutions,Dubai,Stapler,Office Supplies,15,100,1500,Emily,Cash
+SO-00499,2026-04-11,Elite Enterprises,Sharjah,Web Camera,Accessories,10,2500,25000,Robert,Bank Transfer
+SO-00533,2026-04-11,ABC Trading,Dubai,Mouse,Accessories,5,500,2500,Emily,Card
+SO-00438,2026-04-11,Vanguard Group,Abu Dhabi,Monitor,Electronics,2,12000,24000,David,Bank Transfer
+SO-00525,2026-04-11,Beta Corp,Ras Al Khaimah,Cloud Storage Plan,Software,10,600,6000,Robert,Bank Transfer
+SO-00565,2026-04-11,XYZ Stores,Abu Dhabi,Office Chair,Furniture,3,6000,18000,James,Online Payment
+SO-00475,2026-04-11,XYZ Stores,Abu Dhabi,Stapler,Office Supplies,5,100,500,Linda,Bank Transfer
+SO-00580,2026-04-11,ABC Trading,Dubai,Mouse,Accessories,5,500,2500,Karen,Bank Transfer
+SO-00572,2026-04-11,Customer Client 10,Al Ain,Laptop,Electronics,3,50000,150000,William,Bank Transfer
+SO-00415,2026-04-11,ABC Trading,Dubai,Tablet,Electronics,1,15000,15000,Michael,Cash
+SO-00486,2026-04-11,Apex Distributors,Al Ain,Notebooks Pack,Office Supplies,2,120,240,Karen,Online Payment
+SO-00514,2026-04-12,XYZ Stores,Abu Dhabi,Antivirus Subscription,Software,1,1200,1200,Emily,Cash
+SO-00553,2026-04-12,ABC Trading,Dubai,Mouse,Accessories,20,500,10000,John,Cash
+SO-00454,2026-04-12,Desert Star LLC,Al Ain,Monitor,Electronics,2,12000,24000,Michael,Cash
+SO-00513,2026-04-12,XYZ Stores,Abu Dhabi,HDMI Cable,Accessories,10,200,2000,William,Bank Transfer
+SO-00465,2026-04-12,XYZ Stores,Abu Dhabi,Keyboard,Accessories,1,1000,1000,Robert,Card
+SO-00515,2026-04-13,Elite Enterprises,Sharjah,Cloud Storage Plan,Software,2,600,1200,Sarah,Card
+SO-00440,2026-04-13,Customer Client 20,Ras Al Khaimah,Laptop,Electronics,2,50000,100000,Robert,Cash
+SO-00411,2026-04-13,Nova Soft,Ajman,Keyboard,Accessories,5,1000,5000,David,Cash
+SO-00477,2026-04-13,Global Mart,Sharjah,Mouse,Accessories,2,500,1000,John,Online Payment
+SO-00455,2026-04-13,Smart Buy,Abu Dhabi,Laptop,Electronics,1,50000,50000,Linda,Cash
+SO-00568,2026-04-14,ABC Trading,Dubai,Mouse,Accessories,20,500,10000,Karen,Bank Transfer
+SO-00531,2026-04-14,ABC Trading,Dubai,Mouse,Accessories,2,500,1000,Robert,Online Payment
+SO-00409,2026-04-14,ABC Trading,Dubai,Notebooks Pack,Office Supplies,3,120,360,Michael,Bank Transfer
+SO-00426,2026-04-14,Smart Buy,Abu Dhabi,Laptop Stand,Accessories,10,1800,18000,Michael,Bank Transfer
+SO-00519,2026-04-15,Global Mart,Sharjah,Pens Box,Office Supplies,10,80,800,Karen,Online Payment
+SO-00452,2026-04-15,Customer Client 17,Fujairah,Mouse,Accessories,1,500,500,Michael,Bank Transfer
+SO-00556,2026-04-15,Skyline Ventures,Dubai,HDMI Cable,Accessories,20,200,4000,James,Card
+SO-00567,2026-04-15,Nova Soft,Ajman,Notebooks Pack,Office Supplies,1,120,120,David,Online Payment
+SO-00442,2026-04-15,Customer Client 5,Fujairah,Cloud Storage Plan,Software,2,600,1200,William,Card
+SO-00544,2026-04-15,XYZ Stores,Abu Dhabi,HDMI Cable,Accessories,15,200,3000,Michael,Card
+SO-00434,2026-04-15,HyperMax,Dubai,Standing Desk,Furniture,1,18000,18000,Robert,Card
+SO-00471,2026-04-16,XYZ Stores,Abu Dhabi,Whiteboard,Furniture,1,1200,1200,John,Online Payment
+SO-00414,2026-04-16,ABC Trading,Dubai,Stapler,Office Supplies,20,100,2000,David,Cash
+SO-00527,2026-04-16,Vanguard Group,Abu Dhabi,Office Chair,Furniture,1,6000,6000,Robert,Cash
+SO-00530,2026-04-16,Customer Client 20,Ras Al Khaimah,Pens Box,Office Supplies,5,80,400,William,Bank Transfer
+SO-00431,2026-04-16,Customer Client 6,Dubai,Desk Organizer,Office Supplies,3,300,900,Michael,Bank Transfer
+SO-00483,2026-04-16,Tech Solutions,Dubai,Mouse,Accessories,20,500,10000,Linda,Card
+SO-00577,2026-04-17,Apex Distributors,Al Ain,Desk Lamp,Furniture,2,800,1600,William,Card
+SO-00416,2026-04-17,XYZ Stores,Abu Dhabi,USB Hub,Accessories,3,800,2400,Sarah,Card
+SO-00579,2026-04-17,Skyline Ventures,Dubai,Antivirus Subscription,Software,2,1200,2400,Emily,Online Payment
+SO-00500,2026-04-17,ABC Trading,Dubai,Office Suite License,Software,10,4500,45000,David,Online Payment
+SO-00495,2026-04-18,Customer Client 12,Abu Dhabi,Wireless Charger,Accessories,5,1200,6000,William,Online Payment
+SO-00441,2026-04-18,XYZ Stores,Abu Dhabi,Laptop,Electronics,3,50000,150000,Emily,Card
+SO-00549,2026-04-18,Desert Star LLC,Al Ain,HDMI Cable,Accessories,3,200,600,Sarah,Cash
+SO-00448,2026-04-19,ABC Trading,Dubai,Laptop,Electronics,2,50000,100000,Emily,Bank Transfer
+SO-00520,2026-04-19,Gulf Merchants,Dubai,Tablet,Electronics,3,15000,45000,Karen,Bank Transfer
+SO-00428,2026-04-19,Apex Distributors,Al Ain,Stapler,Office Supplies,20,100,2000,Sarah,Cash
+SO-00496,2026-04-19,ABC Trading,Dubai,Projector,Electronics,3,25000,75000,John,Card
+SO-00470,2026-04-19,Customer Client 24,Al Ain,External Hard Drive,Accessories,10,3500,35000,Emily,Card
+SO-00468,2026-04-19,Customer Client 14,Ajman,Keyboard,Accessories,2,1000,2000,Sarah,Bank Transfer
+SO-00532,2026-04-19,Customer Client 19,Abu Dhabi,Desk Organizer,Office Supplies,2,300,600,David,Online Payment
+SO-00407,2026-04-19,Customer Client 26,Fujairah,Pens Box,Office Supplies,20,80,1600,John,Cash
+SO-00543,2026-04-20,Falcon Trading,Abu Dhabi,Mouse,Accessories,1,500,500,David,Online Payment
+SO-00546,2026-04-20,Customer Client 29,Al Ain,Mouse,Accessories,10,500,5000,Karen,Cash
+SO-00518,2026-04-20,Falcon Trading,Abu Dhabi,Laptop,Electronics,2,50000,100000,James,Bank Transfer
+SO-00535,2026-04-20,Tech Solutions,Dubai,Headphones,Accessories,5,1500,7500,James,Cash
+SO-00462,2026-04-21,Customer Client 24,Al Ain,Office Chair,Furniture,2,6000,12000,John,Cash
+SO-00503,2026-04-21,Prime Retail,Ajman,Mouse,Accessories,2,500,1000,Emily,Online Payment
+SO-00492,2026-04-21,Tech Solutions,Dubai,Tablet,Electronics,2,15000,30000,Michael,Online Payment
+SO-00464,2026-04-21,Tech Solutions,Dubai,Cloud Storage Plan,Software,5,600,3000,Linda,Online Payment
+SO-00516,2026-04-22,Tech Solutions,Dubai,Wireless Charger,Accessories,1,1200,1200,John,Online Payment
+SO-00562,2026-04-22,Gulf Merchants,Dubai,Pens Box,Office Supplies,15,80,1200,James,Card
+SO-00488,2026-04-22,ABC Trading,Dubai,Mouse,Accessories,5,500,2500,Karen,Online Payment
+SO-00561,2026-04-22,Desert Star LLC,Al Ain,Pens Box,Office Supplies,10,80,800,David,Online Payment
+SO-00523,2026-04-22,Vanguard Group,Abu Dhabi,Mouse,Accessories,15,500,7500,Linda,Bank Transfer
+SO-00584,2026-04-22,Customer Client 17,Fujairah,Headphones,Accessories,20,1500,30000,John,Cash
+SO-00545,2026-04-23,Gulf Merchants,Dubai,Mouse,Accessories,15,500,7500,William,Bank Transfer
+SO-00573,2026-04-23,XYZ Stores,Abu Dhabi,External Hard Drive,Accessories,2,3500,7000,James,Cash
+SO-00583,2026-04-23,Elite Enterprises,Sharjah,HDMI Cable,Accessories,10,200,2000,Karen,Online Payment
+SO-00578,2026-04-23,ABC Trading,Dubai,Mouse,Accessories,5,500,2500,Karen,Bank Transfer
+SO-00575,2026-04-23,Tech Solutions,Dubai,Mouse,Accessories,15,500,7500,Karen,Cash
+SO-00571,2026-04-23,ABC Trading,Dubai,Mouse,Accessories,20,500,10000,Sarah,Cash
+SO-00482,2026-04-24,Apex Distributors,Al Ain,Stapler,Office Supplies,5,100,500,Michael,Online Payment
+SO-00447,2026-04-24,HyperMax,Dubai,Mouse,Accessories,15,500,7500,James,Cash
+SO-00421,2026-04-24,ABC Trading,Dubai,Cloud Storage Plan,Software,2,600,1200,Linda,Online Payment
+SO-00505,2026-04-24,Customer Client 28,Ajman,Tablet,Electronics,1,15000,15000,Robert,Bank Transfer
+SO-00420,2026-04-25,Gulf Merchants,Dubai,Monitor,Electronics,1,12000,12000,William,Card
+SO-00418,2026-04-25,Tech Solutions,Dubai,Printer,Electronics,2,8000,16000,Robert,Card
+SO-00534,2026-04-25,XYZ Stores,Abu Dhabi,External Hard Drive,Accessories,20,3500,70000,David,Card
+SO-00576,2026-04-25,Omega Systems,Dubai,External Hard Drive,Accessories,2,3500,7000,Linda,Cash
+SO-00424,2026-04-25,ABC Trading,Dubai,Desk Lamp,Furniture,1,800,800,John,Bank Transfer
+SO-00456,2026-04-26,ABC Trading,Dubai,Cloud Storage Plan,Software,2,600,1200,Michael,Card
+SO-00502,2026-04-26,Customer Client 24,Al Ain,Printer,Electronics,2,8000,16000,Emily,Online Payment
+SO-00469,2026-04-26,ABC Trading,Dubai,Pens Box,Office Supplies,15,80,1200,Robert,Card
+SO-00558,2026-04-26,Tech Solutions,Dubai,Cloud Storage Plan,Software,5,600,3000,Karen,Cash
+SO-00453,2026-04-27,Customer Client 18,Sharjah,Monitor,Electronics,1,12000,12000,David,Card
+SO-00509,2026-04-27,XYZ Stores,Abu Dhabi,Mouse,Accessories,3,500,1500,William,Online Payment
+SO-00570,2026-04-27,Customer Client 16,Ras Al Khaimah,HDMI Cable,Accessories,3,200,600,William,Online Payment
+SO-00566,2026-04-27,Apex Distributors,Al Ain,Graphics Editor Pro,Software,10,9500,95000,David,Online Payment
+SO-00406,2026-04-27,Global Mart,Sharjah,Laptop,Electronics,2,50000,100000,William,Card
+SO-00457,2026-04-27,Beta Corp,Ras Al Khaimah,Notebooks Pack,Office Supplies,1,120,120,Karen,Bank Transfer
+SO-00460,2026-04-27,Tech Solutions,Dubai,Pens Box,Office Supplies,5,80,400,Michael,Bank Transfer
+SO-00512,2026-04-27,Beta Corp,Ras Al Khaimah,Mouse,Accessories,15,500,7500,John,Card
+SO-00548,2026-04-27,Skyline Ventures,Dubai,Web Camera,Accessories,3,2500,7500,Michael,Cash
+SO-00581,2026-04-27,Peak Industries,Sharjah,Stapler,Office Supplies,10,100,1000,Sarah,Card
+SO-00563,2026-04-27,ABC Trading,Dubai,Mouse,Accessories,15,500,7500,Michael,Online Payment
+SO-00478,2026-04-28,Global Mart,Sharjah,Paper Reams,Office Supplies,2,150,300,Karen,Cash
+SO-00491,2026-04-28,Tech Solutions,Dubai,HDMI Cable,Accessories,5,200,1000,Emily,Cash
+SO-00559,2026-04-28,Prime Retail,Ajman,Mouse,Accessories,5,500,2500,Linda,Cash
+SO-00554,2026-04-28,XYZ Stores,Abu Dhabi,Monitor,Electronics,2,12000,24000,Linda,Bank Transfer
+SO-00526,2026-04-28,Customer Client 23,Sharjah,Office Chair,Furniture,1,6000,6000,Emily,Cash
+SO-00564,2026-04-28,ABC Trading,Dubai,Antivirus Subscription,Software,10,1200,12000,Robert,Card
+SO-00474,2026-04-28,ABC Trading,Dubai,Tablet,Electronics,3,15000,45000,James,Cash
+SO-00555,2026-04-29,Global Mart,Sharjah,Keyboard,Accessories,1,1000,1000,James,Online Payment
+SO-00540,2026-04-29,Prime Retail,Ajman,Printer,Electronics,1,8000,8000,Michael,Online Payment
+SO-00459,2026-04-29,Prime Retail,Ajman,Mouse,Accessories,2,500,1000,Karen,Online Payment
+SO-00569,2026-04-29,Falcon Trading,Abu Dhabi,Notebooks Pack,Office Supplies,5,120,600,Robert,Bank Transfer
+SO-00437,2026-04-30,Customer Client 30,Ras Al Khaimah,Desk Organizer,Office Supplies,15,300,4500,James,Card
+SO-00458,2026-04-30,XYZ Stores,Abu Dhabi,Notebooks Pack,Office Supplies,5,120,600,Michael,Cash
+SO-00517,2026-04-30,Alpha Logistics,Fujairah,Graphics Editor Pro,Software,1,9500,9500,Sarah,Bank Transfer
+SO-00473,2026-04-30,ABC Trading,Dubai,Desk Lamp,Furniture,3,800,2400,Michael,Cash
+SO-00423,2026-04-30,Customer Client 19,Abu Dhabi,Standing Desk,Furniture,2,18000,36000,Robert,Card
+SO-00417,2026-04-30,Apex Distributors,Al Ain,Keyboard,Accessories,1,1000,1000,David,Card
+SO-00449,2026-04-30,Zenith Digital,Dubai,Monitor,Electronics,2,12000,24000,Linda,Bank Transfer
+SO-00479,2026-04-30,Nova Soft,Ajman,Mouse,Accessories,2,500,1000,Robert,Bank Transfer
+SO-00770,2026-05-01,Falcon Trading,Abu Dhabi,Projector,Electronics,1,25000,25000,James,Cash
+SO-00747,2026-05-01,HyperMax,Dubai,Office Chair,Furniture,3,6000,18000,Karen,Card
+SO-00691,2026-05-01,Customer Client 20,Ras Al Khaimah,Pens Box,Office Supplies,10,80,800,Sarah,Card
+SO-00726,2026-05-01,ABC Trading,Dubai,Laptop,Electronics,1,50000,50000,Linda,Online Payment
+SO-00608,2026-05-01,Smart Buy,Abu Dhabi,Mouse,Accessories,15,500,7500,Karen,Cash
+SO-00802,2026-05-01,HyperMax,Dubai,Ethernet Switch,Accessories,20,2200,44000,John,Online Payment
+SO-00730,2026-05-01,XYZ Stores,Abu Dhabi,Mouse,Accessories,10,500,5000,Robert,Card
+SO-00805,2026-05-02,Falcon Trading,Abu Dhabi,Printer,Electronics,1,8000,8000,Michael,Cash
+SO-00594,2026-05-02,Omega Systems,Dubai,Mouse,Accessories,20,500,10000,Karen,Bank Transfer
+SO-00763,2026-05-02,Tech Solutions,Dubai,Keyboard,Accessories,20,1000,20000,David,Cash
+SO-00755,2026-05-02,Omega Systems,Dubai,Filing Cabinet,Furniture,3,4500,13500,David,Card
+SO-00606,2026-05-03,Customer Client 9,Abu Dhabi,Laptop,Electronics,3,50000,150000,David,Card
+SO-00797,2026-05-03,Beta Corp,Ras Al Khaimah,Printer,Electronics,1,8000,8000,William,Online Payment
+SO-00714,2026-05-03,XYZ Stores,Abu Dhabi,Printer,Electronics,2,8000,16000,Emily,Online Payment
+SO-00597,2026-05-03,XYZ Stores,Abu Dhabi,Notebooks Pack,Office Supplies,3,120,360,Robert,Bank Transfer
+SO-00700,2026-05-03,XYZ Stores,Abu Dhabi,Stapler,Office Supplies,3,100,300,Linda,Card
+SO-00776,2026-05-03,Alpha Logistics,Fujairah,Paper Reams,Office Supplies,15,150,2250,Sarah,Online Payment
+SO-00671,2026-05-03,XYZ Stores,Abu Dhabi,Pens Box,Office Supplies,15,80,1200,Sarah,Bank Transfer
+SO-00613,2026-05-04,Omega Systems,Dubai,Projector,Electronics,3,25000,75000,William,Cash
+SO-00748,2026-05-04,ABC Trading,Dubai,Mouse,Accessories,3,500,1500,Robert,Card
+SO-00616,2026-05-04,Elite Enterprises,Sharjah,Mouse,Accessories,20,500,10000,William,Online Payment
+SO-00739,2026-05-04,XYZ Stores,Abu Dhabi,Keyboard,Accessories,10,1000,10000,Sarah,Card
+SO-00734,2026-05-04,ABC Trading,Dubai,Standing Desk,Furniture,3,18000,54000,James,Online Payment
+SO-00681,2026-05-04,Desert Star LLC,Al Ain,Mouse,Accessories,1,500,500,Sarah,Online Payment
+SO-00733,2026-05-04,ABC Trading,Dubai,Mouse,Accessories,2,500,1000,John,Card
+SO-00593,2026-05-05,XYZ Stores,Abu Dhabi,Mouse,Accessories,3,500,1500,Linda,Card
+SO-00725,2026-05-05,Elite Enterprises,Sharjah,Office Suite License,Software,5,4500,22500,Linda,Card
+SO-00701,2026-05-05,ABC Trading,Dubai,Mouse,Accessories,15,500,7500,Robert,Bank Transfer
+SO-00697,2026-05-06,XYZ Stores,Abu Dhabi,Notebooks Pack,Office Supplies,3,120,360,David,Card
+SO-00768,2026-05-06,Customer Client 7,Ajman,Pens Box,Office Supplies,10,80,800,Emily,Cash
+SO-00713,2026-05-06,ABC Trading,Dubai,Desk Organizer,Office Supplies,5,300,1500,John,Card
+SO-00637,2026-05-06,Peak Industries,Sharjah,Mouse,Accessories,15,500,7500,Sarah,Online Payment
+SO-00685,2026-05-06,XYZ Stores,Abu Dhabi,Mouse,Accessories,15,500,7500,Emily,Card
+SO-00641,2026-05-06,HyperMax,Dubai,Web Camera,Accessories,10,2500,25000,Karen,Cash
+SO-00762,2026-05-06,Customer Client 10,Al Ain,USB Hub,Accessories,10,800,8000,Michael,Online Payment
+SO-00644,2026-05-06,Omega Systems,Dubai,Desk Lamp,Furniture,1,800,800,Sarah,Online Payment
+SO-00698,2026-05-06,ABC Trading,Dubai,HDMI Cable,Accessories,10,200,2000,John,Cash
+SO-00658,2026-05-06,Customer Client 10,Al Ain,Mouse,Accessories,20,500,10000,Michael,Online Payment
+SO-00709,2026-05-06,XYZ Stores,Abu Dhabi,Laptop,Electronics,1,50000,50000,James,Card
+SO-00679,2026-05-06,XYZ Stores,Abu Dhabi,Antivirus Subscription,Software,2,1200,2400,John,Online Payment
+SO-00662,2026-05-07,HyperMax,Dubai,Wireless Charger,Accessories,15,1200,18000,Sarah,Card
+SO-00711,2026-05-07,Global Mart,Sharjah,Mouse,Accessories,15,500,7500,Linda,Online Payment
+SO-00778,2026-05-07,Desert Star LLC,Al Ain,Graphics Editor Pro,Software,2,9500,19000,Michael,Bank Transfer
+SO-00786,2026-05-07,Customer Client 3,Abu Dhabi,Mouse,Accessories,3,500,1500,James,Card
+SO-00684,2026-05-07,Tech Solutions,Dubai,Tablet,Electronics,2,15000,30000,Emily,Online Payment
+SO-00590,2026-05-07,Customer Client 30,Ras Al Khaimah,Paper Reams,Office Supplies,15,150,2250,Robert,Card
+SO-00766,2026-05-07,XYZ Stores,Abu Dhabi,Ethernet Switch,Accessories,5,2200,11000,Karen,Card
+SO-00777,2026-05-08,Customer Client 30,Ras Al Khaimah,Bookshelf,Furniture,2,3500,7000,Linda,Card
+SO-00803,2026-05-08,Prime Retail,Ajman,USB Hub,Accessories,5,800,4000,Linda,Cash
+SO-00683,2026-05-08,Global Mart,Sharjah,Tablet,Electronics,1,15000,15000,Linda,Online Payment
+SO-00749,2026-05-08,ABC Trading,Dubai,Standing Desk,Furniture,2,18000,36000,Karen,Card
+SO-00721,2026-05-08,XYZ Stores,Abu Dhabi,Office Suite License,Software,5,4500,22500,Karen,Cash
+SO-00643,2026-05-08,Customer Client 9,Abu Dhabi,Desk Lamp,Furniture,1,800,800,Karen,Bank Transfer
+SO-00649,2026-05-08,Tech Solutions,Dubai,Printer,Electronics,3,8000,24000,Karen,Cash
+SO-00667,2026-05-09,ABC Trading,Dubai,Office Chair,Furniture,1,6000,6000,William,Bank Transfer
+SO-00631,2026-05-09,Gulf Merchants,Dubai,Keyboard,Accessories,10,1000,10000,Robert,Online Payment
+SO-00716,2026-05-09,Prime Retail,Ajman,Keyboard,Accessories,2,1000,2000,Emily,Online Payment
+SO-00760,2026-05-09,Elite Enterprises,Sharjah,Mouse,Accessories,1,500,500,James,Online Payment
+SO-00712,2026-05-09,ABC Trading,Dubai,Keyboard,Accessories,1,1000,1000,William,Cash
+SO-00720,2026-05-09,XYZ Stores,Abu Dhabi,Printer,Electronics,1,8000,8000,Sarah,Cash
+SO-00793,2026-05-10,Customer Client 29,Al Ain,Mouse,Accessories,5,500,2500,Linda,Cash
+SO-00707,2026-05-10,Customer Client 10,Al Ain,Laptop,Electronics,3,50000,150000,Sarah,Cash
+SO-00673,2026-05-10,Nova Soft,Ajman,Printer,Electronics,1,8000,8000,William,Card
+SO-00619,2026-05-10,Global Mart,Sharjah,External Hard Drive,Accessories,5,3500,17500,Robert,Bank Transfer
+SO-00614,2026-05-10,Customer Client 29,Al Ain,Desk Organizer,Office Supplies,3,300,900,Sarah,Online Payment
+SO-00598,2026-05-10,Smart Buy,Abu Dhabi,HDMI Cable,Accessories,10,200,2000,John,Cash
+SO-00586,2026-05-10,ABC Trading,Dubai,Pens Box,Office Supplies,20,80,1600,Emily,Card
+SO-00656,2026-05-10,Tech Solutions,Dubai,Stapler,Office Supplies,2,100,200,David,Card
+SO-00765,2026-05-10,Global Mart,Sharjah,Keyboard,Accessories,15,1000,15000,William,Card
+SO-00780,2026-05-11,Vanguard Group,Abu Dhabi,Mouse,Accessories,2,500,1000,Robert,Card
+SO-00731,2026-05-11,Customer Client 12,Abu Dhabi,Projector,Electronics,1,25000,25000,William,Online Payment
+SO-00668,2026-05-11,XYZ Stores,Abu Dhabi,Laptop Stand,Accessories,20,1800,36000,Karen,Bank Transfer
+SO-00621,2026-05-11,Peak Industries,Sharjah,Stapler,Office Supplies,15,100,1500,James,Bank Transfer
+SO-00695,2026-05-11,Peak Industries,Sharjah,Laptop,Electronics,3,50000,150000,James,Bank Transfer
+SO-00728,2026-05-11,Customer Client 14,Ajman,Whiteboard,Furniture,3,1200,3600,Michael,Cash
+SO-00773,2026-05-11,XYZ Stores,Abu Dhabi,Mouse,Accessories,3,500,1500,Robert,Bank Transfer
+SO-00754,2026-05-11,Global Mart,Sharjah,External Hard Drive,Accessories,15,3500,52500,Sarah,Card
+SO-00653,2026-05-12,Falcon Trading,Abu Dhabi,Desk Lamp,Furniture,2,800,1600,Emily,Online Payment
+SO-00723,2026-05-12,HyperMax,Dubai,Mouse,Accessories,15,500,7500,Karen,Bank Transfer
+SO-00666,2026-05-12,XYZ Stores,Abu Dhabi,HDMI Cable,Accessories,5,200,1000,Karen,Cash
+SO-00623,2026-05-12,ABC Trading,Dubai,Keyboard,Accessories,15,1000,15000,Karen,Cash
+SO-00761,2026-05-12,Global Mart,Sharjah,Whiteboard,Furniture,3,1200,3600,John,Bank Transfer
+SO-00715,2026-05-12,ABC Trading,Dubai,Monitor,Electronics,1,12000,12000,Michael,Cash
+SO-00645,2026-05-13,XYZ Stores,Abu Dhabi,Wireless Charger,Accessories,20,1200,24000,William,Online Payment
+SO-00722,2026-05-13,Omega Systems,Dubai,Cloud Storage Plan,Software,10,600,6000,Karen,Card
+SO-00693,2026-05-13,ABC Trading,Dubai,Keyboard,Accessories,15,1000,15000,Robert,Online Payment
+SO-00795,2026-05-13,ABC Trading,Dubai,Keyboard,Accessories,5,1000,5000,Karen,Card
+SO-00589,2026-05-13,Global Mart,Sharjah,Office Chair,Furniture,1,6000,6000,John,Bank Transfer
+SO-00650,2026-05-14,Customer Client 3,Abu Dhabi,Keyboard,Accessories,20,1000,20000,David,Bank Transfer
+SO-00756,2026-05-14,ABC Trading,Dubai,Mouse,Accessories,3,500,1500,David,Online Payment
+SO-00672,2026-05-14,ABC Trading,Dubai,Pens Box,Office Supplies,20,80,1600,Emily,Card
+SO-00769,2026-05-15,Gulf Merchants,Dubai,Laptop,Electronics,3,50000,150000,Robert,Cash
+SO-00657,2026-05-15,HyperMax,Dubai,Web Camera,Accessories,20,2500,50000,Robert,Cash
+SO-00636,2026-05-15,HyperMax,Dubai,Notebooks Pack,Office Supplies,3,120,360,Sarah,Card
+SO-00705,2026-05-15,XYZ Stores,Abu Dhabi,Keyboard,Accessories,3,1000,3000,John,Cash
+SO-00792,2026-05-15,Customer Client 5,Fujairah,Laptop,Electronics,2,50000,100000,Michael,Online Payment
+SO-00602,2026-05-16,Falcon Trading,Abu Dhabi,Keyboard,Accessories,3,1000,3000,William,Cash
+SO-00675,2026-05-16,XYZ Stores,Abu Dhabi,Laptop,Electronics,1,50000,50000,Sarah,Card
+SO-00674,2026-05-16,Customer Client 26,Fujairah,Filing Cabinet,Furniture,2,4500,9000,Michael,Card
+SO-00719,2026-05-16,Global Mart,Sharjah,Keyboard,Accessories,15,1000,15000,John,Cash
+SO-00632,2026-05-16,ABC Trading,Dubai,Notebooks Pack,Office Supplies,3,120,360,David,Bank Transfer
+SO-00680,2026-05-16,Global Mart,Sharjah,Projector,Electronics,3,25000,75000,Michael,Online Payment
+SO-00595,2026-05-16,Customer Client 6,Dubai,Pens Box,Office Supplies,3,80,240,William,Card
+SO-00652,2026-05-17,XYZ Stores,Abu Dhabi,Pens Box,Office Supplies,20,80,1600,Robert,Online Payment
+SO-00738,2026-05-17,Customer Client 14,Ajman,Monitor,Electronics,1,12000,12000,Sarah,Cash
+SO-00790,2026-05-17,Customer Client 13,Ajman,Mouse,Accessories,2,500,1000,William,Online Payment
+SO-00706,2026-05-17,Prime Retail,Ajman,Laptop Stand,Accessories,1,1800,1800,Linda,Online Payment
+SO-00729,2026-05-17,Customer Client 12,Abu Dhabi,Laptop,Electronics,3,50000,150000,Robert,Online Payment
+SO-00746,2026-05-17,ABC Trading,Dubai,Monitor,Electronics,1,12000,12000,Sarah,Bank Transfer
+SO-00735,2026-05-17,XYZ Stores,Abu Dhabi,Bookshelf,Furniture,3,3500,10500,David,Cash
+SO-00710,2026-05-17,Zenith Digital,Dubai,Laptop Stand,Accessories,20,1800,36000,Emily,Online Payment
+SO-00772,2026-05-17,Peak Industries,Sharjah,Mouse,Accessories,1,500,500,Sarah,Bank Transfer
+SO-00628,2026-05-17,Tech Solutions,Dubai,External Hard Drive,Accessories,1,3500,3500,Sarah,Card
+SO-00704,2026-05-17,Global Mart,Sharjah,HDMI Cable,Accessories,10,200,2000,Sarah,Cash
+SO-00601,2026-05-18,HyperMax,Dubai,Cloud Storage Plan,Software,5,600,3000,William,Online Payment
+SO-00727,2026-05-18,Prime Retail,Ajman,Keyboard,Accessories,10,1000,10000,Michael,Bank Transfer
+SO-00708,2026-05-18,Customer Client 24,Al Ain,Office Chair,Furniture,2,6000,12000,James,Card
+SO-00737,2026-05-18,Customer Client 9,Abu Dhabi,Pens Box,Office Supplies,1,80,80,Karen,Bank Transfer
+SO-00686,2026-05-18,XYZ Stores,Abu Dhabi,Mouse,Accessories,20,500,10000,Michael,Online Payment
+SO-00740,2026-05-18,ABC Trading,Dubai,Cloud Storage Plan,Software,5,600,3000,Linda,Online Payment
+SO-00655,2026-05-18,Tech Solutions,Dubai,Office Chair,Furniture,3,6000,18000,Linda,Bank Transfer
+SO-00757,2026-05-19,XYZ Stores,Abu Dhabi,Mouse,Accessories,5,500,2500,William,Online Payment
+SO-00682,2026-05-19,Alpha Logistics,Fujairah,Laptop,Electronics,1,50000,50000,William,Bank Transfer
+SO-00634,2026-05-19,Tech Solutions,Dubai,Keyboard,Accessories,10,1000,10000,James,Bank Transfer
+SO-00640,2026-05-19,HyperMax,Dubai,Mouse,Accessories,10,500,5000,Michael,Cash
+SO-00639,2026-05-19,Tech Solutions,Dubai,Mouse,Accessories,2,500,1000,John,Card
+SO-00654,2026-05-19,Desert Star LLC,Al Ain,Web Camera,Accessories,20,2500,50000,Sarah,Online Payment
+SO-00744,2026-05-19,Customer Client 3,Abu Dhabi,Office Chair,Furniture,3,6000,18000,Emily,Bank Transfer
+SO-00804,2026-05-20,Smart Buy,Abu Dhabi,Laptop,Electronics,3,50000,150000,William,Card
+SO-00751,2026-05-20,Customer Client 11,Dubai,Filing Cabinet,Furniture,2,4500,9000,David,Cash
+SO-00789,2026-05-20,Tech Solutions,Dubai,Paper Reams,Office Supplies,15,150,2250,Karen,Cash
+SO-00651,2026-05-20,XYZ Stores,Abu Dhabi,Mouse,Accessories,15,500,7500,John,Cash
+SO-00605,2026-05-21,ABC Trading,Dubai,Mouse,Accessories,5,500,2500,Robert,Cash
+SO-00801,2026-05-21,ABC Trading,Dubai,Keyboard,Accessories,1,1000,1000,Karen,Bank Transfer
+SO-00627,2026-05-21,XYZ Stores,Abu Dhabi,Cloud Storage Plan,Software,5,600,3000,Michael,Online Payment
+SO-00759,2026-05-21,Zenith Digital,Dubai,Wireless Charger,Accessories,2,1200,2400,Sarah,Cash
+SO-00774,2026-05-21,Global Mart,Sharjah,Mouse,Accessories,15,500,7500,Emily,Online Payment
+SO-00694,2026-05-21,ABC Trading,Dubai,Mouse,Accessories,2,500,1000,Robert,Card
+SO-00617,2026-05-21,Gulf Merchants,Dubai,Mouse,Accessories,3,500,1500,David,Card
+SO-00784,2026-05-22,Desert Star LLC,Al Ain,Cloud Storage Plan,Software,10,600,6000,Michael,Online Payment
+SO-00663,2026-05-22,Falcon Trading,Abu Dhabi,Mouse,Accessories,2,500,1000,David,Bank Transfer
+SO-00742,2026-05-22,Apex Distributors,Al Ain,Printer,Electronics,2,8000,16000,William,Bank Transfer
+SO-00604,2026-05-22,Apex Distributors,Al Ain,Mouse,Accessories,2,500,1000,William,Online Payment
+SO-00599,2026-05-22,Customer Client 30,Ras Al Khaimah,Notebooks Pack,Office Supplies,10,120,1200,Karen,Card
+SO-00670,2026-05-22,Customer Client 19,Abu Dhabi,Mouse,Accessories,5,500,2500,David,Bank Transfer
+SO-00767,2026-05-23,Customer Client 30,Ras Al Khaimah,Notebooks Pack,Office Supplies,10,120,1200,John,Bank Transfer
+SO-00689,2026-05-23,Customer Client 11,Dubai,Laptop,Electronics,2,50000,100000,David,Online Payment
+SO-00620,2026-05-23,Tech Solutions,Dubai,Monitor,Electronics,2,12000,24000,Michael,Cash
+SO-00785,2026-05-23,Tech Solutions,Dubai,External Hard Drive,Accessories,5,3500,17500,Michael,Card
+SO-00788,2026-05-23,Customer Client 26,Fujairah,Laptop,Electronics,2,50000,100000,James,Cash
+SO-00669,2026-05-23,Prime Retail,Ajman,Cloud Storage Plan,Software,2,600,1200,Robert,Online Payment
+SO-00779,2026-05-23,Apex Distributors,Al Ain,Cloud Storage Plan,Software,2,600,1200,Karen,Card
+SO-00718,2026-05-24,Zenith Digital,Dubai,Cloud Storage Plan,Software,1,600,600,William,Card
+SO-00764,2026-05-24,ABC Trading,Dubai,Laptop,Electronics,1,50000,50000,Robert,Cash
+SO-00791,2026-05-24,HyperMax,Dubai,Cloud Storage Plan,Software,1,600,600,Sarah,Bank Transfer
+SO-00753,2026-05-24,Beta Corp,Ras Al Khaimah,Tablet,Electronics,1,15000,15000,Emily,Cash
+SO-00781,2026-05-24,Customer Client 24,Al Ain,Headphones,Accessories,5,1500,7500,Emily,Online Payment
+SO-00750,2026-05-24,Customer Client 8,Dubai,HDMI Cable,Accessories,2,200,400,Linda,Cash
+SO-00625,2026-05-24,Customer Client 17,Fujairah,External Hard Drive,Accessories,15,3500,52500,John,Online Payment
+SO-00665,2026-05-24,Smart Buy,Abu Dhabi,Laptop,Electronics,3,50000,150000,William,Bank Transfer
+SO-00787,2026-05-24,ABC Trading,Dubai,Keyboard,Accessories,5,1000,5000,Karen,Online Payment
+SO-00782,2026-05-24,XYZ Stores,Abu Dhabi,Mouse,Accessories,2,500,1000,Michael,Cash
+SO-00690,2026-05-24,Global Mart,Sharjah,Office Chair,Furniture,3,6000,18000,Emily,Bank Transfer
+SO-00660,2026-05-24,Alpha Logistics,Fujairah,Notebooks Pack,Office Supplies,10,120,1200,Emily,Cash
+SO-00618,2026-05-24,ABC Trading,Dubai,Notebooks Pack,Office Supplies,15,120,1800,Sarah,Cash
+SO-00630,2026-05-24,XYZ Stores,Abu Dhabi,Antivirus Subscription,Software,10,1200,12000,Sarah,Cash
+SO-00794,2026-05-24,Customer Client 5,Fujairah,Desk Lamp,Furniture,3,800,2400,William,Card
+SO-00592,2026-05-24,ABC Trading,Dubai,Headphones,Accessories,3,1500,4500,William,Bank Transfer
+SO-00588,2026-05-24,HyperMax,Dubai,Cloud Storage Plan,Software,5,600,3000,John,Online Payment
+SO-00798,2026-05-24,Tech Solutions,Dubai,Office Chair,Furniture,2,6000,12000,John,Card
+SO-00800,2026-05-25,Global Mart,Sharjah,Stapler,Office Supplies,20,100,2000,Linda,Bank Transfer
+SO-00609,2026-05-25,ABC Trading,Dubai,Printer,Electronics,3,8000,24000,David,Bank Transfer
+SO-00758,2026-05-25,Prime Retail,Ajman,Office Chair,Furniture,1,6000,6000,Linda,Online Payment
+SO-00591,2026-05-25,XYZ Stores,Abu Dhabi,Pens Box,Office Supplies,1,80,80,Michael,Card
+SO-00626,2026-05-25,Smart Buy,Abu Dhabi,Laptop,Electronics,3,50000,150000,William,Online Payment
+SO-00692,2026-05-25,Gulf Merchants,Dubai,Wireless Charger,Accessories,5,1200,6000,Linda,Cash
+SO-00783,2026-05-25,Alpha Logistics,Fujairah,Keyboard,Accessories,10,1000,10000,Sarah,Card
+SO-00664,2026-05-25,Tech Solutions,Dubai,Web Camera,Accessories,10,2500,25000,Sarah,Cash
+SO-00699,2026-05-25,ABC Trading,Dubai,Mouse,Accessories,3,500,1500,Karen,Card
+SO-00587,2026-05-25,Customer Client 11,Dubai,USB Hub,Accessories,1,800,800,Karen,Card
+SO-00629,2026-05-25,XYZ Stores,Abu Dhabi,Keyboard,Accessories,10,1000,10000,Karen,Card
+SO-00732,2026-05-25,Global Mart,Sharjah,Monitor,Electronics,2,12000,24000,Robert,Cash
+SO-00687,2026-05-26,HyperMax,Dubai,Mouse,Accessories,20,500,10000,William,Bank Transfer
+SO-00610,2026-05-26,Global Mart,Sharjah,Cloud Storage Plan,Software,10,600,6000,James,Online Payment
+SO-00638,2026-05-26,Prime Retail,Ajman,Pens Box,Office Supplies,5,80,400,Linda,Card
+SO-00688,2026-05-26,Elite Enterprises,Sharjah,Standing Desk,Furniture,1,18000,18000,James,Cash
+SO-00717,2026-05-27,Peak Industries,Sharjah,Laptop,Electronics,2,50000,100000,Linda,Card
+SO-00611,2026-05-27,Smart Buy,Abu Dhabi,Keyboard,Accessories,2,1000,2000,James,Bank Transfer
+SO-00646,2026-05-27,XYZ Stores,Abu Dhabi,HDMI Cable,Accessories,10,200,2000,Karen,Cash
+SO-00676,2026-05-27,Global Mart,Sharjah,Keyboard,Accessories,20,1000,20000,David,Cash
+SO-00633,2026-05-27,Elite Enterprises,Sharjah,Keyboard,Accessories,5,1000,5000,James,Bank Transfer
+SO-00624,2026-05-27,ABC Trading,Dubai,Laptop Stand,Accessories,2,1800,3600,Emily,Cash
+SO-00622,2026-05-27,Zenith Digital,Dubai,Monitor,Electronics,2,12000,24000,Linda,Online Payment
+SO-00635,2026-05-27,Prime Retail,Ajman,Bookshelf,Furniture,1,3500,3500,William,Card
+SO-00743,2026-05-28,Beta Corp,Ras Al Khaimah,Headphones,Accessories,20,1500,30000,Robert,Card
+SO-00678,2026-05-28,Global Mart,Sharjah,External Hard Drive,Accessories,10,3500,35000,Emily,Online Payment
+SO-00702,2026-05-28,Smart Buy,Abu Dhabi,Laptop,Electronics,3,50000,150000,Linda,Card
+SO-00775,2026-05-29,XYZ Stores,Abu Dhabi,Keyboard,Accessories,3,1000,3000,James,Card
+SO-00741,2026-05-29,XYZ Stores,Abu Dhabi,Office Chair,Furniture,2,6000,12000,William,Bank Transfer
+SO-00642,2026-05-29,Apex Distributors,Al Ain,Bookshelf,Furniture,2,3500,7000,Linda,Card
+SO-00771,2026-05-29,Omega Systems,Dubai,Laptop Stand,Accessories,1,1800,1800,Michael,Card
+SO-00648,2026-05-29,Tech Solutions,Dubai,Mouse,Accessories,15,500,7500,William,Online Payment
+SO-00796,2026-05-29,Global Mart,Sharjah,Pens Box,Office Supplies,15,80,1200,Michael,Cash
+SO-00696,2026-05-29,Tech Solutions,Dubai,Antivirus Subscription,Software,10,1200,12000,James,Card
+SO-00615,2026-05-29,XYZ Stores,Abu Dhabi,Keyboard,Accessories,10,1000,10000,Emily,Card
+SO-00647,2026-05-29,ABC Trading,Dubai,Mouse,Accessories,5,500,2500,Michael,Cash
+SO-00724,2026-05-30,Falcon Trading,Abu Dhabi,Keyboard,Accessories,15,1000,15000,William,Cash
+SO-00677,2026-05-30,Prime Retail,Ajman,Paper Reams,Office Supplies,1,150,150,William,Cash
+SO-00736,2026-05-30,Customer Client 26,Fujairah,Mouse,Accessories,5,500,2500,John,Bank Transfer
+SO-00607,2026-05-30,Apex Distributors,Al Ain,Paper Reams,Office Supplies,5,150,750,James,Bank Transfer
+SO-00752,2026-05-30,Customer Client 12,Abu Dhabi,Headphones,Accessories,5,1500,7500,David,Card
+SO-00799,2026-05-30,Gulf Merchants,Dubai,Keyboard,Accessories,2,1000,2000,Michael,Card
+SO-00659,2026-05-30,XYZ Stores,Abu Dhabi,Keyboard,Accessories,3,1000,3000,David,Cash
+SO-00600,2026-05-31,Global Mart,Sharjah,Tablet,Electronics,1,15000,15000,James,Bank Transfer
+SO-00603,2026-05-31,Smart Buy,Abu Dhabi,Laptop Stand,Accessories,1,1800,1800,David,Card
+SO-00612,2026-05-31,Customer Client 26,Fujairah,Office Suite License,Software,5,4500,22500,John,Card
+SO-00596,2026-05-31,Customer Client 6,Dubai,External Hard Drive,Accessories,2,3500,7000,James,Online Payment
+SO-00661,2026-05-31,Apex Distributors,Al Ain,Mouse,Accessories,2,500,1000,William,Bank Transfer
+SO-00745,2026-05-31,ABC Trading,Dubai,Desk Organizer,Office Supplies,1,300,300,Emily,Cash
+SO-00703,2026-05-31,Omega Systems,Dubai,HDMI Cable,Accessories,15,200,3000,Karen,Online Payment
+SO-00901,2026-06-01,Global Mart,Sharjah,Office Suite License,Software,1,4500,4500,James,Cash
+SO-01054,2026-06-01,Global Mart,Sharjah,Monitor,Electronics,3,12000,36000,David,Cash
+SO-00895,2026-06-01,Customer Client 6,Dubai,HDMI Cable,Accessories,1,200,200,Karen,Bank Transfer
+SO-01061,2026-06-01,Apex Distributors,Al Ain,Pens Box,Office Supplies,5,80,400,David,Card
+SO-00932,2026-06-02,Customer Client 4,Abu Dhabi,External Hard Drive,Accessories,1,3500,3500,James,Online Payment
+SO-00864,2026-06-02,Skyline Ventures,Dubai,Tablet,Electronics,1,15000,15000,Karen,Online Payment
+SO-00944,2026-06-02,Apex Distributors,Al Ain,External Hard Drive,Accessories,10,3500,35000,William,Cash
+SO-01013,2026-06-02,Customer Client 19,Abu Dhabi,Cloud Storage Plan,Software,5,600,3000,Michael,Online Payment
+SO-00870,2026-06-02,Elite Enterprises,Sharjah,Mouse,Accessories,15,500,7500,Emily,Cash
+SO-00990,2026-06-02,Prime Retail,Ajman,Mouse,Accessories,3,500,1500,John,Cash
+SO-00989,2026-06-03,Customer Client 1,Fujairah,Headphones,Accessories,1,1500,1500,Sarah,Cash
+SO-00850,2026-06-03,Omega Systems,Dubai,Cloud Storage Plan,Software,10,600,6000,Robert,Online Payment
+SO-00847,2026-06-03,Skyline Ventures,Dubai,Desk Lamp,Furniture,2,800,1600,James,Bank Transfer
+SO-00970,2026-06-03,Tech Solutions,Dubai,Paper Reams,Office Supplies,3,150,450,James,Card
+SO-00838,2026-06-03,Skyline Ventures,Dubai,Whiteboard,Furniture,3,1200,3600,Linda,Bank Transfer
+SO-00929,2026-06-03,Prime Retail,Ajman,Keyboard,Accessories,10,1000,10000,Linda,Online Payment
+SO-00840,2026-06-03,Global Mart,Sharjah,Pens Box,Office Supplies,15,80,1200,Linda,Online Payment
+SO-00843,2026-06-03,Prime Retail,Ajman,HDMI Cable,Accessories,20,200,4000,Michael,Bank Transfer
+SO-00899,2026-06-03,ABC Trading,Dubai,Mouse,Accessories,2,500,1000,John,Card
+SO-00897,2026-06-03,Global Mart,Sharjah,Notebooks Pack,Office Supplies,2,120,240,Michael,Cash
+SO-00815,2026-06-04,Customer Client 9,Abu Dhabi,Mouse,Accessories,15,500,7500,Sarah,Online Payment
+SO-00994,2026-06-04,Peak Industries,Sharjah,Keyboard,Accessories,3,1000,3000,Michael,Cash
+SO-01007,2026-06-04,XYZ Stores,Abu Dhabi,Paper Reams,Office Supplies,2,150,300,John,Cash
+SO-00856,2026-06-04,XYZ Stores,Abu Dhabi,Headphones,Accessories,15,1500,22500,Karen,Online Payment
+SO-00849,2026-06-04,ABC Trading,Dubai,USB Hub,Accessories,2,800,1600,Emily,Online Payment
+SO-00927,2026-06-04,XYZ Stores,Abu Dhabi,Antivirus Subscription,Software,5,1200,6000,Sarah,Bank Transfer
+SO-01037,2026-06-05,Customer Client 10,Al Ain,Laptop,Electronics,3,50000,150000,William,Card
+SO-00837,2026-06-05,Desert Star LLC,Al Ain,Mouse,Accessories,1,500,500,James,Cash
+SO-00959,2026-06-05,HyperMax,Dubai,Monitor,Electronics,3,12000,36000,Emily,Online Payment
+SO-00872,2026-06-05,XYZ Stores,Abu Dhabi,Mouse,Accessories,15,500,7500,David,Card
+SO-00823,2026-06-05,Global Mart,Sharjah,Tablet,Electronics,3,15000,45000,William,Card
+SO-00859,2026-06-05,ABC Trading,Dubai,Mouse,Accessories,1,500,500,David,Cash
+SO-00978,2026-06-05,Skyline Ventures,Dubai,Mouse,Accessories,3,500,1500,Michael,Cash
+SO-00966,2026-06-05,Tech Solutions,Dubai,Mouse,Accessories,3,500,1500,Robert,Bank Transfer
+SO-00860,2026-06-05,ABC Trading,Dubai,Mouse,Accessories,2,500,1000,James,Online Payment
+SO-00888,2026-06-06,ABC Trading,Dubai,Tablet,Electronics,2,15000,30000,Robert,Cash
+SO-00836,2026-06-06,Customer Client 26,Fujairah,Monitor,Electronics,3,12000,36000,Linda,Cash
+SO-00955,2026-06-06,ABC Trading,Dubai,Mouse,Accessories,3,500,1500,Karen,Card
+SO-00918,2026-06-06,ABC Trading,Dubai,Mouse,Accessories,15,500,7500,Robert,Bank Transfer
+SO-01055,2026-06-06,Customer Client 4,Abu Dhabi,Notebooks Pack,Office Supplies,20,120,2400,Michael,Online Payment
+SO-00834,2026-06-06,Beta Corp,Ras Al Khaimah,Office Chair,Furniture,3,6000,18000,David,Card
+SO-00807,2026-06-06,Skyline Ventures,Dubai,Pens Box,Office Supplies,10,80,800,Karen,Card
+SO-00992,2026-06-06,ABC Trading,Dubai,Antivirus Subscription,Software,5,1200,6000,Karen,Bank Transfer
+SO-00842,2026-06-06,Customer Client 24,Al Ain,Monitor,Electronics,2,12000,24000,Linda,Cash
+SO-00925,2026-06-06,Apex Distributors,Al Ain,Desk Organizer,Office Supplies,2,300,600,Robert,Bank Transfer
+SO-00890,2026-06-06,Smart Buy,Abu Dhabi,Cloud Storage Plan,Software,10,600,6000,Sarah,Cash
+SO-00874,2026-06-06,Global Mart,Sharjah,Mouse,Accessories,2,500,1000,Karen,Card
+SO-00964,2026-06-07,Customer Client 17,Fujairah,USB Hub,Accessories,15,800,12000,David,Online Payment
+SO-00934,2026-06-07,XYZ Stores,Abu Dhabi,Notebooks Pack,Office Supplies,1,120,120,John,Online Payment
+SO-00984,2026-06-07,Customer Client 14,Ajman,Keyboard,Accessories,20,1000,20000,William,Cash
+SO-00913,2026-06-07,HyperMax,Dubai,USB Hub,Accessories,5,800,4000,Sarah,Card
+SO-01049,2026-06-07,Beta Corp,Ras Al Khaimah,Monitor,Electronics,3,12000,36000,James,Cash
+SO-00853,2026-06-07,Global Mart,Sharjah,Monitor,Electronics,3,12000,36000,Emily,Online Payment
+SO-00876,2026-06-07,XYZ Stores,Abu Dhabi,Antivirus Subscription,Software,1,1200,1200,John,Card
+SO-00926,2026-06-07,Skyline Ventures,Dubai,Standing Desk,Furniture,1,18000,18000,Emily,Card
+SO-00919,2026-06-07,Alpha Logistics,Fujairah,Graphics Editor Pro,Software,10,9500,95000,John,Cash
+SO-00965,2026-06-07,Alpha Logistics,Fujairah,Wireless Charger,Accessories,1,1200,1200,Robert,Online Payment
+SO-00826,2026-06-07,ABC Trading,Dubai,Tablet,Electronics,1,15000,15000,Sarah,Cash
+SO-00902,2026-06-07,Customer Client 21,Dubai,Laptop Stand,Accessories,2,1800,3600,Karen,Card
+SO-01035,2026-06-08,ABC Trading,Dubai,Laptop,Electronics,2,50000,100000,Linda,Online Payment
+SO-00923,2026-06-08,Tech Solutions,Dubai,Keyboard,Accessories,5,1000,5000,Sarah,Cash
+SO-00841,2026-06-08,Customer Client 27,Al Ain,Paper Reams,Office Supplies,3,150,450,Robert,Online Payment
+SO-00953,2026-06-08,Customer Client 5,Fujairah,Mouse,Accessories,2,500,1000,Robert,Bank Transfer
+SO-01000,2026-06-08,Customer Client 18,Sharjah,Headphones,Accessories,2,1500,3000,David,Online Payment
+SO-00917,2026-06-09,Customer Client 9,Abu Dhabi,Keyboard,Accessories,15,1000,15000,Linda,Online Payment
+SO-01022,2026-06-09,Omega Systems,Dubai,Mouse,Accessories,3,500,1500,James,Online Payment
+SO-00930,2026-06-09,Zenith Digital,Dubai,Laptop,Electronics,1,50000,50000,Robert,Online Payment
+SO-01050,2026-06-09,Prime Retail,Ajman,HDMI Cable,Accessories,15,200,3000,James,Bank Transfer
+SO-00884,2026-06-09,Beta Corp,Ras Al Khaimah,Mouse,Accessories,1,500,500,Karen,Card
+SO-00889,2026-06-09,ABC Trading,Dubai,External Hard Drive,Accessories,2,3500,7000,Karen,Online Payment
+SO-01034,2026-06-09,XYZ Stores,Abu Dhabi,Pens Box,Office Supplies,10,80,800,Sarah,Online Payment
+SO-01005,2026-06-09,Customer Client 10,Al Ain,Notebooks Pack,Office Supplies,5,120,600,Robert,Online Payment
+SO-00979,2026-06-09,Customer Client 30,Ras Al Khaimah,Printer,Electronics,1,8000,8000,Emily,Bank Transfer
+SO-00825,2026-06-09,Customer Client 23,Sharjah,Laptop,Electronics,2,50000,100000,Linda,Bank Transfer
+SO-01043,2026-06-09,Customer Client 19,Abu Dhabi,Desk Lamp,Furniture,1,800,800,Linda,Bank Transfer
+SO-00833,2026-06-09,Apex Distributors,Al Ain,Notebooks Pack,Office Supplies,1,120,120,Emily,Card
+SO-00962,2026-06-10,Customer Client 15,Sharjah,Keyboard,Accessories,5,1000,5000,Robert,Cash
+SO-00991,2026-06-10,Customer Client 6,Dubai,Mouse,Accessories,10,500,5000,Sarah,Card
+SO-00950,2026-06-10,Customer Client 22,Ajman,Graphics Editor Pro,Software,2,9500,19000,William,Bank Transfer
+SO-01026,2026-06-10,Elite Enterprises,Sharjah,Web Camera,Accessories,20,2500,50000,Sarah,Cash
+SO-00986,2026-06-10,Apex Distributors,Al Ain,Whiteboard,Furniture,3,1200,3600,Robert,Card
+SO-00839,2026-06-10,Peak Industries,Sharjah,Antivirus Subscription,Software,1,1200,1200,Linda,Card
+SO-01047,2026-06-10,Desert Star LLC,Al Ain,Mouse,Accessories,10,500,5000,Sarah,Online Payment
+SO-00871,2026-06-10,HyperMax,Dubai,Mouse,Accessories,20,500,10000,Emily,Bank Transfer
+SO-00810,2026-06-10,Skyline Ventures,Dubai,Laptop,Electronics,2,50000,100000,William,Online Payment
+SO-00967,2026-06-10,ABC Trading,Dubai,Keyboard,Accessories,15,1000,15000,Linda,Online Payment
+SO-00972,2026-06-10,Customer Client 12,Abu Dhabi,Monitor,Electronics,3,12000,36000,Emily,Online Payment
+SO-00963,2026-06-11,XYZ Stores,Abu Dhabi,Desk Lamp,Furniture,3,800,2400,Sarah,Bank Transfer
+SO-00909,2026-06-11,ABC Trading,Dubai,Antivirus Subscription,Software,10,1200,12000,Michael,Bank Transfer
+SO-00961,2026-06-11,Customer Client 29,Al Ain,Mouse,Accessories,2,500,1000,William,Cash
+SO-01023,2026-06-11,ABC Trading,Dubai,Pens Box,Office Supplies,15,80,1200,Sarah,Bank Transfer
+SO-01021,2026-06-11,Global Mart,Sharjah,Mouse,Accessories,5,500,2500,James,Online Payment
+SO-00942,2026-06-11,Falcon Trading,Abu Dhabi,HDMI Cable,Accessories,15,200,3000,Karen,Card
+SO-01004,2026-06-11,Tech Solutions,Dubai,Mouse,Accessories,2,500,1000,James,Online Payment
+SO-00896,2026-06-11,Beta Corp,Ras Al Khaimah,Notebooks Pack,Office Supplies,1,120,120,Robert,Bank Transfer
+SO-00831,2026-06-11,ABC Trading,Dubai,Wireless Charger,Accessories,20,1200,24000,Emily,Cash
+SO-00845,2026-06-11,Customer Client 8,Dubai,Monitor,Electronics,3,12000,36000,Linda,Online Payment
+SO-01018,2026-06-12,Beta Corp,Ras Al Khaimah,Printer,Electronics,2,8000,16000,David,Online Payment
+SO-00957,2026-06-12,Smart Buy,Abu Dhabi,Keyboard,Accessories,10,1000,10000,Emily,Cash
+SO-00941,2026-06-12,Skyline Ventures,Dubai,Mouse,Accessories,10,500,5000,Sarah,Card
+SO-00993,2026-06-12,Customer Client 6,Dubai,Stapler,Office Supplies,10,100,1000,Sarah,Cash
+SO-00869,2026-06-12,ABC Trading,Dubai,Pens Box,Office Supplies,10,80,800,Emily,Bank Transfer
+SO-01019,2026-06-12,ABC Trading,Dubai,Notebooks Pack,Office Supplies,2,120,240,Sarah,Card
+SO-00915,2026-06-12,XYZ Stores,Abu Dhabi,Keyboard,Accessories,1,1000,1000,William,Cash
+SO-01025,2026-06-12,Beta Corp,Ras Al Khaimah,Office Suite License,Software,1,4500,4500,William,Card
+SO-00977,2026-06-12,ABC Trading,Dubai,Laptop,Electronics,1,50000,50000,Karen,Cash
+SO-01048,2026-06-13,XYZ Stores,Abu Dhabi,Monitor,Electronics,1,12000,12000,Sarah,Bank Transfer
+SO-01063,2026-06-13,XYZ Stores,Abu Dhabi,Whiteboard,Furniture,1,1200,1200,Emily,Card
+SO-00898,2026-06-13,Tech Solutions,Dubai,Mouse,Accessories,15,500,7500,Robert,Online Payment
+SO-00862,2026-06-13,Apex Distributors,Al Ain,Bookshelf,Furniture,1,3500,3500,Karen,Online Payment
+SO-00879,2026-06-13,ABC Trading,Dubai,Mouse,Accessories,10,500,5000,Robert,Online Payment
+SO-01060,2026-06-13,ABC Trading,Dubai,Mouse,Accessories,3,500,1500,Michael,Cash
+SO-01058,2026-06-13,Elite Enterprises,Sharjah,Keyboard,Accessories,1,1000,1000,John,Card
+SO-00816,2026-06-14,Elite Enterprises,Sharjah,Graphics Editor Pro,Software,2,9500,19000,John,Card
+SO-00883,2026-06-14,Desert Star LLC,Al Ain,USB Hub,Accessories,3,800,2400,Sarah,Bank Transfer
+SO-00997,2026-06-14,ABC Trading,Dubai,HDMI Cable,Accessories,1,200,200,William,Card
+SO-01014,2026-06-14,Tech Solutions,Dubai,External Hard Drive,Accessories,20,3500,70000,David,Online Payment
+SO-01064,2026-06-14,ABC Trading,Dubai,Mouse,Accessories,3,500,1500,Emily,Card
+SO-01028,2026-06-14,ABC Trading,Dubai,Notebooks Pack,Office Supplies,20,120,2400,Emily,Bank Transfer
+SO-00922,2026-06-14,Customer Client 28,Ajman,Monitor,Electronics,1,12000,12000,David,Bank Transfer
+SO-00951,2026-06-14,Customer Client 6,Dubai,Monitor,Electronics,2,12000,24000,Karen,Online Payment
+SO-00907,2026-06-14,Zenith Digital,Dubai,Pens Box,Office Supplies,5,80,400,Robert,Cash
+SO-00985,2026-06-14,ABC Trading,Dubai,Mouse,Accessories,1,500,500,Linda,Bank Transfer
+SO-01029,2026-06-14,Tech Solutions,Dubai,Web Camera,Accessories,3,2500,7500,Karen,Online Payment
+SO-01053,2026-06-15,Falcon Trading,Abu Dhabi,Notebooks Pack,Office Supplies,2,120,240,Linda,Card
+SO-00996,2026-06-15,Global Mart,Sharjah,Tablet,Electronics,2,15000,30000,Sarah,Card
+SO-00954,2026-06-15,XYZ Stores,Abu Dhabi,Desk Organizer,Office Supplies,10,300,3000,Emily,Card
+SO-00881,2026-06-15,Omega Systems,Dubai,Cloud Storage Plan,Software,2,600,1200,William,Bank Transfer
+SO-00956,2026-06-15,XYZ Stores,Abu Dhabi,Office Chair,Furniture,3,6000,18000,John,Bank Transfer
+SO-00952,2026-06-15,Customer Client 28,Ajman,Office Suite License,Software,5,4500,22500,Michael,Bank Transfer
+SO-00808,2026-06-15,ABC Trading,Dubai,Cloud Storage Plan,Software,5,600,3000,Robert,Bank Transfer
+SO-00877,2026-06-15,Prime Retail,Ajman,Antivirus Subscription,Software,2,1200,2400,James,Online Payment
+SO-00821,2026-06-15,ABC Trading,Dubai,Wireless Charger,Accessories,3,1200,3600,Karen,Bank Transfer
+SO-00936,2026-06-15,Customer Client 23,Sharjah,Pens Box,Office Supplies,5,80,400,Michael,Bank Transfer
+SO-00827,2026-06-15,Prime Retail,Ajman,External Hard Drive,Accessories,2,3500,7000,Sarah,Bank Transfer
+SO-01002,2026-06-15,ABC Trading,Dubai,Mouse,Accessories,2,500,1000,James,Online Payment
+SO-01041,2026-06-16,ABC Trading,Dubai,Cloud Storage Plan,Software,5,600,3000,Robert,Online Payment
+SO-00999,2026-06-16,Apex Distributors,Al Ain,Whiteboard,Furniture,3,1200,3600,Emily,Online Payment
+SO-00933,2026-06-16,XYZ Stores,Abu Dhabi,Mouse,Accessories,10,500,5000,John,Online Payment
+SO-00948,2026-06-16,HyperMax,Dubai,Paper Reams,Office Supplies,1,150,150,Emily,Online Payment
+SO-00878,2026-06-16,Customer Client 21,Dubai,USB Hub,Accessories,1,800,800,Emily,Online Payment
+SO-00812,2026-06-16,Customer Client 17,Fujairah,Monitor,Electronics,2,12000,24000,William,Bank Transfer
+SO-00998,2026-06-16,Elite Enterprises,Sharjah,Desk Organizer,Office Supplies,1,300,300,David,Bank Transfer
+SO-00900,2026-06-16,Smart Buy,Abu Dhabi,Notebooks Pack,Office Supplies,3,120,360,Linda,Online Payment
+SO-00924,2026-06-16,Apex Distributors,Al Ain,Mouse,Accessories,2,500,1000,Karen,Online Payment
+SO-00868,2026-06-16,Prime Retail,Ajman,Filing Cabinet,Furniture,3,4500,13500,Robert,Online Payment
+SO-00945,2026-06-16,Smart Buy,Abu Dhabi,Laptop,Electronics,2,50000,100000,Karen,Bank Transfer
+SO-01024,2026-06-16,Gulf Merchants,Dubai,Printer,Electronics,1,8000,8000,Karen,Bank Transfer
+SO-00938,2026-06-17,Nova Soft,Ajman,Laptop,Electronics,3,50000,150000,Karen,Card
+SO-01016,2026-06-17,HyperMax,Dubai,Desk Lamp,Furniture,2,800,1600,Karen,Bank Transfer
+SO-00921,2026-06-17,XYZ Stores,Abu Dhabi,Desk Organizer,Office Supplies,5,300,1500,Karen,Bank Transfer
+SO-01052,2026-06-17,Alpha Logistics,Fujairah,Stapler,Office Supplies,20,100,2000,William,Bank Transfer
+SO-00980,2026-06-17,Customer Client 3,Abu Dhabi,Paper Reams,Office Supplies,2,150,300,David,Card
+SO-00866,2026-06-17,Alpha Logistics,Fujairah,Mouse,Accessories,2,500,1000,Linda,Cash
+SO-00811,2026-06-17,Alpha Logistics,Fujairah,Mouse,Accessories,1,500,500,Karen,Cash
+SO-00983,2026-06-17,Prime Retail,Ajman,Web Camera,Accessories,3,2500,7500,Michael,Cash
+SO-00894,2026-06-17,Tech Solutions,Dubai,Stapler,Office Supplies,20,100,2000,David,Card
+SO-00910,2026-06-18,Omega Systems,Dubai,Mouse,Accessories,2,500,1000,David,Online Payment
+SO-00848,2026-06-18,Gulf Merchants,Dubai,Mouse,Accessories,15,500,7500,Karen,Online Payment
+SO-00835,2026-06-18,XYZ Stores,Abu Dhabi,Mouse,Accessories,15,500,7500,Emily,Card
+SO-01011,2026-06-18,Smart Buy,Abu Dhabi,Ethernet Switch,Accessories,1,2200,2200,John,Online Payment
+SO-00981,2026-06-18,Customer Client 13,Ajman,Pens Box,Office Supplies,20,80,1600,Emily,Bank Transfer
+SO-01036,2026-06-18,Customer Client 30,Ras Al Khaimah,Mouse,Accessories,2,500,1000,Michael,Bank Transfer
+SO-00973,2026-06-18,Customer Client 8,Dubai,Mouse,Accessories,2,500,1000,Emily,Bank Transfer
+SO-00971,2026-06-18,Nova Soft,Ajman,Mouse,Accessories,2,500,1000,Michael,Online Payment
+SO-00822,2026-06-18,Omega Systems,Dubai,Pens Box,Office Supplies,3,80,240,Robert,Cash
+SO-00931,2026-06-19,Omega Systems,Dubai,Keyboard,Accessories,10,1000,10000,John,Online Payment
+SO-00832,2026-06-19,XYZ Stores,Abu Dhabi,Monitor,Electronics,1,12000,12000,Sarah,Bank Transfer
+SO-00824,2026-06-19,ABC Trading,Dubai,Cloud Storage Plan,Software,5,600,3000,Robert,Cash
+SO-00846,2026-06-19,XYZ Stores,Abu Dhabi,Ethernet Switch,Accessories,2,2200,4400,Linda,Online Payment
+SO-01031,2026-06-19,Customer Client 12,Abu Dhabi,Stapler,Office Supplies,5,100,500,Emily,Online Payment
+SO-00976,2026-06-19,Customer Client 20,Ras Al Khaimah,Laptop,Electronics,3,50000,150000,Linda,Cash
+SO-00914,2026-06-20,Peak Industries,Sharjah,External Hard Drive,Accessories,10,3500,35000,David,Bank Transfer
+SO-00885,2026-06-20,ABC Trading,Dubai,Bookshelf,Furniture,1,3500,3500,James,Card
+SO-00928,2026-06-20,Beta Corp,Ras Al Khaimah,Paper Reams,Office Supplies,2,150,300,Karen,Card
+SO-00880,2026-06-20,XYZ Stores,Abu Dhabi,Graphics Editor Pro,Software,1,9500,9500,Emily,Online Payment
+SO-01039,2026-06-20,Customer Client 29,Al Ain,Web Camera,Accessories,3,2500,7500,David,Online Payment
+SO-01009,2026-06-20,Beta Corp,Ras Al Khaimah,Paper Reams,Office Supplies,1,150,150,David,Online Payment
+SO-00916,2026-06-20,Smart Buy,Abu Dhabi,External Hard Drive,Accessories,2,3500,7000,Linda,Card
+SO-01065,2026-06-20,Tech Solutions,Dubai,Desk Lamp,Furniture,3,800,2400,Linda,Cash
+SO-00851,2026-06-21,Customer Client 12,Abu Dhabi,Mouse,Accessories,10,500,5000,John,Card
+SO-01038,2026-06-21,Customer Client 6,Dubai,Mouse,Accessories,1,500,500,David,Bank Transfer
+SO-01020,2026-06-21,Customer Client 30,Ras Al Khaimah,Pens Box,Office Supplies,1,80,80,Emily,Cash
+SO-00857,2026-06-21,Tech Solutions,Dubai,Tablet,Electronics,2,15000,30000,William,Card
+SO-00974,2026-06-21,Gulf Merchants,Dubai,Laptop,Electronics,2,50000,100000,Michael,Online Payment
+SO-00937,2026-06-21,ABC Trading,Dubai,Paper Reams,Office Supplies,1,150,150,James,Bank Transfer
+SO-00882,2026-06-22,ABC Trading,Dubai,Notebooks Pack,Office Supplies,1,120,120,David,Cash
+SO-00852,2026-06-22,Global Mart,Sharjah,Projector,Electronics,3,25000,75000,Karen,Online Payment
+SO-00858,2026-06-22,XYZ Stores,Abu Dhabi,Office Chair,Furniture,2,6000,12000,Robert,Online Payment
+SO-00935,2026-06-22,Prime Retail,Ajman,Standing Desk,Furniture,3,18000,54000,Karen,Cash
+SO-00806,2026-06-22,ABC Trading,Dubai,Mouse,Accessories,1,500,500,James,Card
+SO-00982,2026-06-22,Omega Systems,Dubai,Printer,Electronics,1,8000,8000,John,Card
+SO-01001,2026-06-22,Desert Star LLC,Al Ain,External Hard Drive,Accessories,15,3500,52500,David,Online Payment
+SO-01057,2026-06-22,XYZ Stores,Abu Dhabi,Mouse,Accessories,5,500,2500,Robert,Card
+SO-00893,2026-06-22,Skyline Ventures,Dubai,Monitor,Electronics,2,12000,24000,Karen,Cash
+SO-01006,2026-06-22,Global Mart,Sharjah,Keyboard,Accessories,20,1000,20000,Linda,Cash
+SO-00908,2026-06-22,Customer Client 14,Ajman,Office Suite License,Software,2,4500,9000,John,Card
+SO-01030,2026-06-22,ABC Trading,Dubai,Paper Reams,Office Supplies,15,150,2250,William,Card
+SO-01015,2026-06-22,Elite Enterprises,Sharjah,HDMI Cable,Accessories,5,200,1000,William,Card
+SO-00867,2026-06-22,Global Mart,Sharjah,Paper Reams,Office Supplies,1,150,150,Robert,Cash
+SO-00949,2026-06-22,Prime Retail,Ajman,Printer,Electronics,2,8000,16000,Linda,Cash
+SO-00865,2026-06-23,Vanguard Group,Abu Dhabi,Laptop Stand,Accessories,20,1800,36000,Emily,Online Payment
+SO-01044,2026-06-23,Apex Distributors,Al Ain,HDMI Cable,Accessories,15,200,3000,Sarah,Bank Transfer
+SO-01027,2026-06-23,XYZ Stores,Abu Dhabi,Mouse,Accessories,10,500,5000,William,Online Payment
+SO-01003,2026-06-23,Customer Client 26,Fujairah,Keyboard,Accessories,1,1000,1000,Robert,Card
+SO-01062,2026-06-23,Customer Client 11,Dubai,Cloud Storage Plan,Software,5,600,3000,Emily,Online Payment
+SO-00988,2026-06-23,XYZ Stores,Abu Dhabi,Mouse,Accessories,1,500,500,James,Cash
+SO-00987,2026-06-23,Customer Client 11,Dubai,Mouse,Accessories,2,500,1000,Michael,Card
+SO-00817,2026-06-23,ABC Trading,Dubai,Monitor,Electronics,2,12000,24000,William,Bank Transfer
+SO-00854,2026-06-23,ABC Trading,Dubai,Paper Reams,Office Supplies,10,150,1500,James,Card
+SO-01051,2026-06-23,Customer Client 12,Abu Dhabi,Mouse,Accessories,20,500,10000,Michael,Bank Transfer
+SO-00830,2026-06-23,Global Mart,Sharjah,Mouse,Accessories,15,500,7500,Karen,Cash
+SO-01008,2026-06-24,HyperMax,Dubai,Pens Box,Office Supplies,1,80,80,Michael,Online Payment
+SO-00920,2026-06-24,XYZ Stores,Abu Dhabi,Keyboard,Accessories,20,1000,20000,John,Online Payment
+SO-00995,2026-06-24,HyperMax,Dubai,Pens Box,Office Supplies,5,80,400,Robert,Card
+SO-01033,2026-06-24,Tech Solutions,Dubai,Monitor,Electronics,1,12000,12000,Sarah,Online Payment
+SO-00818,2026-06-25,Global Mart,Sharjah,Printer,Electronics,2,8000,16000,Karen,Cash
+SO-00911,2026-06-25,Prime Retail,Ajman,Mouse,Accessories,1,500,500,John,Card
+SO-00943,2026-06-25,Customer Client 28,Ajman,Laptop,Electronics,3,50000,150000,James,Bank Transfer
+SO-01017,2026-06-25,ABC Trading,Dubai,Desk Lamp,Furniture,1,800,800,Michael,Bank Transfer
+SO-00844,2026-06-25,ABC Trading,Dubai,Wireless Charger,Accessories,1,1200,1200,James,Cash
+SO-00892,2026-06-25,HyperMax,Dubai,Keyboard,Accessories,15,1000,15000,John,Cash
+SO-00820,2026-06-26,Prime Retail,Ajman,Keyboard,Accessories,15,1000,15000,Linda,Bank Transfer
+SO-00946,2026-06-26,Customer Client 24,Al Ain,HDMI Cable,Accessories,1,200,200,David,Online Payment
+SO-00939,2026-06-26,Global Mart,Sharjah,Stapler,Office Supplies,1,100,100,William,Bank Transfer
+SO-00814,2026-06-26,XYZ Stores,Abu Dhabi,Pens Box,Office Supplies,3,80,240,Sarah,Cash
+SO-01042,2026-06-26,XYZ Stores,Abu Dhabi,Mouse,Accessories,1,500,500,Michael,Card
+SO-01056,2026-06-26,Customer Client 23,Sharjah,Stapler,Office Supplies,2,100,200,Emily,Card
+SO-01010,2026-06-26,Gulf Merchants,Dubai,External Hard Drive,Accessories,5,3500,17500,William,Bank Transfer
+SO-00968,2026-06-26,Customer Client 10,Al Ain,Stapler,Office Supplies,5,100,500,James,Card
+SO-01046,2026-06-27,Customer Client 6,Dubai,Notebooks Pack,Office Supplies,2,120,240,Emily,Online Payment
+SO-00906,2026-06-27,Omega Systems,Dubai,Office Suite License,Software,2,4500,9000,David,Card
+SO-00969,2026-06-27,Global Mart,Sharjah,HDMI Cable,Accessories,20,200,4000,William,Bank Transfer
+SO-00819,2026-06-27,Customer Client 14,Ajman,Monitor,Electronics,3,12000,36000,Linda,Online Payment
+SO-01040,2026-06-27,Elite Enterprises,Sharjah,Stapler,Office Supplies,10,100,1000,David,Bank Transfer
+SO-00875,2026-06-27,Customer Client 5,Fujairah,Tablet,Electronics,1,15000,15000,Linda,Card
+SO-00829,2026-06-27,XYZ Stores,Abu Dhabi,Desk Organizer,Office Supplies,1,300,300,Linda,Online Payment
+SO-00863,2026-06-28,XYZ Stores,Abu Dhabi,Web Camera,Accessories,10,2500,25000,Karen,Bank Transfer
+SO-00855,2026-06-28,Customer Client 29,Al Ain,Ethernet Switch,Accessories,1,2200,2200,John,Bank Transfer
+SO-00940,2026-06-29,Tech Solutions,Dubai,HDMI Cable,Accessories,10,200,2000,John,Bank Transfer
+SO-01012,2026-06-29,Global Mart,Sharjah,Tablet,Electronics,2,15000,30000,Linda,Cash
+SO-00886,2026-06-29,XYZ Stores,Abu Dhabi,Monitor,Electronics,2,12000,24000,David,Online Payment
+SO-00947,2026-06-29,ABC Trading,Dubai,Keyboard,Accessories,3,1000,3000,David,Card
+SO-01045,2026-06-29,Peak Industries,Sharjah,Tablet,Electronics,2,15000,30000,John,Cash
+SO-00960,2026-06-29,Gulf Merchants,Dubai,Keyboard,Accessories,20,1000,20000,Karen,Online Payment
+SO-00905,2026-06-29,ABC Trading,Dubai,HDMI Cable,Accessories,10,200,2000,Michael,Cash
+SO-00861,2026-06-29,Apex Distributors,Al Ain,Wireless Charger,Accessories,5,1200,6000,William,Online Payment
+SO-00809,2026-06-29,Customer Client 2,Dubai,Headphones,Accessories,20,1500,30000,William,Cash
+SO-00904,2026-06-30,Falcon Trading,Abu Dhabi,Mouse,Accessories,1,500,500,Michael,Cash
+SO-00958,2026-06-30,HyperMax,Dubai,Cloud Storage Plan,Software,2,600,1200,Linda,Bank Transfer
+SO-01032,2026-06-30,Tech Solutions,Dubai,HDMI Cable,Accessories,2,200,400,Sarah,Card
+SO-00903,2026-06-30,ABC Trading,Dubai,External Hard Drive,Accessories,15,3500,52500,John,Online Payment
+SO-01059,2026-06-30,XYZ Stores,Abu Dhabi,Pens Box,Office Supplies,20,80,1600,Michael,Cash
+SO-00912,2026-06-30,Omega Systems,Dubai,Laptop,Electronics,2,50000,100000,Linda,Card
+SO-00813,2026-06-30,HyperMax,Dubai,Wireless Charger,Accessories,15,1200,18000,Linda,Online Payment
+SO-00873,2026-06-30,Tech Solutions,Dubai,Keyboard,Accessories,3,1000,3000,Sarah,Online Payment
+SO-00975,2026-06-30,Customer Client 3,Abu Dhabi,Laptop,Electronics,2,50000,100000,David,Bank Transfer
+SO-00887,2026-06-30,Skyline Ventures,Dubai,Notebooks Pack,Office Supplies,20,120,2400,Robert,Bank Transfer
+SO-00891,2026-06-30,ABC Trading,Dubai,Mouse,Accessories,1,500,500,David,Bank Transfer
+SO-00828,2026-06-30,Smart Buy,Abu Dhabi,Monitor,Electronics,2,12000,24000,Michael,Cash
