@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diabetes Prediction</title>
+    <style>
+        :root {
+            --bg: #06131f;
+            --bg-2: #0c2238;
+            --panel: rgba(12, 30, 46, 0.9);
+            --panel-soft: rgba(20, 41, 61, 0.9);
+            --primary: #44d7b6;
+            --primary-dark: #1ba88d;
+            --primary-soft: rgba(68, 215, 182, 0.12);
+            --text: #edf6fb;
+            --muted: #9bb8c9;
+            --border: rgba(148, 163, 184, 0.18);
+            --success-bg: rgba(16, 185, 129, 0.12);
+            --success-border: rgba(52, 211, 153, 0.45);
+            --success-text: #7aeec0;
+            --danger-bg: rgba(244, 63, 94, 0.12);
+            --danger-border: rgba(251, 113, 133, 0.45);
+            --danger-text: #fca5b4;
+            --shadow: rgba(0, 0, 0, 0.32);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 32px 20px;
+            background:
+                linear-gradient(rgba(68, 215, 182, 0.04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(68, 215, 182, 0.04) 1px, transparent 1px),
+                radial-gradient(circle at 12% 10%, rgba(68, 215, 182, 0.18), transparent 22%),
+                linear-gradient(135deg, var(--bg) 0%, var(--bg-2) 100%);
+            background-size: 34px 34px, 34px 34px, auto, auto;
+            color: var(--text);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 980px;
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--text);
+            font-size: clamp(2rem, 3vw, 3rem);
+            margin-bottom: 10px;
+            letter-spacing: -0.05em;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: var(--muted);
+            margin-bottom: 26px;
+            font-size: 1.02rem;
+        }
+
+        .card {
+            background: linear-gradient(145deg, rgba(20, 38, 55, 0.96), rgba(10, 25, 38, 0.96));
+            border: 1px solid var(--border);
+            border-radius: 22px;
+            box-shadow: 0 24px 60px var(--shadow);
+            padding: 28px 24px 24px;
+            backdrop-filter: blur(10px);
+        }
+
+        [hidden] {
+            display: none !important;
+        }
+
+        .auth-card {
+            max-width: 460px;
+            margin: 0 auto;
+        }
+
+        .auth-card h2 {
+            margin-bottom: 8px;
+        }
+
+        .auth-description {
+            color: var(--muted);
+            margin-bottom: 22px;
+            line-height: 1.5;
+        }
+
+        .auth-form {
+            display: grid;
+            gap: 16px;
+        }
+
+        .auth-form button {
+            grid-column: auto;
+        }
+
+        .session-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            margin-bottom: 16px;
+            color: var(--muted);
+        }
+
+        .session-bar button {
+            margin: 0;
+            padding: 10px 14px;
+        }
+
+        .form {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px 20px;
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: #d1e1ec;
+            margin-bottom: 9px;
+            letter-spacing: 0.02em;
+        }
+
+        input {
+            width: 100%;
+            padding: 13px 14px;
+            background: rgba(4, 15, 27, 0.8);
+            border: 1px solid rgba(148, 163, 184, 0.25);
+            border-radius: 12px;
+            color: var(--text);
+            font-size: 0.98rem;
+            outline: none;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+        }
+
+        input::placeholder {
+            color: rgba(155, 184, 201, 0.7);
+        }
+
+        input:focus {
+            border-color: rgba(68, 215, 182, 0.9);
+            box-shadow: 0 0 0 4px rgba(68, 215, 182, 0.12);
+            transform: translateY(-1px);
+        }
+
+        button {
+            grid-column: 1 / -1;
+            border: none;
+            border-radius: 14px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: #062d29;
+            padding: 15px 18px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            margin-top: 8px;
+            box-shadow: 0 12px 26px rgba(33, 168, 143, 0.28);
+            transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 16px 32px rgba(33, 168, 143, 0.36);
+            filter: brightness(1.04);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        button:focus-visible {
+            outline: 3px solid #edf6fb;
+            outline-offset: 3px;
+        }
+
+        .result {
+            display: none;
+            margin-top: 24px;
+            padding: 22px 18px;
+            border-radius: 16px;
+            text-align: center;
+            border: 1px solid transparent;
+        }
+
+        .positive {
+            background: var(--danger-bg);
+            border-color: var(--danger-border);
+            color: var(--danger-text);
+        }
+
+        .negative {
+            background: var(--success-bg);
+            border-color: var(--success-border);
+            color: var(--success-text);
+        }
+
+        .result h2 {
+            margin-bottom: 10px;
+            font-size: clamp(1.5rem, 2vw, 2rem);
+        }
+
+        .accuracy {
+            font-size: 0.98rem;
+            color: var(--text);
+        }
+
+        .error {
+            display: none;
+            margin-top: 18px;
+            padding: 12px 14px;
+            background: var(--danger-bg);
+            color: var(--danger-text);
+            border: 1px solid var(--danger-border);
+            border-radius: 12px;
+            font-weight: 600;
+        }
+
+        @media (max-width: 640px) {
+            .card {
+                padding: 22px 18px 18px;
+            }
+
+            .form {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            button {
+                grid-column: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🩺 Diabetes Prediction</h1>
+        <p class="subtitle">KNN Machine Learning Prediction</p>
+
+        <section class="card auth-card" id="loginPanel" aria-labelledby="loginHeading" hidden>
+            <h2 id="loginHeading" tabindex="-1">Sign in</h2>
+            <p class="auth-description">Sign in to access the diabetes prediction tool.</p>
+            <form class="auth-form" id="loginForm">
+                <div class="input-group">
+                    <label for="username">Username or email</label>
+                    <input id="username" name="username" type="text" autocomplete="username" required />
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input id="password" name="password" type="password" autocomplete="current-password" required />
+                </div>
+                <button type="submit" id="loginButton">Sign in</button>
+            </form>
+            <p class="error" id="loginError" role="alert" aria-live="polite"></p>
+        </section>
+
+        <section id="predictionPanel" aria-label="Diabetes prediction" hidden>
+            <div class="session-bar">
+                <span id="sessionStatus" role="status" aria-live="polite">Signed in</span>
+                <button type="button" id="logoutButton">Sign out</button>
+            </div>
+            <div class="card">
+                <form class="form" id="predictionForm">
+                <div class="input-group">
+                    <label for="Pregnancies">Pregnancies</label>
+                    <input type="number" id="Pregnancies" min="0" required />
+                </div>
+
+                <div class="input-group">
+                    <label for="Glucose">Glucose</label>
+                    <input type="number" id="Glucose" step="any" min="0" required />
+                </div>
+
+                <div class="input-group">
+                    <label for="BloodPressure">Blood Pressure</label>
+                    <input type="number" id="BloodPressure" step="any" min="0" required />
+                </div>
+
+                <div class="input-group">
+                    <label for="SkinThickness">Skin Thickness</label>
+                    <input type="number" id="SkinThickness" step="any" min="0" required />
+                </div>
+
+                <div class="input-group">
+                    <label for="Insulin">Insulin</label>
+                    <input type="number" id="Insulin" step="any" min="0" required />
+                </div>
+
+                <div class="input-group">
+                    <label for="BMI">BMI</label>
+                    <input type="number" id="BMI" step="any" min="0" required />
+                </div>
+
+                <div class="input-group">
+                    <label for="DiabetesPedigreeFunction">Diabetes Pedigree Function</label>
+                    <input type="number" id="DiabetesPedigreeFunction" step="any" min="0" required />
+                </div>
+
+                <div class="input-group">
+                    <label for="Age">Age</label>
+                    <input type="number" id="Age" min="0" required />
+                </div>
+
+                <button type="submit">Predict</button>
+            </form>
+
+                <div id="result" class="result" aria-live="polite">
+                    <h2 id="prediction"></h2>
+                    <p class="accuracy">Model Accuracy: <strong id="accuracy"></strong></p>
+                </div>
+
+                <div id="error" class="error" role="alert" aria-live="polite"></div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        const API_URL = window.location.origin;
+        const loginPanel = document.getElementById("loginPanel");
+        const predictionPanel = document.getElementById("predictionPanel");
+        const loginError = document.getElementById("loginError");
+
+        async function readResponse(response) {
+            const text = await response.text();
+            let data = {};
+
+            if (text) {
+                try {
+                    data = JSON.parse(text);
+                } catch {
+                    throw new Error(`The server returned an invalid response (${response.status}).`);
+                }
+            }
+
+            return data;
+        }
+
+        function responseMessage(data, fallback) {
+            if (Array.isArray(data.detail)) {
+                return data.detail.map((item) => item.msg).join(", ");
+            }
+            return data.detail || data.message || fallback;
+        }
+
+        function showLogin(message = "") {
+            loginPanel.hidden = false;
+            predictionPanel.hidden = true;
+            loginError.textContent = message;
+            loginError.style.display = message ? "block" : "none";
+            document.getElementById("password").value = "";
+        }
+
+        function showPrediction() {
+            loginPanel.hidden = true;
+            predictionPanel.hidden = false;
+            loginError.textContent = "";
+            loginError.style.display = "none";
+            document.getElementById("sessionStatus").textContent = "Signed in";
+        }
+
+        async function checkSession() {
+            showLogin();
+            try {
+                const response = await fetch(`${API_URL}/auth/me`, {
+                    credentials: "same-origin"
+                });
+
+                if (response.ok) {
+                    showPrediction();
+                    return;
+                }
+
+                if (response.status !== 401 && response.status !== 403) {
+                    const data = await readResponse(response);
+                    showLogin(responseMessage(data, "Unable to verify your session."));
+                }
+            } catch (error) {
+                showLogin(error.message || "Unable to connect to the authentication service.");
+            }
+        }
+
+        document.getElementById("loginForm").addEventListener("submit", async function (event) {
+            event.preventDefault();
+            const button = document.getElementById("loginButton");
+            button.disabled = true;
+            button.textContent = "Signing in...";
+            loginError.style.display = "none";
+
+            try {
+                const response = await fetch(`${API_URL}/auth/login`, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    credentials: "same-origin",
+                    body: JSON.stringify({
+                        username: document.getElementById("username").value.trim(),
+                        password: document.getElementById("password").value
+                    })
+                });
+                const data = await readResponse(response);
+
+                if (!response.ok) {
+                    throw new Error(responseMessage(data, "Sign in failed."));
+                }
+
+                showPrediction();
+            } catch (error) {
+                showLogin(error.message || "Unable to sign in.");
+            } finally {
+                button.disabled = false;
+                button.textContent = "Sign in";
+            }
+        });
+
+        document.getElementById("logoutButton").addEventListener("click", async function () {
+            const button = this;
+            button.disabled = true;
+            button.textContent = "Signing out...";
+
+            try {
+                const response = await fetch(`${API_URL}/auth/logout`, {
+                    method: "POST",
+                    credentials: "same-origin"
+                });
+                const data = await readResponse(response);
+
+                if (!response.ok) {
+                    throw new Error(responseMessage(data, "Sign out failed."));
+                }
+
+                showLogin();
+                document.getElementById("loginHeading").focus();
+            } catch (error) {
+                document.getElementById("sessionStatus").textContent =
+                    error.message || "Unable to sign out. Please try again.";
+            } finally {
+                button.disabled = false;
+                button.textContent = "Sign out";
+            }
+        });
+
+        document.getElementById("predictionForm").addEventListener("submit", async function (event) {
+            event.preventDefault();
+
+            const details = {
+                Pregnancies: Number(document.getElementById("Pregnancies").value),
+                Glucose: Number(document.getElementById("Glucose").value),
+                BloodPressure: Number(document.getElementById("BloodPressure").value),
+                SkinThickness: Number(document.getElementById("SkinThickness").value),
+                Insulin: Number(document.getElementById("Insulin").value),
+                BMI: Number(document.getElementById("BMI").value),
+                DiabetesPedigreeFunction: Number(document.getElementById("DiabetesPedigreeFunction").value),
+                Age: Number(document.getElementById("Age").value)
+            };
+
+            try {
+                const response = await fetch(`${API_URL}/predict`, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    credentials: "same-origin",
+                    body: JSON.stringify(details)
+                });
+
+                const data = await readResponse(response);
+
+                if (!response.ok) {
+                    if (response.status === 401 || response.status === 403) {
+                        showLogin("Your session has expired. Please sign in again.");
+                        return;
+                    }
+                    throw new Error(responseMessage(data, "Prediction failed."));
+                }
+
+                const result = document.getElementById("result");
+                const prediction = document.getElementById("prediction");
+                const accuracy = document.getElementById("accuracy");
+
+                prediction.textContent = data.prediction === 0 ? "No Diabetes Detected" : "Diabetes Detected";
+                result.className = data.prediction === 0 ? "result negative" : "result positive";
+                accuracy.textContent = `${(data.accuracy * 100).toFixed(2)}%`;
+                result.style.display = "block";
+                document.getElementById("error").style.display = "none";
+            } catch (error) {
+                const errorBox = document.getElementById("error");
+                errorBox.style.display = "block";
+                errorBox.textContent = "❌ " + error.message;
+                document.getElementById("result").style.display = "none";
+            }
+        });
+
+        checkSession();
+    </script>
+</body>
+</html>

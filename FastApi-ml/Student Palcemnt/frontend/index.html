@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f7f9f6" />
+    <title>Student Placement Predictor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/styles.css" />
+    <script src="/assets/app.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="Pathway home">
+        <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span>pathway<span class="brand-period">.</span></span>
+      </a>
+      <div class="topbar-note"><span class="status-dot"></span> Student outcomes lab</div>
+    </header>
+
+    <main class="shell">
+      <section class="intro" aria-labelledby="page-title">
+        <div class="eyebrow"><span class="eyebrow-line"></span> PLACEMENT FORECAST</div>
+        <h1 id="page-title">A clearer view of<br /><em>what comes next.</em></h1>
+        <p class="intro-copy">Bring a student profile together and get a model-generated placement prediction.</p>
+        <div class="intro-meta"><span>01 <i></i> PROFILE</span><span>02 <i></i> FORECAST</span></div>
+        <div class="intro-art" aria-hidden="true">
+          <div class="art-ring ring-one"></div><div class="art-ring ring-two"></div>
+          <div class="art-sun"></div><div class="art-path"></div>
+          <span class="art-caption">BUILDING<br />TOWARD WHAT'S NEXT</span>
+        </div>
+      </section>
+
+      <div class="workspace">
+        <section class="form-column" aria-label="Student profile form">
+          <div class="form-heading">
+            <div>
+              <span class="section-kicker">STUDENT PROFILE</span>
+              <h2>Start with the details</h2>
+            </div>
+            <button class="text-button" id="sample-button" type="button">Load sample <span aria-hidden="true">↗</span></button>
+          </div>
+
+          <div class="progress-row">
+            <div class="progress-track"><span id="progress-bar"></span></div>
+            <span id="progress-label">0 / 23 complete</span>
+          </div>
+
+          <div class="access-row">
+            <label class="field access-field" for="api-key">
+              <span>API key <span class="required-mark">*</span></span>
+              <input id="api-key" type="password" autocomplete="off" placeholder="Enter your X-API-Key" required />
+            </label>
+            <fieldset class="model-picker">
+              <legend>Prediction model</legend>
+              <label><input type="radio" name="model" value="knn_model" checked /><span>KNN</span></label>
+              <label><input type="radio" name="model" value="nb_model" /><span>Naive Bayes</span></label>
+            </fieldset>
+          </div>
+
+          <form id="prediction-form">
+            <section class="form-section">
+              <div class="section-title"><span class="section-number">01</span><div><h3>About the student</h3><p>A few essentials to set the scene.</p></div></div>
+              <div class="field-grid">
+                <label class="field" for="Age"><span>Age <b>*</b></span><input id="Age" name="Age" type="number" min="0" step="1" placeholder="e.g. 22" required /></label>
+                <label class="field" for="Gender"><span>Gender <b>*</b></span><select id="Gender" name="Gender" required><option value="" selected disabled>Select gender</option><option>Female</option><option>Male</option><option>Other</option></select></label>
+                <label class="field" for="University_Year"><span>University year <b>*</b></span><select id="University_Year" name="University_Year" required><option value="" selected disabled>Select year</option><option>Freshman</option><option>Sophomore</option><option>Junior</option><option>Senior</option></select></label>
+                <label class="field" for="Major"><span>Major <b>*</b></span><select id="Major" name="Major" required><option value="" selected disabled>Select major</option><option>Artificial Intelligence</option><option>Business Analytics</option><option>Computer Science</option><option>Cybersecurity</option><option>Data Science</option><option>Electrical Engineering</option><option>Information Technology</option><option>Software Engineering</option></select></label>
+              </div>
+            </section>
+
+            <section class="form-section">
+              <div class="section-title"><span class="section-number">02</span><div><h3>Academic rhythm</h3><p>Study habits and academic standing.</p></div></div>
+              <div class="field-grid">
+                <label class="field" for="Attendance_Percentage"><span>Attendance <b>*</b></span><div class="input-suffix"><input id="Attendance_Percentage" name="Attendance_Percentage" type="number" min="0" max="100" step="1" placeholder="86" required /><span>%</span></div></label>
+                <label class="field" for="Study_Hours_Per_Week"><span>Study hours / week <b>*</b></span><input id="Study_Hours_Per_Week" name="Study_Hours_Per_Week" type="number" min="0" step="1" placeholder="21" required /></label>
+                <label class="field" for="CGPA"><span>CGPA <b>*</b></span><input id="CGPA" name="CGPA" type="number" min="0" step="0.01" placeholder="3.28" required /></label>
+                <label class="field" for="Academic_Performance"><span>Academic performance <b>*</b></span><select id="Academic_Performance" name="Academic_Performance" required><option value="" selected disabled>Select standing</option><option>Average</option><option>Excellent</option><option>Good</option><option>Poor</option></select></label>
+                <label class="field" for="Programming_Skill"><span>Programming skill <b>*</b></span><input id="Programming_Skill" name="Programming_Skill" type="number" min="0" step="1" placeholder="0 – 10" required /></label>
+              </div>
+            </section>
+
+            <section class="form-section">
+              <div class="section-title"><span class="section-number">03</span><div><h3>Experience & presence</h3><p>Work, projects, and professional footprint.</p></div></div>
+              <div class="field-grid">
+                <label class="field" for="Projects_Completed"><span>Projects completed <b>*</b></span><input id="Projects_Completed" name="Projects_Completed" type="number" min="0" step="1" placeholder="10" required /></label>
+                <label class="field" for="Certifications"><span>Certifications <b>*</b></span><input id="Certifications" name="Certifications" type="number" min="0" step="1" placeholder="1" required /></label>
+                <label class="field" for="Hackathons"><span>Hackathons <b>*</b></span><input id="Hackathons" name="Hackathons" type="number" min="0" step="1" placeholder="6" required /></label>
+                <label class="field" for="Internships"><span>Internships <b>*</b></span><input id="Internships" name="Internships" type="number" min="0" step="1" placeholder="5" required /></label>
+                <label class="field" for="GitHub_Profile"><span>GitHub profile <b>*</b></span><select id="GitHub_Profile" name="GitHub_Profile" required><option value="" selected disabled>Select one</option><option>No</option><option>Yes</option></select></label>
+                <label class="field" for="Leadership_Experience"><span>Leadership experience <b>*</b></span><select id="Leadership_Experience" name="Leadership_Experience" required><option value="" selected disabled>Select one</option><option>No</option><option>Yes</option></select></label>
+                <label class="field" for="LinkedIn_Profile"><span>LinkedIn profile <b>*</b></span><select id="LinkedIn_Profile" name="LinkedIn_Profile" required><option value="" selected disabled>Select one</option><option>No</option><option>Yes</option></select></label>
+                <label class="field" for="Resume_Score"><span>Resume score <b>*</b></span><input id="Resume_Score" name="Resume_Score" type="number" min="0" step="1" placeholder="0 – 100" required /></label>
+              </div>
+            </section>
+
+            <section class="form-section">
+              <div class="section-title"><span class="section-number">04</span><div><h3>Skills & readiness</h3><p>Communication, problem-solving, and interview results.</p></div></div>
+              <div class="field-grid">
+                <label class="field" for="Communication_Skills"><span>Communication <b>*</b></span><input id="Communication_Skills" name="Communication_Skills" type="number" min="0" step="1" placeholder="0 – 10" required /></label>
+                <label class="field" for="Teamwork"><span>Teamwork <b>*</b></span><input id="Teamwork" name="Teamwork" type="number" min="0" step="1" placeholder="0 – 10" required /></label>
+                <label class="field" for="Problem_Solving"><span>Problem solving <b>*</b></span><input id="Problem_Solving" name="Problem_Solving" type="number" min="0" step="1" placeholder="0 – 10" required /></label>
+                <label class="field" for="English_Proficiency"><span>English proficiency <b>*</b></span><select id="English_Proficiency" name="English_Proficiency" required><option value="" selected disabled>Select level</option><option>Advanced</option><option>Basic</option><option>Intermediate</option></select></label>
+                <label class="field" for="Interview_Score"><span>Interview score <b>*</b></span><input id="Interview_Score" name="Interview_Score" type="number" min="0" step="1" placeholder="72" required /></label>
+                <label class="field" for="Employability_Score"><span>Employability score <b>*</b></span><input id="Employability_Score" name="Employability_Score" type="number" min="0" step="0.1" placeholder="231.7" required /></label>
+              </div>
+            </section>
+
+            <div class="submit-row">
+              <p>All fields are required. Your API key is only sent with this request.</p>
+              <button class="submit-button" id="submit-button" type="submit"><span>Generate forecast</span><span class="button-arrow" aria-hidden="true">↗</span></button>
+            </div>
+          </form>
+        </section>
+
+        <aside class="result-column" aria-label="Prediction result">
+          <div class="result-card" aria-live="polite">
+            <div class="result-topline"><span>YOUR FORECAST</span><span class="result-spark" aria-hidden="true">✳</span></div>
+            <div class="result-visual" id="result-visual"><div class="result-orbit orbit-a"></div><div class="result-orbit orbit-b"></div><div class="result-core" id="result-core"><span id="result-value">—</span></div></div>
+            <h2 id="result-title">Ready when<br />you are.</h2>
+            <p id="result-copy">Complete the student profile to see the model’s prediction.</p>
+            <div class="result-divider"></div>
+            <div class="result-foot"><span class="result-foot-dot"></span><span id="result-model">K-nearest neighbors</span></div>
+          </div>
+          <div class="note-block"><span class="note-mark">i</span><p>1 means the student will be placed. 0 means the student will not be placed.</p></div>
+        </aside>
+      </div>
+
+      <footer class="page-footer"><span>PATHWAY <span class="footer-dot">/</span> STUDENT OUTCOMES LAB</span><span>Prediction is a starting point.</span></footer>
+    </main>
+  </body>
+</html>
