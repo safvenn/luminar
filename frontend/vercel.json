@@ -1,0 +1,1 @@
+{"rewrites":[{"source":"/assets/:path*","destination":"/:path*"},{"source":"/live","destination":"https://railcast-api.onrender.com/live"},{"source":"/predict","destination":"https://railcast-api.onrender.com/predict"},{"source":"/health","destination":"https://railcast-api.onrender.com/health"}]}
