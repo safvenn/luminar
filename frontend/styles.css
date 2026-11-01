@@ -131,3 +131,26 @@ html[data-theme="dark"]{color-scheme:dark;--bg:#101827;--ink:#e5ebf7;--muted:#a6
   .live-metrics > div + div { border-left: 0; border-top: 1px solid var(--line); padding-top: 20px; }
   .how-section { grid-template-columns: minmax(0, 1fr); }
 }
+
+/* Safari gives date inputs an intrinsic width; let the field shrink to its panel. */
+.date-input-wrap { min-width: 0; max-width: 100%; }
+.date-input-wrap input[type="date"] {
+  display: block;
+  appearance: none;
+  -webkit-appearance: none;
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  min-inline-size: 0;
+  height: 50px;
+  overflow: hidden;
+}
+.date-input-wrap input[type="date"]::-webkit-date-and-time-value {
+  min-width: 0;
+  text-align: left;
+}
+.date-input-wrap input[type="date"]::-webkit-datetime-edit {
+  min-width: 0;
+  padding: 0;
+}
