@@ -84,3 +84,50 @@ html[data-theme="dark"]{color-scheme:dark;--bg:#101827;--ink:#e5ebf7;--muted:#a6
 .date-input-wrap input:focus-visible{outline:2px solid var(--blue);outline-offset:3px;box-shadow:0 0 0 5px #375fe814}
 [data-theme="dark"] .date-input-wrap input{background:#111d30;border-color:#3b4c65;color:#e5ebf7;color-scheme:dark}
 .station-stop .station-date{display:block;font-size:9px;color:var(--blue);font-weight:600;margin-top:4px}
+
+/* Keep every panel within the viewport; the route scrolls independently. */
+.dashboard > *, .panel-heading, .live-metrics > *, .empty-metrics > * { min-width: 0; }
+.route-stations { max-width: 100%; overscroll-behavior-x: contain; }
+.result-journey h2, #result-train, .form-message, #result-caption { overflow-wrap: anywhere; }
+@media (max-width: 760px) {
+  .dashboard { grid-template-columns: minmax(0, 1fr); }
+  input, select, .train-select-wrap select, .date-input-wrap input { min-width: 0; font-size: 16px; }
+  .primary, .secondary { min-height: 48px; }
+  .result-top { flex-wrap: wrap; }
+  .result-journey { padding: 24px 20px 12px; }
+  .live-metrics { padding: 20px; gap: 12px; }
+  .live-metrics strong { font-size: clamp(24px, 5vw, 36px); }
+  .route-panel > .panel-heading { flex-wrap: wrap; gap: 10px; }
+  #route-title { flex: 1 1 160px; overflow-wrap: anywhere; }
+  .station-stop { flex: 0 0 145px; min-height: 48px; }
+}
+@media (max-width: 480px) {
+  main { padding: 0 16px; }
+  .header { height: auto; padding: 14px 16px 0; display: grid; grid-template-columns: minmax(0, 1fr) 44px; gap: 10px; }
+  .header .brand { font-size: 24px; }
+  .header .theme-toggle { grid-column: 2; grid-row: 1; }
+  .header nav { grid-column: 1 / -1; grid-row: 2; gap: 24px; font-size: 12px; }
+  .header nav a { min-height: 44px; }
+  .workspace { padding-top: 26px; }
+  .journey-panel, .route-panel { padding: 20px 16px; }
+  .section-heading h2 { font-size: 25px; }
+  .result-panel { min-height: 0; }
+  .result-top { padding: 20px 16px; gap: 12px; }
+  .empty-result { padding: 12px 16px 24px; }
+  .empty-result h2 { font-size: 20px; }
+  .empty-metrics { margin-top: 24px; gap: 8px; }
+  .empty-metrics span, .live-metrics span { letter-spacing: .6px; line-height: 1.6; }
+  .live-metrics { padding: 20px 16px; }
+  .result-journey h2 { font-size: 26px; }
+  .result-bottom { padding: 16px; line-height: 1.6; }
+  .mini-track { display: none; }
+  .how-section { gap: 24px 18px; }
+  .how-title { grid-column: 1 / -1; }
+  .how-section article p { max-width: none; }
+  footer { margin: 0 16px; line-height: 1.6; }
+}
+@media (max-width: 360px) {
+  .live-metrics { flex-direction: column; gap: 20px; }
+  .live-metrics > div + div { border-left: 0; border-top: 1px solid var(--line); padding-top: 20px; }
+  .how-section { grid-template-columns: minmax(0, 1fr); }
+}

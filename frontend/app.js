@@ -73,7 +73,7 @@ async function request(path, options = {}) {
   } finally { clearTimeout(timeout); }
 }
 function resetResult() { $('empty-result').hidden = false; $('prediction-result').hidden = true; $('result-badge').textContent = report?.prediction_available === false ? 'LIVE STATUS ONLY' : report && !report.data.some(station => canSelectStation(station.station_code)) ? 'NO UPCOMING ARRIVALS' : report ? 'READY TO PREDICT' : 'AWAITING JOURNEY'; $('result-caption').textContent = 'Powered by your train delay prediction model'; }
-function estimatedArrival(scheduledArrival, delay, predictedTime, scheduledDay = 0) {
+function estimatedArrival(scheduledArrival, delay, predictedTime) {
   const parseTime = (value) => {
     const match = /^(\d{1,2}):(\d{2})(?::(\d{2}))?$/.exec(String(value ?? '').trim());
     if (!match) return null;
@@ -84,13 +84,11 @@ function estimatedArrival(scheduledArrival, delay, predictedTime, scheduledDay =
   const scheduledSeconds = parseTime(scheduledArrival);
   const arrivalSeconds = scheduledSeconds === null ? parseTime(predictedTime) : scheduledSeconds + delay * 60;
   if (arrivalSeconds === null || !Number.isFinite(arrivalSeconds)) return 'Unavailable';
-  const dayOffset = (Number.isFinite(scheduledDay) ? scheduledDay : 0) + Math.floor(arrivalSeconds / 86400);
   const secondsInDay = ((arrivalSeconds % 86400) + 86400) % 86400;
   const hours = Math.floor(secondsInDay / 3600);
   const period = hours >= 12 ? 'PM' : 'AM';
   const minutes = String(Math.floor(secondsInDay % 3600 / 60)).padStart(2, '0');
-  const dayLabel = dayOffset === 0 ? '' : ` (${dayOffset > 0 ? '+' : ''}${dayOffset} ${Math.abs(dayOffset) === 1 ? 'day' : 'days'})`;
-  return `${hours % 12 || 12}:${minutes} ${period}${dayLabel}`;
+  return `${hours % 12 || 12}:${minutes} ${period}`;
 }
 function isHaltingStation(station) { return station?.halts_here === true || station?.halts_here === 1; }
 function hasPassed(station) {
