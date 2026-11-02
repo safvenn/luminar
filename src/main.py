@@ -39,9 +39,9 @@ def health():
 
 
 @app.post("/predict", tags=["Predict"])
-def predict(station_code: str, request: Request):
+def predict(station_code: str, report_id: str, request: Request):
     # The existing service expects the model itself and returns the result.
-    return predict_services(station_code=station_code, model=request.app.state.model)
+    return predict_services(station_code=station_code, model=request.app.state.model, report_id=report_id)
 
 
 @app.get("/", response_class=FileResponse, tags=["HTML Frontend"])

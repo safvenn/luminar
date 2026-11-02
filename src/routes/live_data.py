@@ -1,4 +1,5 @@
 from fastapi import APIRouter, HTTPException
+import math
 import requests
 from datetime import datetime
 from src.depends.db import reports
@@ -7,7 +8,8 @@ from dotenv import dotenv_values
 from pathlib import Path
 import os
 import re
-import difflib
+from uuid import uuid4
+from time import time
 from typing import Literal
 
 
@@ -91,50 +93,49 @@ def fetch_train_data(train_no, endpoint, date=None):
 
 
 def match_station_stop(row, live_stops, used_indices):
-    """Match a timetable station row to a live stop by distance, proximity, or station name/alias."""
-    r_dist = row.get("distance_km")
-    code = (row.get("station_code") or "").strip().lower()
-    t_name = (row.get("station_name") or "").strip().lower()
-    t_clean = re.sub(r'[^a-z0-9]', '', t_name)
+    """Match unique station identities; distances alone cannot establish identity."""
+    def clean(value):
+        value = re.sub(r"\b(junction|jn|jnction)\b", "", str(value or "").lower())
+        return re.sub(r"[^a-z0-9]", "", value)
 
+    code = str(row.get("station_code") or "").strip().upper()
     aliases = {
-        "tvc": ["trivandrum", "thiruvananthapuram"],
-        "allp": ["alleppey", "alappuzha"],
-        "cno": ["cancona", "canacona"],
-        "sgr": ["sangmeshwar", "sangameshwar"],
-        "vard": ["vaikom", "vaikam"],
-        "rdm": ["ramagundam", "ramgundam"],
-        "vglj": ["jhansi", "lakshmibai"],
-        "nzm": ["nizamuddin"],
-        "ipl": ["idapalli", "idaplli", "edappally"],
-        "trtr": ["tripunittura", "triupunittura"],
-        "vtk": ["vallathol", "vailapuzha"],
+        "TVC": ["trivandrum cntl", "trivandrum central", "thiruvananthapuram central"],
+        "ALLP": ["alleppey", "alappuzha"],
+        "CNO": ["cancona", "canacona"],
+        "SGR": ["sangmeshwar", "sangameshwar", "sangameshwar road"],
+        "VARD": ["vaikom", "vaikom road", "vaikam road"],
+        "RDM": ["ramagundam", "ramgundam"],
+        "VGLJ": ["v lakshmibai jhansi jhs", "virangana lakshmibai", "virangana lakshmibai jhansi", "jhansi"],
+        "NZM": ["hazrat nizamuddin", "h nizamuddin"],
+        "IPL": ["idapalli", "idaplli", "edappally"],
+        "TRTR": ["tripunittura", "triupunittura", "tripunithura"],
+        "VAK": ["varkalasivagiri"],
+        "CGY": ["changanaseri"],
+        "SKZR": ["sirpur kagazngr"],
+        "MGK": ["mulagunnathukvu"],
+        "KPY": ["karunagapalli"],
+        "HAD": ["harippad"],
+        "MAJN": ["mangaluru jn"],
+        "BYNR": ["mookambika road"],
+        "LTT": ["lokmanyatilak t"],
+        "VPZ": ["vallapuzha", "vailapuzha"],
+        "VTK": ["vallathol nagar", "vallattolnagar"],
     }
-
-    # 1. Exact distance match
-    for i, s in enumerate(live_stops):
-        if i not in used_indices and s.get("distanceKm") is not None and s["distanceKm"] == r_dist:
-            return i, s
-
-    # 2. Close distance match (e.g. slight distance discrepancy within 2 km)
-    for i, s in enumerate(live_stops):
-        if i not in used_indices and s.get("distanceKm") is not None and r_dist is not None:
-            if abs(float(s["distanceKm"]) - float(r_dist)) <= 2:
-                return i, s
-
-    # 3. Station name or code alias match (when distance is missing or differs)
-    for i, s in enumerate(live_stops):
+    names = {clean(row.get("station_name")), *(clean(n) for n in aliases.get(code, []))} - {""}
+    explicit, named = [], []
+    for i, stop in enumerate(live_stops):
         if i in used_indices:
             continue
-        s_name = (s.get("stationName") or "").strip().lower()
-        s_clean = re.sub(r'[^a-z0-9]', '', s_name)
-        if code in aliases and any(a in s_clean for a in aliases[code]):
-            return i, s
-        if len(s_clean) >= 4 and len(t_clean) >= 4:
-            if s_clean in t_clean or t_clean in s_clean or difflib.SequenceMatcher(None, s_clean, t_clean).ratio() >= 0.6:
-                return i, s
-
-    return None, None
+        live_code = str(stop.get("stationCode") or stop.get("code") or "").strip().upper()
+        if live_code:
+            if live_code == code:
+                explicit.append((i, stop))
+            continue
+        if clean(stop.get("stationName")) in names:
+            named.append((i, stop))
+    matches = explicit or named
+    return matches[0] if len(matches) == 1 else (None, None)
 
 
 @router.get("/live")
@@ -157,7 +158,7 @@ def live_data(train_no: TRAIN_OPTIONS = '16346', date: str | None = None):
             rows.append({
                 "train_no": data["trainNo"],
                 "train_type": data.get("trainType"),
-                "station_code": stop["code"],
+                "station_code": str(stop["code"]).strip().upper(),
                 "station_name": stop.get("name"),
                 "seq": int(stop["seq"]),
                 "distance_km": float(stop["distanceKm"]),
@@ -167,11 +168,15 @@ def live_data(train_no: TRAIN_OPTIONS = '16346', date: str | None = None):
                 "arrival_day_offset": stop.get("arrivalDayOffset"),
                 "departure_day_offset": stop.get("dayOffset"),
             })
+        if any(not math.isfinite(row["distance_km"]) for row in rows):
+            raise ValueError("Invalid station distance")
+        if len({row["station_code"] for row in rows}) != len(rows):
+            raise ValueError("Repeated station codes are not supported")
         rows.sort(key=lambda row: row["seq"])
     except (KeyError, TypeError, ValueError):
         raise HTTPException(status_code=502, detail="IRCTC API returned invalid station data.") from None
 
-    # Match stations by exact distance, close distance, or name/code aliases.
+    # Match unique station identities, including verified spelling aliases.
     used_indices = set()
     for row in rows:
         idx, stop = match_station_stop(row, live["stops"], used_indices)
@@ -187,8 +192,14 @@ def live_data(train_no: TRAIN_OPTIONS = '16346', date: str | None = None):
     try:
         add_prediction_features(rows, live, data.get("trainType"))
     except (ValueError, TypeError, KeyError, IndexError) as error:
+        for row in rows:
+            row.pop("model_features", None)
+            row["prediction_available"] = False
+            row["prediction_reason"] = "Live inputs are incomplete or invalid. Refresh your train."
         prediction_message = f"Prediction unavailable: {error}"
     prediction_available = any("model_features" in row for row in rows)
+    if not prediction_available:
+        prediction_message = "No upcoming stop has sufficient observed history and supported model inputs."
 
     current_location = live.get("currentLocation")
     current = next((row for row in rows if row.get("live_status") == "current"), None)
@@ -202,6 +213,8 @@ def live_data(train_no: TRAIN_OPTIONS = '16346', date: str | None = None):
                     else (live["stops"][0].get("date") if live.get("stops") else None))
 
     report = {
+        "report_id": uuid4().hex,
+        "created_at": time(),
         "train_no": data["trainNo"],
         "train_name": data.get("trainName"),
         "journey_date": journey_date,
@@ -215,6 +228,7 @@ def live_data(train_no: TRAIN_OPTIONS = '16346', date: str | None = None):
         "prediction_message": prediction_message,
     }
     reports.append(report)
+    del reports[:-100]
     # Keep model inputs on the server; the frontend only needs display fields.
     return {**report, "data": [
         {key: value for key, value in row.items() if key != "model_features"}

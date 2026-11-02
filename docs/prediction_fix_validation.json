@@ -1,0 +1,31 @@
+{
+  "12625": {
+    "matched": 44,
+    "total": 44,
+    "predictions": []
+  },
+  "16306": {
+    "matched": 18,
+    "total": 18,
+    "predictions": []
+  },
+  "16325": {
+    "matched": 29,
+    "total": 29,
+    "predictions": []
+  },
+  "16346": {
+    "matched": 49,
+    "total": 49,
+    "predictions": [
+      {
+        "report_id": "60229418413a458e9898a1ddc1b7cb9e",
+        "train_no": "16346",
+        "station_code": "SRTL",
+        "predicted_delay_arrival_min": 29.575082593682122,
+        "predict_time": "12:44:34",
+        "prediction_note": "Estimates use observed station delays against timetable. Platform defaults to 1."
+      }
+    ]
+  }
+}

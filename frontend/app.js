@@ -56,7 +56,7 @@ function currentStationIndex(data) {
 }
 function message(text, error = false) { $('form-message').textContent = text; $('form-message').classList.toggle('error', error); }
 function canPredict() { return Boolean(report && report.prediction_available !== false && canSelectStation($('station').value)); }
-function setBusy(value) { busy = value; $('find-button').disabled = value; $('train-number').disabled = value; $('station').disabled = value || !report || report.prediction_available === false || !report.data.some(station => canSelectStation(station.station_code)); $('predict-button').disabled = value || !canPredict(); }
+function setBusy(value) { busy = value; $('find-button').disabled = value; $('train-number').disabled = value; $('journey-date').disabled = value; $('station').disabled = value || !report || report.prediction_available === false || !report.data.some(station => canSelectStation(station.station_code)); $('predict-button').disabled = value || !canPredict(); }
 async function request(path, options = {}) {
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), 60000);
@@ -96,10 +96,10 @@ function hasPassed(station) {
   const lastPassed = report.data.reduce((last, stop, index) => stop.live_status === 'passed' ? index : last, -1);
   return report.data.indexOf(station) <= lastPassed;
 }
-function canSelectStation(code) { return Boolean(report?.data.some(station => String(station.station_code) === code && isHaltingStation(station) && station.scheduled_arrival && !hasPassed(station))); }
+function canSelectStation(code) { return Boolean(report?.data.some(station => String(station.station_code) === code && isHaltingStation(station) && station.prediction_available === true && station.scheduled_arrival && !hasPassed(station))); }
 function selectStation(code) { if (busy || report?.prediction_available === false) return; if (!canSelectStation(code)) code = ''; $('station').value = code; $('predict-button').disabled = !canPredict(); resetResult(); document.querySelectorAll('.station-stop').forEach(button => button.classList.toggle('selected', button.dataset.code === code)); }
 $('station').addEventListener('change', () => selectStation($('station').value));
-$('train-number').addEventListener('change', () => {
+function resetJourney() {
   report = null;
   resetResult();
   $('route-panel').hidden = true;
@@ -107,7 +107,9 @@ $('train-number').addEventListener('change', () => {
   $('find-button').textContent = 'Find my train →';
   setBusy(false);
   message('Find your selected train to load its latest status.');
-});
+}
+$('train-number').addEventListener('change', resetJourney);
+$('journey-date').addEventListener('change', resetJourney);
 $('train-form').addEventListener('submit', async (event) => {
   event.preventDefault(); if (busy) return;
   const number = $('train-number').value.trim(); if (!/^\d{5}$/.test(number)) return;
@@ -147,6 +149,12 @@ async function loadTrain(number, date = '') {
       const time = document.createElement('span'); time.textContent = scheduledTime;
       const distance = document.createElement('span'); distance.textContent = `${station.distance_km ?? '—'} km`;
       button.append(name, time, distance);
+      if (!station.prediction_available && station.prediction_reason) {
+        button.title = station.prediction_reason;
+        const reason = document.createElement('span');
+        reason.textContent = station.prediction_reason;
+        button.append(reason);
+      }
       if (station.live_date) {
         const dateSpan = document.createElement('span');
         dateSpan.className = 'station-date';
@@ -201,10 +209,10 @@ $('prediction-form').addEventListener('submit', async (event) => {
   if (!canSelectStation($('station').value)) { selectStation(''); message('Choose a station where this train halts.', true); return; }
   const station = $('station').value; setBusy(true); resetResult(); $('predict-button').textContent = 'Calculating arrival…'; message('Your arrival outlook is on its way…');
   try {
-    const data = await request(`/predict?station_code=${encodeURIComponent(station)}`, { method: 'POST' });
+    const data = await request(`/predict?station_code=${encodeURIComponent(station)}&report_id=${encodeURIComponent(report.report_id)}`, { method: 'POST' });
     const delay = data.predicted_delay_arrival_min;
     if (typeof delay !== 'number' || !Number.isFinite(delay)) throw new Error('The model returned an invalid prediction. Please try again.');
-    if (String(data.train_no) !== String(report.train_no) || String(data.station_code).toUpperCase() !== station.toUpperCase()) throw new Error('The active train data changed. Find your train again before predicting.');
+    if (data.report_id !== report.report_id || String(data.train_no) !== String(report.train_no) || String(data.station_code).toUpperCase() !== station.toUpperCase()) throw new Error('The active train data changed. Find your train again before predicting.');
     $('result-train').textContent = `${report.train_name || 'Train'} · ${data.train_no}`; $('result-station').textContent = `Arriving at ${data.station_code}`;
     const selectedStop = report.data.find(stop => String(stop.station_code).trim().toUpperCase() === station.trim().toUpperCase());
     $('delay-value').textContent = `${Math.abs(delay).toFixed(1)} min`;
@@ -214,7 +222,7 @@ $('prediction-form').addEventListener('submit', async (event) => {
     $('empty-result').hidden = true; $('prediction-result').hidden = false;
     $('result-caption').textContent = `Prediction updated at ${new Date().toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit', hour12: true })}`;
     message(data.prediction_note
-      ? 'Your prediction is ready. Missing live observations are estimated from the latest known delays.'
+      ? data.prediction_note
       : 'Your prediction is ready. Travel times are estimates, so allow a little flexibility.');
   } catch (error) { message(error.message, true); }
   finally { setBusy(false); $('predict-button').textContent = 'Predict arrival →'; }

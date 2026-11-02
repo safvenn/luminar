@@ -1,5 +1,6 @@
 """Prepare model inputs from completed live stops and the timetable."""
 import json
+import math
 from pathlib import Path
 
 import pandas as pd
@@ -23,11 +24,14 @@ def date_near(day_month, reference):
 
 
 def add_prediction_features(rows, live, train_type):
+    for row in rows:
+        row.pop("model_features", None)
+        row["prediction_available"] = False
+        row["prediction_reason"] = "Station or timetable is not supported by the trained model."
     updated = pd.Timestamp(live["updatedAt"]).tz_convert("Asia/Kolkata")
     first = live["stops"][0]
     journey_date = date_near(first["date"], updated) - pd.Timedelta(days=int(first["day"]) - 1)
     route = []
-    observed_count = 0
 
     def scheduled(clock, offset):
         return None if clock is None else journey_date + pd.Timedelta(days=int(offset or 0)) + pd.Timedelta(clock)
@@ -41,21 +45,9 @@ def add_prediction_features(rows, live, train_type):
         if row.get("live_status") in ("passed", "current"):
             # Reconcile timetable and live API delay information:
             # The live API directly provides reliable delayMin.
-            if row.get("live_delay_min") is not None:
+            if row.get("live_delay_min") is not None and math.isfinite(float(row["live_delay_min"])):
                 arr_delay = float(row["live_delay_min"])
                 dep_delay = float(row["live_delay_min"])
-                observed_count += 1
-            elif row.get("live_date"):
-                actual_date = date_near(row["live_date"], arrival or departure)
-                actual_arrival = actual_date + pd.Timedelta(row["live_arrival"] + ":00") if row.get("live_arrival") else None
-                actual_departure = actual_date + pd.Timedelta(row["live_departure"] + ":00") if row.get("live_departure") else None
-                if actual_arrival is not None and actual_departure is not None and actual_departure < actual_arrival:
-                    actual_departure += pd.Timedelta(days=1)
-                if arrival is not None and actual_arrival is not None:
-                    arr_delay = (actual_arrival - arrival).total_seconds() / 60
-                    observed_count += 1
-                if departure is not None and actual_departure is not None:
-                    dep_delay = (actual_departure - departure).total_seconds() / 60
 
         # Do not repeat delays across missing or upcoming stops.
         route.append({
@@ -65,8 +57,7 @@ def add_prediction_features(rows, live, train_type):
             "scheduledDeparture": departure.isoformat() if departure is not None else None,
             "delayArrival": arr_delay, "delayDeparture": dep_delay,
         })
-    if not observed_count:
-        raise ValueError("No completed stops with observed arrival times are available yet")
+
     features = extract_features({"trainNumber": live["trainNumber"], "train": {"type": train_type}, "route": route})
     by_code = {row["station_code"]: row for row in rows}
     sequences = metadata["station_sequences"][str(live["trainNumber"])]
@@ -74,7 +65,22 @@ def add_prediction_features(rows, live, train_type):
         if pd.isna(feature["scheduled_arrival_iso"]):
             feature["scheduled_arrival_iso"] = None
         code = feature["station_code"]
+        row = by_code[code]
+        if row.get("live_status") != "upcoming" or not row.get("scheduled_arrival"):
+            row["prediction_reason"] = "Prediction is only available for an upcoming arrival."
+            continue
+        index = rows.index(row)
+        predecessors = rows[max(0, index - 3):index]
+        if len(predecessors) < 3 or any(p["station_code"] not in sequences or p.get("live_status") not in ("passed", "current") for p in predecessors):
+            row["prediction_reason"] = "Waiting for observed delays at the preceding three stops."
+            continue
+        history = ("previous_delay", "previous_departure_delay", "previous_delay2", "previous_delay3", "last_three_delay_avg")
+        if any(not math.isfinite(float(feature[key])) for key in history):
+            row["prediction_reason"] = "Waiting for observed delays at the preceding three stops."
+            continue
         if code in sequences and feature["station_time_difference"] in time_codes:
             feature["seq"] = sequences[code]
             feature["station_time_difference"] = time_codes[feature["station_time_difference"]]
             by_code[code]["model_features"] = feature
+            row["prediction_available"] = True
+            row["prediction_reason"] = None

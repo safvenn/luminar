@@ -181,7 +181,8 @@ def extract_features(data: dict) -> pd.DataFrame:
     
 
     for column in df.columns:
-        if column == 'scheduled_arrival_iso':
+        if column in ('scheduled_arrival_iso', 'previous_delay', 'previous_departure_delay',
+                      'previous_delay2', 'previous_delay3', 'last_three_delay_avg'):
             continue
         if pd.api.types.is_numeric_dtype(df[column]):
             df[column] = df[column].fillna(0)
