@@ -1,0 +1,27 @@
+[project]
+name = "trian-time-delay-prediction"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Safvan sidheeq", email = "mkdsafwan4@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "ipykernel>=7.4.0",
+    "numpy>=2.5.4",
+    "pip>=26.2.2",
+    "pykernel>=0.1.6",
+]
+
+[project.scripts]
+trian-time-delay-prediction = "trian_time_delay_prediction:main"
+
+[build-system]
+requires = ["uv_build>=0.13.4,<0.14.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.4.0",
+]
