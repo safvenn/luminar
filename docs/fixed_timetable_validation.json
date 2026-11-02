@@ -1,0 +1,538 @@
+{
+  "12625": {
+    "returned_stations": 56,
+    "eligible_count": 42,
+    "predictions": [
+      {
+        "station_code": "VAK",
+        "delay": 8.864604894411276
+      },
+      {
+        "station_code": "QLN",
+        "delay": 8.157870895122285
+      },
+      {
+        "station_code": "KYJ",
+        "delay": 8.060581243540915
+      },
+      {
+        "station_code": "MVLK",
+        "delay": 5.629444864467228
+      },
+      {
+        "station_code": "CNGR",
+        "delay": 6.251918047862131
+      },
+      {
+        "station_code": "TRVL",
+        "delay": 7.160303955421366
+      },
+      {
+        "station_code": "CGY",
+        "delay": 7.1918082013031555
+      },
+      {
+        "station_code": "KTYM",
+        "delay": 10.165297681017453
+      },
+      {
+        "station_code": "VARD",
+        "delay": 56.95998403052502
+      },
+      {
+        "station_code": "ERN",
+        "delay": 41.43003769994597
+      },
+      {
+        "station_code": "AWY",
+        "delay": 19.850753791341006
+      },
+      {
+        "station_code": "TCR",
+        "delay": 21.91188577987608
+      },
+      {
+        "station_code": "OTP",
+        "delay": 28.62558615084902
+      },
+      {
+        "station_code": "PGT",
+        "delay": 186.37911949248542
+      },
+      {
+        "station_code": "CBE",
+        "delay": 157.63316302587083
+      },
+      {
+        "station_code": "TUP",
+        "delay": 954.9714902784127
+      },
+      {
+        "station_code": "ED",
+        "delay": 116.20587284701142
+      },
+      {
+        "station_code": "SA",
+        "delay": 99.37442946779936
+      },
+      {
+        "station_code": "JTJ",
+        "delay": 37.1320300498585
+      },
+      {
+        "station_code": "KPD",
+        "delay": 38.09516775802139
+      },
+      {
+        "station_code": "CTO",
+        "delay": 25.063130197146474
+      },
+      {
+        "station_code": "TPTY",
+        "delay": 24.26080668067189
+      },
+      {
+        "station_code": "RU",
+        "delay": 21.444032045397773
+      },
+      {
+        "station_code": "GDR",
+        "delay": 24.353540613545277
+      },
+      {
+        "station_code": "NLR",
+        "delay": 102.8226018581393
+      },
+      {
+        "station_code": "BZA",
+        "delay": 40.906809245610475
+      },
+      {
+        "station_code": "WL",
+        "delay": 49.03
+      },
+      {
+        "station_code": "RDM",
+        "delay": 146.9953148116834
+      },
+      {
+        "station_code": "SKZR",
+        "delay": 289.8690431753976
+      },
+      {
+        "station_code": "BPQ",
+        "delay": 365.9320956641552
+      },
+      {
+        "station_code": "CD",
+        "delay": 520.7358048137125
+      },
+      {
+        "station_code": "SEGM",
+        "delay": 243.55459147448565
+      },
+      {
+        "station_code": "NGP",
+        "delay": 320.7284389507182
+      },
+      {
+        "station_code": "ET",
+        "delay": 490.6555038650459
+      },
+      {
+        "station_code": "BPL",
+        "delay": 244.58084970236882
+      },
+      {
+        "station_code": "BINA",
+        "delay": 430.019357106529
+      },
+      {
+        "station_code": "VGLJ",
+        "delay": 372.75689328065937
+      },
+      {
+        "station_code": "GWL",
+        "delay": 533.5195054597889
+      },
+      {
+        "station_code": "AGC",
+        "delay": 237.40751986272883
+      },
+      {
+        "station_code": "MTJ",
+        "delay": 382.1489064214212
+      },
+      {
+        "station_code": "FDB",
+        "delay": 423.79882759721664
+      },
+      {
+        "station_code": "NZM",
+        "delay": 644.4040397685243
+      }
+    ]
+  },
+  "16306": {
+    "returned_stations": 19,
+    "eligible_count": 16,
+    "predictions": [
+      {
+        "station_code": "TLY",
+        "delay": 6.249723614911759
+      },
+      {
+        "station_code": "MAHE",
+        "delay": 4.09395419255894
+      },
+      {
+        "station_code": "BDJ",
+        "delay": 4.0749754555298425
+      },
+      {
+        "station_code": "CLT",
+        "delay": 5.87758677916078
+      },
+      {
+        "station_code": "PGI",
+        "delay": 8.805935548395569
+      },
+      {
+        "station_code": "TA",
+        "delay": 9.876195217984545
+      },
+      {
+        "station_code": "TIR",
+        "delay": 534.2695793924092
+      },
+      {
+        "station_code": "KTU",
+        "delay": 27.27661127686557
+      },
+      {
+        "station_code": "PTB",
+        "delay": 18.471076679579205
+      },
+      {
+        "station_code": "SRR",
+        "delay": 325.3605803683182
+      },
+      {
+        "station_code": "TCR",
+        "delay": 75.9417643396848
+      },
+      {
+        "station_code": "IJK",
+        "delay": 372.64806839273035
+      },
+      {
+        "station_code": "CKI",
+        "delay": 202.36592046195472
+      },
+      {
+        "station_code": "AFK",
+        "delay": 704.5117600882221
+      },
+      {
+        "station_code": "AWY",
+        "delay": 399.381425749378
+      },
+      {
+        "station_code": "ERN",
+        "delay": 198.58805087037254
+      }
+    ]
+  },
+  "16325": {
+    "returned_stations": 33,
+    "eligible_count": 28,
+    "predictions": [
+      {
+        "station_code": "VNB",
+        "delay": 4.4462044148008
+      },
+      {
+        "station_code": "TUV",
+        "delay": 5.828551852991207
+      },
+      {
+        "station_code": "MLTR",
+        "delay": 4.83658229065576
+      },
+      {
+        "station_code": "PKQ",
+        "delay": 4.548604010944005
+      },
+      {
+        "station_code": "AAM",
+        "delay": 4.427417429587565
+      },
+      {
+        "station_code": "KZC",
+        "delay": 4.513766793400574
+      },
+      {
+        "station_code": "VPZ",
+        "delay": 4.576140695041235
+      },
+      {
+        "station_code": "SRR",
+        "delay": 9.278510211010353
+      },
+      {
+        "station_code": "VTK",
+        "delay": 7.379791651943861
+      },
+      {
+        "station_code": "WKI",
+        "delay": 8.464293474614088
+      },
+      {
+        "station_code": "MGK",
+        "delay": 6.928703736897495
+      },
+      {
+        "station_code": "PNQ",
+        "delay": 5.716646069735436
+      },
+      {
+        "station_code": "TCR",
+        "delay": 5.956930714410156
+      },
+      {
+        "station_code": "PUK",
+        "delay": 5.483848330379141
+      },
+      {
+        "station_code": "IJK",
+        "delay": 253.77266088579722
+      },
+      {
+        "station_code": "CKI",
+        "delay": 71.22945482411488
+      },
+      {
+        "station_code": "KUC",
+        "delay": 70.91635267268354
+      },
+      {
+        "station_code": "AFK",
+        "delay": 572.951218870893
+      },
+      {
+        "station_code": "AWY",
+        "delay": 86.19141925362923
+      },
+      {
+        "station_code": "IPL",
+        "delay": 98.94074203433566
+      },
+      {
+        "station_code": "ERN",
+        "delay": 170.61666730713688
+      },
+      {
+        "station_code": "TRTR",
+        "delay": 202.31341719995973
+      },
+      {
+        "station_code": "MNTT",
+        "delay": 230.73019559025454
+      },
+      {
+        "station_code": "PVRD",
+        "delay": 230.25363961082556
+      },
+      {
+        "station_code": "VARD",
+        "delay": 216.4088113373797
+      },
+      {
+        "station_code": "KRPP",
+        "delay": 215.70764467071302
+      },
+      {
+        "station_code": "ETM",
+        "delay": 171.9790289235879
+      },
+      {
+        "station_code": "KTYM",
+        "delay": 187.02891496949448
+      }
+    ]
+  },
+  "16346": {
+    "returned_stations": 52,
+    "eligible_count": 42,
+    "predictions": [
+      {
+        "station_code": "SRTL",
+        "delay": 29.35354454839408
+      },
+      {
+        "station_code": "ERS",
+        "delay": 356.03834534554994
+      },
+      {
+        "station_code": "AWY",
+        "delay": 10.57212615814051
+      },
+      {
+        "station_code": "DINR",
+        "delay": 22.633651701486183
+      },
+      {
+        "station_code": "TCR",
+        "delay": 33.45422599469544
+      },
+      {
+        "station_code": "SRR",
+        "delay": 241.5223563672949
+      },
+      {
+        "station_code": "KTU",
+        "delay": 20.68136429543436
+      },
+      {
+        "station_code": "TIR",
+        "delay": 336.2244661483044
+      },
+      {
+        "station_code": "PGI",
+        "delay": 18.70562936969886
+      },
+      {
+        "station_code": "CLT",
+        "delay": 37.85546173712781
+      },
+      {
+        "station_code": "BDJ",
+        "delay": 129.42675425748453
+      },
+      {
+        "station_code": "TLY",
+        "delay": 486.48720156481716
+      },
+      {
+        "station_code": "CAN",
+        "delay": 213.89038485423944
+      },
+      {
+        "station_code": "KPQ",
+        "delay": 156.3440187811113
+      },
+      {
+        "station_code": "PAY",
+        "delay": 142.3921908931345
+      },
+      {
+        "station_code": "CHV",
+        "delay": 141.75400045187808
+      },
+      {
+        "station_code": "NLE",
+        "delay": 142.04859655142715
+      },
+      {
+        "station_code": "KZE",
+        "delay": 141.70401878111133
+      },
+      {
+        "station_code": "KGQ",
+        "delay": 142.75723721136336
+      },
+      {
+        "station_code": "MAJN",
+        "delay": 128.3784048657849
+      },
+      {
+        "station_code": "SL",
+        "delay": 135.28237105338522
+      },
+      {
+        "station_code": "UD",
+        "delay": 37.8977814536681
+      },
+      {
+        "station_code": "KUDA",
+        "delay": 37.83212533882952
+      },
+      {
+        "station_code": "BYNR",
+        "delay": 38.360625411398644
+      },
+      {
+        "station_code": "BTJL",
+        "delay": 39.05694815823281
+      },
+      {
+        "station_code": "MRDW",
+        "delay": 40.38999092383697
+      },
+      {
+        "station_code": "KT",
+        "delay": 39.54937732973448
+      },
+      {
+        "station_code": "KAWR",
+        "delay": 25.8881981922804
+      },
+      {
+        "station_code": "CNO",
+        "delay": 25.082223823101106
+      },
+      {
+        "station_code": "MAO",
+        "delay": 131.0926599096604
+      },
+      {
+        "station_code": "KRMI",
+        "delay": 128.5040037069972
+      },
+      {
+        "station_code": "THVM",
+        "delay": 162.13246649581077
+      },
+      {
+        "station_code": "KUDL",
+        "delay": 48.74359439926897
+      },
+      {
+        "station_code": "RAJP",
+        "delay": 45.66922609514397
+      },
+      {
+        "station_code": "RN",
+        "delay": 88.11134968041911
+      },
+      {
+        "station_code": "SGR",
+        "delay": 50.901726821001496
+      },
+      {
+        "station_code": "CHI",
+        "delay": 49.33766561952727
+      },
+      {
+        "station_code": "KHED",
+        "delay": 55.18590134200898
+      },
+      {
+        "station_code": "ROHA",
+        "delay": 134.87253727509153
+      },
+      {
+        "station_code": "PNVL",
+        "delay": 101.5652264096319
+      },
+      {
+        "station_code": "TNA",
+        "delay": 95.68679243472765
+      },
+      {
+        "station_code": "LTT",
+        "delay": 116.56684440097496
+      }
+    ]
+  }
+}

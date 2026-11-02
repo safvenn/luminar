@@ -128,8 +128,10 @@ def extract_features(data: dict) -> pd.DataFrame:
     df['distance_km'] = pd.to_numeric(df['distance_km'], errors='coerce')
     if df['distance_km'].isna().any():
         raise ValueError('distance missing in live route; cannot compute previous_distance_diff')
-    df['delay_arrival_min'] = pd.to_numeric(df['delay_arrival_min'], errors='coerce')
-    df['delay_departure_min'] = pd.to_numeric(df['delay_departure_min'], errors='coerce')
+    # The requested live inference policy treats unavailable delays as zero.
+    # Fill before rolling so unknown predecessors participate in the average.
+    df['delay_arrival_min'] = pd.to_numeric(df['delay_arrival_min'], errors='coerce').fillna(0)
+    df['delay_departure_min'] = pd.to_numeric(df['delay_departure_min'], errors='coerce').fillna(0)
 
     # Same lag feature names and directions as training.
     df['previous_delay'] = df['delay_arrival_min'].shift(1)
@@ -181,8 +183,7 @@ def extract_features(data: dict) -> pd.DataFrame:
     
 
     for column in df.columns:
-        if column in ('scheduled_arrival_iso', 'previous_delay', 'previous_departure_delay',
-                      'previous_delay2', 'previous_delay3', 'last_three_delay_avg'):
+        if column == 'scheduled_arrival_iso':
             continue
         if pd.api.types.is_numeric_dtype(df[column]):
             df[column] = df[column].fillna(0)

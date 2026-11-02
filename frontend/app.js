@@ -73,7 +73,7 @@ async function request(path, options = {}) {
   } finally { clearTimeout(timeout); }
 }
 function resetResult() { $('empty-result').hidden = false; $('prediction-result').hidden = true; $('result-badge').textContent = report?.prediction_available === false ? 'LIVE STATUS ONLY' : report && !report.data.some(station => canSelectStation(station.station_code)) ? 'NO UPCOMING ARRIVALS' : report ? 'READY TO PREDICT' : 'AWAITING JOURNEY'; $('result-caption').textContent = 'Powered by your train delay prediction model'; }
-function estimatedArrival(scheduledArrival, delay, predictedTime) {
+function estimatedArrival(scheduledArrival, delay, predictedTime, dayOffset = 0) {
   const parseTime = (value) => {
     const match = /^(\d{1,2}):(\d{2})(?::(\d{2}))?$/.exec(String(value ?? '').trim());
     if (!match) return null;
@@ -88,7 +88,8 @@ function estimatedArrival(scheduledArrival, delay, predictedTime) {
   const hours = Math.floor(secondsInDay / 3600);
   const period = hours >= 12 ? 'PM' : 'AM';
   const minutes = String(Math.floor(secondsInDay % 3600 / 60)).padStart(2, '0');
-  return `${hours % 12 || 12}:${minutes} ${period}`;
+  const day = Number(dayOffset || 0) + Math.floor(arrivalSeconds / 86400) + 1;
+  return `${hours % 12 || 12}:${minutes} ${period} · Day ${day}`;
 }
 function isHaltingStation(station) { return station?.halts_here === true || station?.halts_here === 1; }
 function hasPassed(station) {
@@ -96,7 +97,7 @@ function hasPassed(station) {
   const lastPassed = report.data.reduce((last, stop, index) => stop.live_status === 'passed' ? index : last, -1);
   return report.data.indexOf(station) <= lastPassed;
 }
-function canSelectStation(code) { return Boolean(report?.data.some(station => String(station.station_code) === code && isHaltingStation(station) && station.prediction_available === true && station.scheduled_arrival && !hasPassed(station))); }
+function canSelectStation(code) { return Boolean(report?.data.some(station => String(station.station_code) === code && station.prediction_available === true && station.scheduled_arrival && !hasPassed(station))); }
 function selectStation(code) { if (busy || report?.prediction_available === false) return; if (!canSelectStation(code)) code = ''; $('station').value = code; $('predict-button').disabled = !canPredict(); resetResult(); document.querySelectorAll('.station-stop').forEach(button => button.classList.toggle('selected', button.dataset.code === code)); }
 $('station').addEventListener('change', () => selectStation($('station').value));
 function resetJourney() {
@@ -126,9 +127,7 @@ async function loadTrain(number, date = '') {
     const query = `/live?train_no=${encodeURIComponent(number)}${date ? `&date=${encodeURIComponent(date)}` : ''}`;
     const data = await request(query);
     if (!Array.isArray(data.data) || !data.data.length) throw new Error('No stops were found for this train. Select another train.');
-    const haltingStops = data.data.filter(isHaltingStation);
-    if (!haltingStops.length) throw new Error('No halting stations were found for this train. Select another train.');
-    report = { ...data, data: haltingStops }; $('station').replaceChildren(new Option('Select your arrival station', ''));
+    report = data; $('station').replaceChildren(new Option('Select your arrival station', ''));
     $('route-stations').replaceChildren();
     const currentIndex = currentStationIndex(report);
     const currentLabel = report.data[currentIndex]?.live_status === 'current' ? 'Current station' : 'Last reported stop';
@@ -138,7 +137,7 @@ async function loadTrain(number, date = '') {
       const scheduledTime = station.scheduled_arrival
         ? estimatedArrival(station.scheduled_arrival, 0, null, station.arrival_day_offset)
         : `Departs ${estimatedArrival(station.scheduled_departure, 0, null, station.departure_day_offset)}`;
-      const option = new Option(`${code} · ${scheduledTime}${hasPassed(station) ? ' · Passed' : isCurrentStation ? ` · ${currentLabel}` : ''}`, code);
+      const option = new Option(`${code}${station.current_route === false ? " · Historical" : ""} · ${scheduledTime}${hasPassed(station) ? ' · Passed' : isCurrentStation ? ` · ${currentLabel}` : ''}`, code);
       option.disabled = !canSelectStation(code);
       $('station').add(option);
       const button = document.createElement('button'); button.type = 'button'; button.className = 'station-stop'; button.dataset.code = code;
@@ -147,8 +146,23 @@ async function loadTrain(number, date = '') {
       button.classList.toggle('travelled', index < currentIndex);
       const name = document.createElement('strong'); name.textContent = code;
       const time = document.createElement('span'); time.textContent = scheduledTime;
-      const distance = document.createElement('span'); distance.textContent = `${station.distance_km ?? '—'} km`;
+      const distance = document.createElement('span'); distance.textContent = `${station.distance_km ?? '—'} km from origin`;
       button.append(name, time, distance);
+      const fullName = document.createElement('span');
+      fullName.textContent = station.station_name || code;
+      button.append(fullName);
+      const previous = document.createElement('span');
+      previous.textContent = `${station.previous_distance_diff ?? '—'} km from ${station.previous_station_code || 'origin'}`;
+      const travelTime = document.createElement('span');
+      travelTime.textContent = station.station_time_difference == null ? 'First station' : `${station.station_time_difference} min from previous station`;
+      const departure = document.createElement('span');
+      departure.textContent = station.scheduled_departure ? `Departs ${estimatedArrival(station.scheduled_departure, 0, null, station.departure_day_offset)}` : 'Destination';
+      button.append(previous, travelTime, departure);
+      if (station.schedule_source === 'training_history') {
+        const historical = document.createElement('span');
+        historical.textContent = 'Historical schedule · not on current route';
+        button.append(historical);
+      }
       if (!station.prediction_available && station.prediction_reason) {
         button.title = station.prediction_reason;
         const reason = document.createElement('span');
@@ -186,14 +200,14 @@ async function loadTrain(number, date = '') {
     }
     const dateTitle = report.journey_date ? ` · ${report.journey_date}` : '';
     $('route-title').textContent = `${report.train_name || 'Train'} · ${report.train_no || number}${dateTitle}`;
-    $('route-count').textContent = `${report.data.length} STOPS`; $('route-panel').hidden = false;
+    $('route-count').textContent = `${report.data.length} STATIONS`; $('route-panel').hidden = false;
     $('station').value = '';
     resetResult();
     const location = typeof report.current_location === 'string' ? report.current_location : report.current_location?.name || report.current_location?.stationCode;
     const delay = report.current_delay;
     const delayText = typeof delay === 'number' ? delay === 0 ? 'On time' : `${Math.abs(delay)} min ${delay < 0 ? 'early' : 'late'}` : 'Delay unavailable';
     const datePrefix = report.journey_date ? `Journey date: ${report.journey_date} · ` : '';
-    $('route-refresh-status').textContent = `${datePrefix}${location ? `Last reported location: ${location}` : 'Location unavailable'} · ${delayText}${report.last_updated ? ` · Source updated ${report.last_updated.replace(/,+$/, '')} IST` : ''} · Refresh train for the latest status. Days are counted from departure.`;
+    $('route-refresh-status').textContent = `${datePrefix}${location ? `Last reported location: ${location}` : 'Location unavailable'} · ${delayText}${report.last_updated ? ` · Source updated ${report.last_updated.replace(/,+$/, '')} IST` : ''} · Schedule saved ${report.timetable_updated_at?.slice(0, 10) || "locally"}. Refresh train for live status.`;
     requestAnimationFrame(centerCurrentStation);
     $('route-panel').scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth', block: 'start' });
     message(report.prediction_available === false ? report.prediction_message || 'Live status is available, but prediction is not ready yet.' : report.data.some(station => canSelectStation(station.station_code)) ? 'Train found. Choose an upcoming arrival station below.' : 'There are no upcoming arrivals on this journey. Refresh for a new run or choose another train.');
@@ -206,7 +220,7 @@ async function loadTrain(number, date = '') {
 $('prediction-form').addEventListener('submit', async (event) => {
   event.preventDefault(); if (busy || !report) return;
   if (report.prediction_available === false) { message(report.prediction_message || 'Prediction is unavailable.', true); return; }
-  if (!canSelectStation($('station').value)) { selectStation(''); message('Choose a station where this train halts.', true); return; }
+  if (!canSelectStation($('station').value)) { selectStation(''); message('Choose an upcoming station on the current route.', true); return; }
   const station = $('station').value; setBusy(true); resetResult(); $('predict-button').textContent = 'Calculating arrival…'; message('Your arrival outlook is on its way…');
   try {
     const data = await request(`/predict?station_code=${encodeURIComponent(station)}&report_id=${encodeURIComponent(report.report_id)}`, { method: 'POST' });

@@ -1,30 +1,39 @@
-The existing model and notebook are unchanged by the November 2 prediction fix.
+# Prediction inputs
 
-preprocessing.json retains the notebook's 475 time categories and train-specific
-station sequence values. Train codes: 12625=0, 16306=1, 16325=2, 16346=3;
-train types MEX=0, SUF=1. AAM is the dropped station dummy baseline.
+Notebook, model, and existing categorical encodings are unchanged.
 
-Live forecasts require an upcoming arrival with observed delays at the preceding
-three supported stops. Missing history stays missing, not zero. Genuine reported
-zero delays remain valid. Unknown stations/time categories are unavailable.
-Only observed finite API delayMin is used; separate timetable subtraction is not
-an acceptable substitute. Platform still defaults to 1. Provider upcoming delays
-are displayed as API estimates and are never treated as observations.
+Fixed station data lives in src/data/train_timetables.json. The runtime reads
+this file; it never calls the train-information API. /timetable returns every
+station in the training list, without making a network request. /live adds the
+live running status from the provider. /predict uses that report_id.
 
-/live returns report_id and per-station prediction_available/prediction_reason.
-/predict requires station_code and report_id. Reports expire after 30 minutes;
-the last 100 are retained in process memory. Use a shared report store before
-running multiple workers; an unknown report asks the client to refresh.
+Refresh the file manually from the project root:
 
-Station matching uses unique codes/names and explicit spelling aliases, never
-proximity alone. Captured all-train API audit: docs/station_api_audit_2026-11-02.json.
-Validation: docs/prediction_fix_validation.json. All 140 timetable rows match;
-NDLS/12625 and ERS/16306 remain outside training coverage.
+    python scripts/scrape_timetables.py
 
-The saved model still has training limitations (see docs/training_audit_2026-11-02.md).
-This patch prevents unsupported input forecasts; it does not retrain or establish
-accuracy on this provider. No arbitrary output cap is applied.
+The script scrapes public Confirmtkt HTML and saves schedules, day offsets,
+origin distances, adjacent distances/times, and provenance. No new runtime
+library is required. All 160 training pairs are included: 139 current and 21
+historical. Historical entries use existing CSV records, are labelled clearly,
+and are displayed only; mixing them into a current route would corrupt history.
+The notebook and datasets are read only by this optional refresh script.
 
-Run from the project root: .venv312/Scripts/python.exe -m unittest discover -s tests -v
-API tests require the TestClient dependency for your Starlette version (httpx2
-for the installed version, or httpx on older releases).
+Unknown arrival/departure delays are zero BEFORE lag and rolling-average
+calculation, as requested. Five stops beyond the last observation therefore
+has zero previous delays and zero trailing average. Upcoming provider estimates
+are never treated as observed delays. Missing history does not block predictions.
+Passed/current stops, origins without arrivals, and unsupported time categories
+remain unavailable. The model may still return very large delays with zero
+history; this change restores that logic without retraining or capping outputs.
+
+Reports expire after 30 minutes and retain the latest 100 in memory. The deployed
+service uses one worker. Both /predict parameters are required: station_code and
+report_id. The report identifies its train and journey.
+
+Run tests from the project root:
+
+    python -m unittest discover -s tests -v
+    node tests/frontend.test.cjs
+
+TestClient requires httpx2 for the installed Starlette version (httpx for older
+versions). See docs/training_audit_2026-11-02.md for model limitations.

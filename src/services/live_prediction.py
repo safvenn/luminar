@@ -23,14 +23,17 @@ def date_near(day_month, reference):
     return min(dates, key=lambda value: abs(value - reference))
 
 
-def add_prediction_features(rows, live, train_type):
+def add_prediction_features(rows, live, train_type, journey_date=None):
     for row in rows:
         row.pop("model_features", None)
         row["prediction_available"] = False
         row["prediction_reason"] = "Station or timetable is not supported by the trained model."
-    updated = pd.Timestamp(live["updatedAt"]).tz_convert("Asia/Kolkata")
-    first = live["stops"][0]
-    journey_date = date_near(first["date"], updated) - pd.Timedelta(days=int(first["day"]) - 1)
+    if journey_date:
+        journey_date = pd.to_datetime(journey_date, format="%Y-%m-%d").tz_localize("Asia/Kolkata")
+    else:
+        updated = pd.Timestamp(live["updatedAt"]).tz_convert("Asia/Kolkata")
+        first = live["stops"][0]
+        journey_date = date_near(first["date"], updated) - pd.Timedelta(days=int(first["day"]) - 1)
     route = []
 
     def scheduled(clock, offset):
@@ -49,7 +52,8 @@ def add_prediction_features(rows, live, train_type):
                 arr_delay = float(row["live_delay_min"])
                 dep_delay = float(row["live_delay_min"])
 
-        # Do not repeat delays across missing or upcoming stops.
+        # Upcoming API estimates are not observations. The feature extractor
+        # supplies zero for unavailable delays before calculating history.
         route.append({
             "stationCode": row["station_code"], "sequence": row["seq"],
             "distance": row["distance_km"], "haltsHere": 1, "platform": 1,
@@ -61,22 +65,21 @@ def add_prediction_features(rows, live, train_type):
     features = extract_features({"trainNumber": live["trainNumber"], "train": {"type": train_type}, "route": route})
     by_code = {row["station_code"]: row for row in rows}
     sequences = metadata["station_sequences"][str(live["trainNumber"])]
+    last_observed_seq = max(
+        (row["seq"] for row in rows if row.get("live_status") in ("passed", "current")),
+        default=-1,
+    )
     for feature in features.to_dict("records"):
         if pd.isna(feature["scheduled_arrival_iso"]):
             feature["scheduled_arrival_iso"] = None
         code = feature["station_code"]
         row = by_code[code]
-        if row.get("live_status") != "upcoming" or not row.get("scheduled_arrival"):
+        if row.get("live_status") in ("passed", "current") or row["seq"] <= last_observed_seq or not row.get("scheduled_arrival"):
             row["prediction_reason"] = "Prediction is only available for an upcoming arrival."
-            continue
-        index = rows.index(row)
-        predecessors = rows[max(0, index - 3):index]
-        if len(predecessors) < 3 or any(p["station_code"] not in sequences or p.get("live_status") not in ("passed", "current") for p in predecessors):
-            row["prediction_reason"] = "Waiting for observed delays at the preceding three stops."
             continue
         history = ("previous_delay", "previous_departure_delay", "previous_delay2", "previous_delay3", "last_three_delay_avg")
         if any(not math.isfinite(float(feature[key])) for key in history):
-            row["prediction_reason"] = "Waiting for observed delays at the preceding three stops."
+            row["prediction_reason"] = "Delay history contains invalid values."
             continue
         if code in sequences and feature["station_time_difference"] in time_codes:
             feature["seq"] = sequences[code]
