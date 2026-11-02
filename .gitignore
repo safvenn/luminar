@@ -1,9 +1,46 @@
+# Secrets and local environment configuration (including examples)
 .env*
 **/.env*
+
+# Python virtual environments
 .venv*/
-**/.venv*/
+venv/
+env/
+ENV/
+
+# Python bytecode, caches, and test output
 __pycache__/
 *.py[cod]
 .pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pyre/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+.tox/
+.nox/
+
+# Notebook checkpoints; keep notebooks and datasets tracked
 .ipynb_checkpoints/
-src/ml/model.pkl
+
+# Generated production model; source is model.pkl.gz
+/src/ml/model.pkl
+
+# Packaging and frontend build output
+build/
+dist/
+*.egg-info/
+node_modules/
+.vercel/
+
+# Local editor, OS, and log files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.log
+*.swp
+*.swo
