@@ -121,3 +121,44 @@ Keep a single worker: live report state is currently stored in process memory. T
 - **Model compatibility errors:** use Python 3.12 and scikit-learn 1.6.1.
 
 Additional preprocessing assumptions are documented in `src/ml/README.md`.
+
+## Predicting several stops ahead
+
+If the train is at A and you select E, the server predicts B, then C, then D, then E.
+
+1. Start with actual delays from passed/current stations.
+2. Predict the next station using its station and timetable inputs.
+3. Add that prediction to a temporary history.
+4. Update the previous three delays, their average and previous departure delay before predicting the following station.
+5. Return the target station's estimated delay and arrival time.
+
+For example, observations of 20, 24 and 27 minutes might give 29 minutes at B. C then uses 24, 27 and 29. Future unknown delays are no longer passed to the model as zeros.
+
+Predictions never overwrite live observations or stored report features. Each request computes a new chain. Refresh the train to obtain new observations; automatic refresh is disabled.
+
+## Assumptions and limitations
+
+- Departure delay is assumed equal to arrival delay. The provider supplies one observed delay, and the model predicts arrival delay only.
+- At least one observed delay is required, including a valid delay at the latest passed/current station. Otherwise the API returns HTTP 422. Actual zero-minute observations remain valid.
+- Earlier missing observations are skipped, following the notebook's retained-report approach. With fewer than three observations, absent older lag slots use training's zero padding; the average uses available history. Future stops use predictions, not zero padding.
+- Every intermediate current-route station needs supported schedule/model inputs. Unsupported intermediate stations return HTTP 422. Historical stations are excluded.
+- The current timetable is traversed in sequence order. Historical training used retained reports that may skip stations; that remaining difference requires validation.
+- Errors can accumulate farther ahead. The existing model is unchanged and predictions are not capped. This implementation does not establish forecasting accuracy.
+- The separate manual Streamlit form in app.py is not the live-route prediction flow.
+
+## API
+
+Fetch /live for a report_id, then POST /predict with station_code and report_id as query parameters. Existing response fields remain. Additional fields are prediction_method (recursive) and prediction_steps (ordered station codes and estimated arrival delays through the target). prediction_note explains the assumptions.
+
+Reports expire after 30 minutes. Refresh after expiry or when new observations are needed.
+
+## Validation
+
+```powershell
+.\.venv312\Scripts\python.exe -m unittest discover -s tests -v
+node tests/frontend.test.cjs
+```
+
+Regression tests cover propagation, updated delay features, fresh observations, unchanged reports, valid zeros, invalid inputs and unsupported intermediate stations.
+
+For accuracy evaluation, replay held-out historical journeys with future observations hidden. Compare errors at 1, 2, 4 and 8 stops against carrying forward the latest delay. Keep entire later journeys outside training.

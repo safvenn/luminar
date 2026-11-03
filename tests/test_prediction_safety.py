@@ -57,7 +57,7 @@ class JourneyContractTests(unittest.TestCase):
         self.assertTrue(rows[index]["prediction_available"])
         self.assertEqual(rows[index]["model_features"]["previous_delay"], 0)
 
-    def test_fifth_stop_after_current_has_zero_history(self):
+    def test_fifth_stop_template_history_is_replaced_at_prediction_time(self):
         from unittest.mock import patch
         from src.routes.live_data import live_data
         fixture = json.loads((ROOT / "docs/station_api_audit_2026-11-02.json").read_text())["trains"]["16346"]
@@ -69,6 +69,12 @@ class JourneyContractTests(unittest.TestCase):
         self.assertTrue(future["prediction_available"])
         for key in ("previous_delay", "previous_departure_delay", "previous_delay2", "previous_delay3", "last_three_delay_avg"):
             self.assertEqual(future["model_features"][key], 0, key)
+        from src.services.predict_services import predict_services
+        from test_recursive_prediction import RecordingModel
+        model = RecordingModel()
+        result = predict_services(future["station_code"], model, self.reports[-1]["report_id"])
+        self.assertEqual(len(result["prediction_steps"]), 5)
+        self.assertEqual(model.inputs[-1]["previous_delay"], rows[current]["live_delay_min"] + 8)
 
     def test_timetable_is_offline_and_covers_training_list(self):
         from unittest.mock import patch
@@ -119,6 +125,11 @@ class JourneyContractTests(unittest.TestCase):
         station = next(row for row in original["data"] if row["station_code"] == "NZM")
         station.update(prediction_available=True, model_features={"train_no": "12625", "station_code": "NZM", "previous_delay": 17, "station_time_difference": 0})
         station["station_code"] = "NZM"
+        # Supply observed history; the old test supplied only a target's zero-filled template.
+        for row in original["data"]:
+            if row["seq"] < station["seq"] and row.get("current_route"):
+                row.update(live_status="passed", live_delay_min=17)
+        station["live_status"] = "upcoming"
         response = client.post("/predict", params={"station_code": "NZM", "report_id": original["report_id"]})
         self.assertEqual(response.status_code, 200, response.text)
         self.assertEqual(response.json()["train_no"], "12625")

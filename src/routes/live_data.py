@@ -153,7 +153,7 @@ def live_data(train_no: TRAIN_OPTIONS = '16346', date: str | None = None):
             row["live_status"] = stop.get("status")
             row["live_date"] = stop.get("date")
 
-    prediction_message = "Missing previous delays use 0 minutes. Future API estimates are not used as observations."
+    prediction_message = "Upcoming stops are predicted in order using earlier predictions. Refresh live data to use new observations."
     try:
         active_rows = [row for row in rows if row["current_route"] and row["schedule_available"]]
         add_prediction_features(active_rows, live, timetable["train_type"], journey_date=date)

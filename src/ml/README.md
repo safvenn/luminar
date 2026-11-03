@@ -18,13 +18,18 @@ historical. Historical entries use existing CSV records, are labelled clearly,
 and are displayed only; mixing them into a current route would corrupt history.
 The notebook and datasets are read only by this optional refresh script.
 
-Unknown arrival/departure delays are zero BEFORE lag and rolling-average
-calculation, as requested. Five stops beyond the last observation therefore
-has zero previous delays and zero trailing average. Upcoming provider estimates
-are never treated as observed delays. Missing history does not block predictions.
-Passed/current stops, origins without arrivals, and unsupported time categories
-remain unavailable. The model may still return very large delays with zero
-history; this change restores that logic without retraining or capping outputs.
+/predict rebuilds delay history on private feature copies, starting with
+observed delays and predicting each upcoming current-route station through
+the target. Intermediate estimates update all three lags, their average and
+previous departure delay. Departure delay is assumed equal to arrival delay.
+Stored templates may contain zeros; all five history fields are replaced
+before each model call. Forecasts never overwrite live observations.
+
+A refreshed report supplies new actual values. Missing latest observed delay
+or unsupported intermediate inputs return HTTP 422. Earlier missing observations
+are skipped; absent older startup lags use zero padding, while averages use
+available history. Historical stations are excluded. See ../../README.md for
+evaluation limits and API details. No retraining or output capping is performed.
 
 Reports expire after 30 minutes and retain the latest 100 in memory. The deployed
 service uses one worker. Both /predict parameters are required: station_code and
