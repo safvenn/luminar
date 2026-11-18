@@ -46,10 +46,18 @@ def get_railcore_key():
     return (key or "").strip()
 
 
-def fetch_railcore_live(train_no: str, api_key: str):
+def fetch_railcore_live(train_no: str, api_key: str, date: str | None = None):
     tz = pytz.timezone("Asia/Kolkata")
-    today_ist = datetime.now(tz).strftime("%Y-%m-%d")
-    url = f"https://ir.railcore.tech/v1/trains/{train_no}/live?date={today_ist}"
+    query_date = (date or "").strip()
+    if not query_date:
+        query_date = datetime.now(tz).strftime("%Y-%m-%d")
+    else:
+        try:
+            datetime.strptime(query_date, "%Y-%m-%d")
+        except ValueError:
+            query_date = datetime.now(tz).strftime("%Y-%m-%d")
+
+    url = f"https://ir.railcore.tech/v1/trains/{train_no}/live?date={query_date}"
     try:
         response = requests.get(
             url,
@@ -146,6 +154,7 @@ def process_railcore_data(rc_data: dict):
         "report_id": report_id,
         "train_no": train_no,
         "train_name": rc_data.get("train_name"),
+        "journey_date": journey_date_str,
         "current_delay": rc_data.get("delay_minutes"),
         "current_location": current_location,
         "last_updated": rc_data.get("last_reported_at"),
@@ -253,11 +262,11 @@ def match_station_stop(row, live_stops, used_indices):
 
 
 @router.get("/live")
-def live_data(train_no: TRAIN_OPTIONS = '16346'):
+def live_data(train_no: TRAIN_OPTIONS = '16346', date: str | None = None):
     # Prioritize RailCore real-time telemetry if key is present
     railcore_key = get_railcore_key()
     if railcore_key:
-        rc_data = fetch_railcore_live(train_no, railcore_key)
+        rc_data = fetch_railcore_live(train_no, railcore_key, date=date)
         if rc_data:
             return process_railcore_data(rc_data)
 

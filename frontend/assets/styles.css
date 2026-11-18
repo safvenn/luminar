@@ -79,5 +79,20 @@ html[data-theme="dark"]{color-scheme:dark;--bg:#101827;--ink:#e5ebf7;--muted:#a6
 .train-select-wrap select:invalid{color:var(--muted);font-weight:400}
 .train-select-wrap select:disabled{cursor:wait;opacity:.6}
 .train-select-wrap option{color:var(--ink);background:var(--white)}
+
+.date-selection-box{margin-top:14px}
+.date-header-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px}
+.date-header-row label{margin:0;font-size:11px;font-weight:600;display:flex;align-items:center;gap:6px}
+.badge-auto{font-size:8px;font-weight:700;letter-spacing:.6px;background:#edf1ff;color:var(--blue);padding:2px 5px;border-radius:4px;text-transform:uppercase}
+[data-theme="dark"] .badge-auto{background:#25385b;color:#b1c5ff}
+.date-pills{display:flex;gap:6px}
+.date-pill{border:1px solid #dfe5f2;background:var(--white);color:var(--muted);font-size:10px;font-weight:600;padding:3px 8px;border-radius:6px;transition:.15s;line-height:1.2}
+.date-pill:hover{color:var(--blue);border-color:#91a8ff}
+.date-pill.active{background:#edf1ff;color:var(--blue);border-color:#b5c6ff}
+[data-theme="dark"] .date-pill{background:#1a2639;border-color:#2c3b52;color:#a6b4ca}
+[data-theme="dark"] .date-pill:hover{border-color:#90acff}
+[data-theme="dark"] .date-pill.active{background:#25385b;color:#b1c5ff;border-color:#3b527c}
+.date-input-wrap input{height:38px;padding-left:36px;font-size:11.5px;font-weight:500;cursor:pointer}
+.date-input-wrap svg{top:10px;left:11px;width:16px;height:16px}
 #train-hint{line-height:1.6;overflow-wrap:anywhere}
 [data-theme="dark"] .train-select-wrap option{background:#111d30;color:#e5ebf7}

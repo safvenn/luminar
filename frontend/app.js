@@ -44,7 +44,16 @@ function currentStationIndex(data) {
 }
 function message(text, error = false) { $('form-message').textContent = text; $('form-message').classList.toggle('error', error); }
 function canPredict() { return Boolean(report && report.prediction_available !== false && canSelectStation($('station').value)); }
-function setBusy(value) { busy = value; $('find-button').disabled = value; $('train-number').disabled = value; $('station').disabled = value || !report || report.prediction_available === false || !report.data.some(station => canSelectStation(station.station_code)); $('predict-button').disabled = value || !canPredict(); }
+function setBusy(value) {
+  busy = value;
+  $('find-button').disabled = value;
+  $('train-number').disabled = value;
+  if ($('journey-date')) $('journey-date').disabled = value;
+  if ($('pill-today')) $('pill-today').disabled = value;
+  if ($('pill-yesterday')) $('pill-yesterday').disabled = value;
+  $('station').disabled = value || !report || report.prediction_available === false || !report.data.some(station => canSelectStation(station.station_code));
+  $('predict-button').disabled = value || !canPredict();
+}
 async function request(path, options = {}) {
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), 60000);
@@ -98,19 +107,63 @@ $('train-number').addEventListener('change', () => {
   setBusy(false);
   message('Find your selected train to load its latest status.');
 });
+function getISTDate(offsetDays = 0) {
+  const d = new Date();
+  if (offsetDays !== 0) d.setDate(d.getDate() + offsetDays);
+  return new Intl.DateTimeFormat('en-CA', {
+    timeZone: 'Asia/Kolkata',
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit'
+  }).format(d);
+}
+
+function updateDatePills(selectedDate) {
+  const today = getISTDate(0);
+  const yesterday = getISTDate(-1);
+  const pillToday = $('pill-today');
+  const pillYesterday = $('pill-yesterday');
+  if (pillToday) pillToday.classList.toggle('active', selectedDate === today);
+  if (pillYesterday) pillYesterday.classList.toggle('active', selectedDate === yesterday);
+}
+
+function initDatePicker() {
+  const dateInput = $('journey-date');
+  if (!dateInput) return;
+  const today = getISTDate(0);
+  dateInput.value = today;
+  updateDatePills(today);
+
+  $('pill-today')?.addEventListener('click', () => {
+    dateInput.value = getISTDate(0);
+    updateDatePills(dateInput.value);
+  });
+  $('pill-yesterday')?.addEventListener('click', () => {
+    dateInput.value = getISTDate(-1);
+    updateDatePills(dateInput.value);
+  });
+  dateInput.addEventListener('change', () => {
+    updateDatePills(dateInput.value);
+  });
+}
+initDatePicker();
+
 $('train-form').addEventListener('submit', async (event) => {
   event.preventDefault(); if (busy) return;
   const number = $('train-number').value.trim(); if (!/^\d{5}$/.test(number)) return;
-  await loadTrain(number);
+  const date = $('journey-date')?.value?.trim() || getISTDate(0);
+  await loadTrain(number, date);
 });
-async function loadTrain(number) {
+async function loadTrain(number, date) {
   if (busy) return;
     report = null; resetResult(); $('route-panel').hidden = true; $('station').replaceChildren(new Option('Loading stations…', ''));
     $('find-button').textContent = 'Finding your train…'; message('Fetching the latest running information…');
   setBusy(true);
   $('route-refresh-status').textContent = 'Updating live train location…';
   try {
-    const data = await request(`/live?train_no=${encodeURIComponent(number)}`);
+    const params = new URLSearchParams({ train_no: number });
+    if (date) params.set('date', date);
+    const data = await request(`/live?${params.toString()}`);
     if (!Array.isArray(data.data) || !data.data.length) throw new Error('No stops were found for this train. Select another train.');
     const haltingStops = data.data.filter(isHaltingStation);
     if (!haltingStops.length) throw new Error('No halting stations were found for this train. Select another train.');
