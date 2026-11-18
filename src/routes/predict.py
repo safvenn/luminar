@@ -4,7 +4,7 @@ from src.services.predict_services import predict_services
 router = APIRouter(tags=["Predict"])
 
 
-@router.post("/predict")
+@router.api_route("/predict", methods=["GET", "POST"])
 def predict(
     station_code: str,
     request: Request,

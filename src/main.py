@@ -36,7 +36,7 @@ app.add_middleware(
 app.include_router(live_router)
 
 
-@app.post("/predict", tags=["Predict"])
+@app.api_route("/predict", methods=["GET", "POST"], tags=["Predict"])
 def predict(
     station_code: str,
     request: Request,

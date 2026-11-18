@@ -112,6 +112,14 @@ class RecursivePredictionTests(unittest.TestCase):
         self.assertEqual(first["previous_delay2"], 0)
         self.assertEqual(first["last_three_delay_avg"], 27)
 
+    def test_ers_station_supported_for_16306(self):
+        from src.services.live_data_services import train_stations
+        import json
+        from pathlib import Path
+        prep = json.loads((Path(__file__).resolve().parents[1] / "src" / "ml" / "preprocessing.json").read_text())
+        self.assertIn("ERS", train_stations["16306"])
+        self.assertIn("ERS", prep["station_sequences"]["16306"])
+
 
 if __name__ == "__main__":
     unittest.main()

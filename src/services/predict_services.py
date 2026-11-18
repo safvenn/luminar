@@ -54,7 +54,18 @@ def predict_services(
             (r for r in reversed(reports) if str(r.get("train_no", "")).strip() == str(train_no).strip()),
             None,
         )
-    if report is None:
+    if report is None and train_no:
+        try:
+            from src.routes.live_data import live_data
+            live_data(train_no=train_no)
+            report = next(
+                (r for r in reversed(reports) if str(r.get("train_no", "")).strip() == str(train_no).strip()),
+                None,
+            )
+        except Exception:
+            pass
+
+    if report is None and not train_no:
         report = reports[-1] if reports else None
 
     if report is None:

@@ -12,7 +12,7 @@ train_stations = {
         "VGLJ", "WL"
     ],
     "16306": [
-        "AFK", "AWY", "BDJ", "CAN", "CKI", "CLT", "ERN", "IJK",
+        "AFK", "AWY", "BDJ", "CAN", "CKI", "CLT", "ERN", "ERS", "IJK",
         "KTU", "MAHE", "MGK", "PGI", "PTB", "SRR", "TA", "TCR",
         "TIR", "TLY", "WKI"
     ],
