@@ -121,20 +121,29 @@ async function loadTrain(number) {
     for (const [index, station] of report.data.entries()) {
       const isCurrentStation = index === currentIndex;
       const code = String(station.station_code);
+      const stationName = station.station_name ? String(station.station_name).trim() : '';
+      const displayLabel = stationName ? `${stationName} (${code})` : code;
       const scheduledTime = station.scheduled_arrival
         ? estimatedArrival(station.scheduled_arrival, 0, null, station.arrival_day_offset)
         : `Departs ${estimatedArrival(station.scheduled_departure, 0, null, station.departure_day_offset)}`;
-      const option = new Option(`${code} · ${scheduledTime}${hasPassed(station) ? ' · Passed' : isCurrentStation ? ` · ${currentLabel}` : ''}`, code);
+      const option = new Option(`${displayLabel} · ${scheduledTime}${hasPassed(station) ? ' · Passed' : isCurrentStation ? ` · ${currentLabel}` : ''}`, code);
       option.disabled = !canSelectStation(code);
       $('station').add(option);
       const button = document.createElement('button'); button.type = 'button'; button.className = 'station-stop'; button.dataset.code = code;
       button.disabled = !canSelectStation(code) || report.prediction_available === false;
-      button.setAttribute('aria-label', `${code}, ${scheduledTime}${station.live_status === 'passed' ? ', already passed' : ''}`);
+      button.setAttribute('aria-label', `${displayLabel}, ${scheduledTime}${station.live_status === 'passed' ? ', already passed' : ''}`);
       button.classList.toggle('travelled', index < currentIndex);
       const name = document.createElement('strong'); name.textContent = code;
       const time = document.createElement('span'); time.textContent = scheduledTime;
       const distance = document.createElement('span'); distance.textContent = `${station.distance_km ?? '—'} km`;
-      button.append(name, time, distance);
+      if (stationName) {
+        const subName = document.createElement('span');
+        subName.className = 'station-name-text';
+        subName.textContent = stationName;
+        button.append(name, subName, time, distance);
+      } else {
+        button.append(name, time, distance);
+      }
       if (typeof station.live_delay_min === 'number') {
         const live = document.createElement('span');
         live.textContent = `${station.live_status === 'upcoming' ? 'API estimate' : 'Reported'}: ${station.live_delay_min === 0 ? 'on time' : `${Math.abs(station.live_delay_min)} min ${station.live_delay_min < 0 ? 'early' : 'late'}`}`;
@@ -188,8 +197,10 @@ $('prediction-form').addEventListener('submit', async (event) => {
     const delay = data.predicted_delay_arrival_min;
     if (typeof delay !== 'number' || !Number.isFinite(delay)) throw new Error('The model returned an invalid prediction. Please try again.');
     if (String(data.train_no) !== String(report.train_no) || String(data.station_code).toUpperCase() !== station.toUpperCase()) throw new Error('The active train data changed. Find your train again before predicting.');
-    $('result-train').textContent = `${report.train_name || 'Train'} · ${data.train_no}`; $('result-station').textContent = `Arriving at ${data.station_code}`;
+    $('result-train').textContent = `${report.train_name || 'Train'} · ${data.train_no}`;
     const selectedStop = report.data.find(stop => String(stop.station_code).trim().toUpperCase() === station.trim().toUpperCase());
+    const targetName = selectedStop?.station_name || data.station_name;
+    $('result-station').textContent = targetName ? `Arriving at ${targetName} (${data.station_code})` : `Arriving at ${data.station_code}`;
     $('delay-value').textContent = `${Math.abs(delay).toFixed(1)} min`;
     $('arrival-value').textContent = estimatedArrival(selectedStop?.scheduled_arrival, delay, data.predict_time, selectedStop?.arrival_day_offset);
     $('arrival-value').classList.toggle('unavailable', $('arrival-value').textContent === 'Unavailable');

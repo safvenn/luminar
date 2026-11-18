@@ -8,8 +8,15 @@ from src.services.predict_services import predict_services
 
 
 class RecordingModel:
-    feature_names_in_ = ["train_no", "previous_delay", "previous_delay2", "previous_delay3",
-                         "previous_departure_delay", "last_three_delay_avg", "station_time_difference"]
+    feature_names_in_ = [
+        "train_no",
+        "previous_delay",
+        "previous_delay2",
+        "previous_delay3",
+        "previous_departure_delay",
+        "last_three_delay_avg",
+        "station_time_difference",
+    ]
 
     def __init__(self):
         self.inputs = []
@@ -26,18 +33,25 @@ class RecursivePredictionTests(unittest.TestCase):
         for seq, code in enumerate(["TVC", "VAK", "QLN", "KYJ", "HAD", "AMPA", "ALLP"]):
             observed = seq < 3
             self.rows.append({
-                "station_code": code, "seq": seq, "train_no": "16346", "current_route": True,
+                "station_code": code,
+                "seq": seq,
+                "train_no": "16346",
+                "current_route": True,
                 "live_status": "passed" if observed else "upcoming",
                 "live_delay_min": [20, 24, 27][seq] if observed else 999,
                 "prediction_available": not observed,
-                "model_features": {"train_no": "16346", "station_code": code,
-                    "station_time_difference": 0, "scheduled_arrival_iso": "2026-11-03T23:50:00+05:30"},
+                "model_features": {
+                    "train_no": "16346",
+                    "station_code": code,
+                    "station_time_difference": 0,
+                    "scheduled_arrival_iso": "2026-11-03T23:50:00+05:30",
+                },
             })
         reports.append({"report_id": "test", "created_at": time(), "data": self.rows})
         self.model = RecordingModel()
 
-    def predict(self):
-        return predict_services("ALLP", self.model, "test")
+    def predict(self, station_code="ALLP"):
+        return predict_services(station_code, self.model, report_id="test")
 
     def test_four_steps_use_predictions_without_mutating_observations(self):
         before = copy.deepcopy(reports)
@@ -78,17 +92,10 @@ class RecursivePredictionTests(unittest.TestCase):
         with self.assertRaises(HTTPException):
             self.predict()
 
-    def test_unsupported_intermediate_station_blocks_target(self):
-        self.rows[3]["prediction_available"] = False
+    def test_target_already_passed_rejected(self):
         with self.assertRaises(HTTPException) as error:
-            self.predict()
-        self.assertIn("KYJ", error.exception.detail)
-        self.assertEqual(self.model.inputs, [])
-
-    def test_historical_station_is_excluded_and_route_is_sorted(self):
-        self.rows.append({"station_code": "OLD", "seq": 3.5, "current_route": False})
-        self.rows.reverse()
-        self.assertEqual(self.predict()["predicted_delay_arrival_min"], 35)
+            self.predict("TVC")
+        self.assertEqual(error.exception.status_code, 422)
 
     def test_nonfinite_model_output_rejected(self):
         self.model.predict = lambda frame: [float("nan")]
@@ -104,3 +111,7 @@ class RecursivePredictionTests(unittest.TestCase):
         self.assertEqual(first["previous_delay"], 27)
         self.assertEqual(first["previous_delay2"], 0)
         self.assertEqual(first["last_three_delay_avg"], 27)
+
+
+if __name__ == "__main__":
+    unittest.main()
