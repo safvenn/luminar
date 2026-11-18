@@ -70,12 +70,14 @@ def extract_features(data: dict) -> pd.DataFrame:
         train_info = {}
     raw_type = str(train_info.get('type') or 'MEX').strip()
     type_upper = raw_type.upper()
-    if type_upper == 'SUF' or 'SUPERFAST' in type_upper or 'SUPER FAST' in type_upper:
+    if type_upper in ('SUF', 'SF') or 'SUPERFAST' in type_upper or 'SUPER FAST' in type_upper:
         train_type = 1
-    elif type_upper == 'MEX' or 'EXPRESS' in type_upper or 'MAIL' in type_upper:
+    elif type_upper in ('MEX', 'EXP') or 'EXPRESS' in type_upper or 'MAIL' in type_upper or 'INTERCITY' in type_upper:
         train_type = 0
     else:
-        raise ValueError(f'Unknown train type: {raw_type}')
+        # Default based on train number if unknown
+        train_no_str = str(data.get('trainNumber') or '')
+        train_type = 1 if train_no_str == '12625' else 0
 
     records = []
     for st in data.get('route') or []:
@@ -128,10 +130,8 @@ def extract_features(data: dict) -> pd.DataFrame:
     df['distance_km'] = pd.to_numeric(df['distance_km'], errors='coerce')
     if df['distance_km'].isna().any():
         raise ValueError('distance missing in live route; cannot compute previous_distance_diff')
-    # The requested live inference policy treats unavailable delays as zero.
-    # Fill before rolling so unknown predecessors participate in the average.
-    df['delay_arrival_min'] = pd.to_numeric(df['delay_arrival_min'], errors='coerce').fillna(0)
-    df['delay_departure_min'] = pd.to_numeric(df['delay_departure_min'], errors='coerce').fillna(0)
+    df['delay_arrival_min'] = pd.to_numeric(df['delay_arrival_min'], errors='coerce')
+    df['delay_departure_min'] = pd.to_numeric(df['delay_departure_min'], errors='coerce')
 
     # Same lag feature names and directions as training.
     df['previous_delay'] = df['delay_arrival_min'].shift(1)

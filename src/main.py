@@ -16,8 +16,11 @@ FRONTEND_DIR = PROJECT_DIR / "frontend"
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    app.state.model = joblib.load(PROJECT_DIR / "src" / "ml" / "model.pkl")
-    print("Model loaded")
+    model_path = Path(__file__).resolve().parent / "ml" / "model.pkl"
+    if not model_path.exists():
+        model_path = PROJECT_DIR / "model.pkl"
+    app.state.model = joblib.load(model_path)
+    print(f"Model loaded from {model_path}")
     yield
     print("App shutdown")
 
@@ -33,15 +36,20 @@ app.add_middleware(
 app.include_router(live_router)
 
 
-@app.get("/health", tags=["Health"])
-def health():
-    return {"status": "ok"}
-
-
 @app.post("/predict", tags=["Predict"])
-def predict(station_code: str, report_id: str, request: Request):
+def predict(
+    station_code: str,
+    request: Request,
+    train_no: str | None = None,
+    report_id: str | None = None,
+):
     # The existing service expects the model itself and returns the result.
-    return predict_services(station_code=station_code, model=request.app.state.model, report_id=report_id)
+    return predict_services(
+        station_code=station_code,
+        model=request.app.state.model,
+        train_no=train_no,
+        report_id=report_id,
+    )
 
 
 @app.get("/", response_class=FileResponse, tags=["HTML Frontend"])
